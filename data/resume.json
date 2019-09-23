@@ -1,0 +1,84 @@
+{
+    "Details": {
+        "Name": "Nick Lemoing",
+        "Email": "nlemoing@uwaterloo.ca",
+        "Phone": "(929) 343-6446",
+        "GitHub": "nlemoing",
+        "LinkedIn": "nick-lemoing"
+    },
+    "Sections": [
+        {
+            "Title": "Experience",
+            "Items": [
+                {
+                    "Title": "Data Engineer",
+                    "Subtitle": "Munich Re",
+                    "Location": "New York",
+                    "Date": "September 2019 - Present",
+                    "Description": [
+                        "Built and deployed a telemetry-enabled PDF viewer for medical documents",
+                        "Designed a pipline for transforming handwriting images into bookmarked, searchable PDFs"
+                    ]
+                },
+                {
+                    "Title": "Data Scientist",
+                    "Subtitle": "Munich Re",
+                    "Location": "New York",
+                    "Date": "January - April 2019",
+                    "Description": [
+                        "Researched and implemented a parallelized, clustering-based algorithm to reduce dimensionality in datasets with a large number of correlated features",
+                        "Developed an interactive tool to interpret black-box models using counterfactuals",
+                        "Designed a React web application to visualize feature importance for NLP models"
+                    ]
+                },
+                {
+                    "Title": "Software Developer",
+                    "Subtitle": "Bonfire Interactive",
+                    "Location": "Kitchener",
+                    "Date": "May - August 2019",
+                    "Description": [
+                        "Designed a RESTful API to be used across all Bonfire services",
+                        "Integrated an Object-Relational Mapping into the API to improve data representation",
+                        "Implemented integrated testing protocols to increase testing robustness"
+
+                    ]
+                }
+            ]
+        },
+        {
+            "Title": "Projects",
+            "Items": [
+                {
+                    "Title": "Generalized knight simulator and visualizer (C++, OpenCV)",
+                    "Date": "July 2019",
+                    "Description": [
+                        "Analyzed movement of chess knights using BFS and Random Walk algorithms",
+                        "Built a path visualization module using OpenCV"
+                    ]
+                },
+                {
+                    "Title": "Templated personal website and resume generator (Golang)",
+                    "Date": "September 2019",
+                    "Description": [
+                        "Built a static site generator for my personal website to ensure consistent views, fast load times",
+                        "Implemented a resume generator to build TeX, HTML resumes from a common source"
+                    ]
+                }
+            ]
+        },
+        {
+            "Title": "Education",
+            "Items": [
+                {
+                    "Title": "University of Waterloo",
+                    "Subtitle": "Computer Science Co-op Program",
+                    "Date": "September 2016 - April 2021",
+                    "Description": [
+                        "91% Average, Earned Dean's List distinctions in 5 of 6 terms",
+                        "Favourite Courses: Game Theory, History of Mathematics, Theory of Computation"
+                    ]
+                }
+            ]
+        }
+    ]
+}
