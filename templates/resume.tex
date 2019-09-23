@@ -3,7 +3,17 @@
 \usepackage{lmodern}
 \usepackage{fontawesome}
 \usepackage[hmargin=1.25cm, vmargin=0.75cm]{geometry} 
+\usepackage{titlesec}
+\usepackage{enumitem}
 
+\titlespacing{\section}{0pt}{0pt}{0pt}
+\titlespacing{\subsection}{0pt}{0pt}{0pt}
+\titleformat{\section}{\scshape\fontsize{16pt}{24pt}\selectfont \raggedright \bfseries}{}{0em}{}
+\titleformat{\subsection}{\fontsize{12pt}{12pt}\selectfont}{}{0em}{}
+\newcommand{\subheading}[1]{\raggedright\fontsize{10pt}{12pt}\selectfont {#1\\} \normalfont}
+\newenvironment{tightitemize}
+{\setlist{nolistsep}\begin{itemize}[leftmargin=0.4cm,noitemsep]}
+{\end{itemize}\vspace{0.3cm}}
 
 \begin{document}
 %% HEADER
@@ -29,17 +39,38 @@
 \vspace{6 pt}\\
 \noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
 <end>
-
 %% LEFT COLUMN
 \begin{minipage}[t]{0.33\textwidth}
-
+<range .SideSections>
+\section{<.Title>}
+<range .Items>
+\subsection{\textbf{<.Title>}<with .Subtitle> <.><end>}
+<with .Subheading>\subheading{<.>}<end>
+<with .Description>
+\begin{tightitemize}
+<range .>
+\item <.>
+<end>
+\end{tightitemize}
+<end>
+<end>
+<end>
 \end{minipage}
-
 %% Right COLUMN
 \begin{minipage}[t]{0.67\textwidth}
 <range .Sections>
-
-
+\section{<.Title>}
+<range .Items>
+\subsection{\textbf{<.Title>}<with .Subtitle> <.><end>}
+<with .Subheading>\subheading{<.>}<end>
+<with .Description>
+\begin{tightitemize}
+<range .>
+\item <.>
+<end>
+\end{tightitemize}
+<end>
+<end>
 <end>
 \end{minipage}
 \end{document}

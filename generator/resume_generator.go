@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 )
 
-var BASE_PATH = "/home/nlemoing/web"
+var BASE_PATH = "/home/nlemoing/resume-generator"
 
 func generateResumeFromTemplate(r Resume, t *template.Template, outputPath string) error {
 	outputFile, err := os.Create(outputPath)

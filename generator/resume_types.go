@@ -12,6 +12,7 @@ type PersonalDetails struct {
 type SectionItems struct {
 	Title string
 	Subtitle string
+	Subheading string
 	Location string
 	Date string
 	Description []string
@@ -25,4 +26,5 @@ type Section struct {
 type Resume struct {
 	Details PersonalDetails
 	Sections []Section
+	SideSections []Section
 }
