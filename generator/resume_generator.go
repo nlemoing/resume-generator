@@ -41,7 +41,7 @@ func main() {
 		panic(err)
 	}
 
-	err = generateResumeFromTemplate(resumeParsedData, texTemplate, "main.tex", filepath.Join(BASE_PATH, "data/resume.tex"))
+	err = generateResumeFromTemplate(resumeParsedData, texTemplate, "main.tex", filepath.Join(BASE_PATH, "output/resume.tex"))
 	if err != nil {
 		panic(err)
 	}

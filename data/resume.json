@@ -15,33 +15,42 @@
                     "Subtitle": "Munich Re",
                     "Location": "New York",
                     "Subheading": "9/2019 (Ongoing)",
-                    "Description": [
-                        "Built and deployed a telemetry-enabled PDF viewer for medical documents",
-                        "Designed a pipline for transforming handwriting images into bookmarked, searchable PDFs",
-                        "Configured automatic deployment pipelines using Docker, Kubernetes"
-                    ]
+                    "Description": {
+                        "Bulleted": true, 
+                        "Contents": [
+                            "Built and deployed a telemetry-enabled PDF viewer for medical documents",
+                            "Designed a pipline for transforming handwriting images into bookmarked, searchable PDFs",
+                            "Configured automatic deployment pipelines using Docker, Kubernetes"
+                        ]
+                    }
                 },
                 {
                     "Title": "Data Scientist",
                     "Subtitle": "Munich Re",
                     "Location": "New York",
                     "Subheading": "1/2019 - 4/2019",
-                    "Description": [
-                        "Researched and implemented a parallelized, clustering-based algorithm to reduce dimensionality in datasets with a large number of correlated features",
-                        "Developed an interactive tool to interpret black-box models using counterfactuals",
-                        "Designed a React web application to visualize feature importance for NLP models"
-                    ]
+                    "Description": {
+                        "Bulleted": true,
+                        "Contents": [
+                            "Researched and implemented a parallelized, clustering-based algorithm to reduce dimensionality in datasets with a large number of correlated features",
+                            "Developed an interactive tool to interpret black-box models using counterfactuals",
+                            "Designed a React web application to visualize feature importance for NLP models"
+                        ]
+                    }
                 },
                 {
                     "Title": "Software Developer",
                     "Subtitle": "Bonfire Interactive",
                     "Location": "Kitchener",
                     "Subheading": "5/2019 - 8/2019",
-                    "Description": [
-                        "Designed a RESTful API to be used across all Bonfire services",
-                        "Integrated an Object-Relational Mapping into the API to improve data representation",
-                        "Implemented integrated testing protocols to increase testing robustness"
-                    ]
+                    "Description": {
+                        "Bulleted": true,
+                        "Contents": [
+                            "Designed a RESTful API to be used across all Bonfire services",
+                            "Integrated an Object-Relational Mapping into the API to improve data representation",
+                            "Implemented integrated testing protocols to increase testing robustness"
+                        ]
+                    }
                 }
             ]
         },
@@ -52,27 +61,25 @@
                     "Title": "GNight",
                     "Subtitle": "Generalized knight simulator and visualizer",
                     "Subheading": "C++, OpenCV (7/2019)",
-                    "Description": [
-                        "Analyzed movement of general chess knights using BFS and Random Walk algorithms",
-                        "Built a path visualization module using OpenCV"
-                    ]
+                    "Description": {
+                        "Bulleted": true,
+                        "Contents": [
+                            "Analyzed movement of general chess knights using BFS and Random Walk algorithms",
+                            "Built a path visualization module using OpenCV"
+                        ]
+                    }
                 },
                 {
                     "Title": "GoCV",
                     "Subtitle": "Templated resume generator",
                     "Subheading": "Golang (9/2019)",
-                    "Description": [
-                        "Built a resume templator to generate multiple views from common JSON data",
-                        "Supports TeX, HTML output with potential to add other formats"
-                    ]
-                },
-                {
-                    "Title": "Rotiserrie",
-                    "Subtitle": "Fantasy baseball predictive model",
-                    "Subheading": "Python, NumPy (12/2017)",
-                    "Description": [
-
-                    ]
+                    "Description": {
+                        "Bulleted": true, 
+                        "Contents": [
+                            "Built a resume templator to generate multiple views from common JSON data",
+                            "Supports TeX, HTML output with potential to add other formats"
+                        ]
+                    }
                 }
             ]
         }
@@ -84,25 +91,13 @@
                 {
                     "Title": "University of Waterloo",
                     "Subheading": "Computer Science (9/2016 - 4/2021)",
-                    "Description": [
-                        "91 Average, Dean's List in 5 of 6 terms",
-                        "Favourite Courses: Game Theory, Theory of Computation"
-                    ]
-                }
-            ]
-        },
-        {
-            "Title": "Skills",
-            "Items": [
-                {
-                    "Title": "Languages",
-                    "Description": [
-                        "C++: OOP, Image Processing",
-                        "Python: Data Science, Backend",
-                        "JavaScript: Frontend, Backend",
-                        "Golang: Web Servers, Templating",
-                        "Scheme: Teaching, Functional Programming"
-                    ]
+                    "Description": {
+                        "Bulleted": false,
+                        "Contents": [
+                            "91 Average, Dean's List in 5 of 6 terms",
+                            "Favourite Courses: Game Theory, Theory of Computation"
+                        ]
+                    }
                 }
             ]
         }
