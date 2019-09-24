@@ -10,13 +10,13 @@ import (
 
 var BASE_PATH = "/home/nlemoing/resume-generator"
 
-func generateResumeFromTemplate(r Resume, t *template.Template, outputPath string) error {
+func generateResumeFromTemplate(r Resume, t *template.Template, tname string, outputPath string) error {
 	outputFile, err := os.Create(outputPath)
 	if err != nil {
 		return err
 	}
 	
-	err = t.Execute(outputFile, r)
+	err = t.ExecuteTemplate(outputFile, tname, r)
 	if err != nil {
 		return err
 	}
@@ -35,17 +35,13 @@ func main() {
 		panic(err)
 	}
 
-	texTemplate := template.New("texTemplate").Delims("<", ">")
-	texTemplateData, err := ioutil.ReadFile(filepath.Join(BASE_PATH, "templates/resume.tex"))
-	if err != nil {
-		panic(err)
-	}
-	texTemplate, err = texTemplate.Parse(string(texTemplateData))
+	texTemplate := template.New("").Delims("<", ">")
+	texTemplate, err = texTemplate.ParseGlob(filepath.Join(BASE_PATH, "templates/tex/*"))
 	if err != nil {
 		panic(err)
 	}
 
-	err = generateResumeFromTemplate(resumeParsedData, texTemplate, filepath.Join(BASE_PATH, "data/resume.tex"))
+	err = generateResumeFromTemplate(resumeParsedData, texTemplate, "main.tex", filepath.Join(BASE_PATH, "data/resume.tex"))
 	if err != nil {
 		panic(err)
 	}
