@@ -3,16 +3,9 @@
 \subsection{\textbf{<.Title>}<with .Subtitle> <.><end>}
 <with .Subheading>\subheading{<.>}<end>
 <with .Description>
-<if .Bulleted>
-\begin{tightitemize}
-<range .Contents>
-\item <.>
-<end> 
-\end{tightitemize}
-<else></* Contents */>
-<range .Contents>
-<.>\\
-<end></* Contents */>
-<end></* Bulleted */>
+<template "description.tex" .>
 <end></* Description */>
 <end></* Items */>
+<with .Description>
+<template "description.tex" .>
+<end></* Description */>

@@ -1,0 +1,11 @@
+<if .Bulleted>
+\begin{tightitemize}
+<range .Contents>
+\item <.>
+<end> 
+\end{tightitemize}
+<else></* Contents */>
+<range .Contents>
+<.>\\
+<end></* Contents */>
+<end></* Bulleted */>

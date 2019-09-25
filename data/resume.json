@@ -100,6 +100,19 @@
                     }
                 }
             ]
+        }, 
+        {
+            "Title": "Languages",
+            "Description": {
+                "Bulleted": false,
+                "Contents": [
+                    "Python",
+                    "JavaScript",
+                    "C++",
+                    "Golang",
+                    "Scheme"
+                ]
+            }
         }
     ]
 }
