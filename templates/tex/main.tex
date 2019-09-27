@@ -14,6 +14,9 @@
 \newenvironment{tightitemize}
 {\setlist{nolistsep}\begin{itemize}[leftmargin=0.4cm,noitemsep]}
 {\end{itemize}\vspace{0.3cm}}
+\newenvironment{tightdescription}
+{\setlist{nolistsep}\begin{description}[leftmargin=0.4cm,noitemsep]}
+{\end{description}\vspace{0.3cm}}
 
 \begin{document}
 <template "header.tex" .Details>
@@ -23,8 +26,9 @@
 <template "section.tex" .>
 <end>
 \end{minipage}
+\hspace{.02\textwidth}
 %% Right COLUMN
-\begin{minipage}[t]{0.67\textwidth}
+\begin{minipage}[t]{0.65\textwidth}
 <range .Sections>
 <template "section.tex" .>
 <end>

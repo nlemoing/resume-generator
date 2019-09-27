@@ -19,7 +19,7 @@
                         "Bulleted": true, 
                         "Contents": [
                             "Built and deployed a telemetry-enabled PDF viewer for medical documents",
-                            "Designed a pipline for transforming handwriting images into bookmarked, searchable PDFs",
+                            "Implemented role-based content scoping to ensure secure access to sensitive information",
                             "Configured automatic deployment pipelines using Docker, Kubernetes"
                         ]
                     }
@@ -82,6 +82,35 @@
                     }
                 }
             ]
+        },
+        {
+            "Title": "Teaching and Research",
+            "Items": [
+                {
+                    "Title": "Research Assistant",
+                    "Subheading": "3D Images (5/2019 - 8/2019)",
+                    "Description": {
+                        "Bulleted": true,
+                        "Contents": [
+                            "Researched algorithms for consistent 3D line drawings",
+                            "Implemented a 3D image stylization algorithm in OpenCV",
+                            "Supervisor: Lesley Istead"
+                        ]
+                    }
+                },
+                {
+                    "Title": "Teaching Assistant",
+                    "Subheading": "Math and CS (9/2017 - Present)",
+                    "Description": {
+                        "Bulleted": true,
+                        "Contents": [
+                            "Hosted weekly office hours for first year courses",
+                            "Organized and presented end-of-term review sessions for hundreds of students",
+                            "Specialties: Functional Programming, Linear Algebra, Statistics"
+                        ]
+                    }
+                }
+            ]
         }
     ],
     "SideSections": [
@@ -92,7 +121,7 @@
                     "Title": "University of Waterloo",
                     "Subheading": "Computer Science (9/2016 - 4/2021)",
                     "Description": {
-                        "Bulleted": false,
+                       "Bulleted": false,
                         "Contents": [
                             "91 Average, Dean's List in 5 of 6 terms",
                             "Favourite Courses: Game Theory, Theory of Computation"
@@ -102,17 +131,54 @@
             ]
         }, 
         {
-            "Title": "Languages",
-            "Description": {
-                "Bulleted": false,
-                "Contents": [
-                    "Python",
-                    "JavaScript",
-                    "C++",
-                    "Golang",
-                    "Scheme"
-                ]
-            }
+            "Title": "Skills",
+            "Items": [
+                {
+                    "Title": "Programming Languages",
+                    "Description": {
+                        "Bulleted": false,
+                        "Contents": [
+                            "Python, JavaScript, C, C++, Golang, Scheme"
+                        ]
+                    }
+                },
+                {
+                    "Title": "Cloud environments",
+                    "Description": {
+                        "Bulleted": false,
+                        "Contents": [
+                            "AWS, Azure"
+                        ]
+                    }
+                },
+                {
+                    "Title": "DevOps",
+                    "Description": {
+                        "Bulleted": false,
+                        "Contents": [
+                            "Docker, Kubernetes, Vagrant"
+                        ]
+                    }
+                },
+                {
+                    "Title": "Frontend Frameworks",
+                    "Description": {
+                        "Bulleted": false,
+                        "Contents": [
+                            "React, Angular"
+                        ]
+                    }
+                },
+                {
+                    "Title": "Data Science",
+                    "Description": {
+                        "Bulleted": false,
+                        "Contents": [
+                            "NumPy, Pandas, Scikit-learn, Jupyter"
+                        ]
+                    }
+                }
+            ]
         }
     ]
 }
