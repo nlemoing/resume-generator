@@ -138,7 +138,11 @@
                     "Description": {
                         "Bulleted": false,
                         "Contents": [
-                            "Python, JavaScript, C, C++, Golang, Scheme"
+                            "Python",
+                            "JavaScript",
+                            "C/C++",
+                            "Golang",
+                            "Scheme"
                         ]
                     }
                 },
@@ -147,7 +151,8 @@
                     "Description": {
                         "Bulleted": false,
                         "Contents": [
-                            "AWS, Azure"
+                            "AWS",
+                            "Azure"
                         ]
                     }
                 },
@@ -156,7 +161,9 @@
                     "Description": {
                         "Bulleted": false,
                         "Contents": [
-                            "Docker, Kubernetes, Vagrant"
+                            "Docker",
+                            "Kubernetes",
+                            "Vagrant"
                         ]
                     }
                 },
@@ -165,7 +172,8 @@
                     "Description": {
                         "Bulleted": false,
                         "Contents": [
-                            "React, Angular"
+                            "React",
+                            "Angular"
                         ]
                     }
                 },
@@ -174,7 +182,34 @@
                     "Description": {
                         "Bulleted": false,
                         "Contents": [
-                            "NumPy, Pandas, Scikit-learn, Jupyter"
+                            "NumPy",
+                            "Pandas",
+                            "Scikit-learn",
+                            "Jupyter"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "Title": "Interests",
+            "Items": [
+                {
+                    "Title": "Ultimate Frisbee",
+                    "Description": {
+                        "Bulleted": false,
+                        "Contents": [
+                            "I play for my university team as well as for a local club team.",
+                            "I also took on a leadership role with the NYU team while living in New York."
+                        ]
+                    }
+                },
+                {
+                    "Title": "Creative Writing",
+                    "Description": {
+                        "Bulleted": false,
+                        "Contents": [
+                            "I write articles about sports and business topics that interest me."
                         ]
                     }
                 }
