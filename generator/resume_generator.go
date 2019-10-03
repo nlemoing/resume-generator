@@ -43,6 +43,11 @@ func generateResume() error {
 		return err
 	}
 
+	blogTemplate, err := template.New("").ParseFiles("templates/html/main.html", "templates/html/blog/index.html")
+	if err != nil {
+		return err
+	}
+
 	err = generateResumeFromTemplate(resumeParsedData, texTemplate, "main.tex", "output/resume.tex")
 	if err != nil {
 		return err
@@ -54,6 +59,11 @@ func generateResume() error {
 	}
 
 	err = generateResumeFromTemplate(resumeParsedData, homeTemplate, "main.html", "static/index.html")
+	if err != nil {
+		return err
+	}
+
+	err = generateResumeFromTemplate(resumeParsedData, blogTemplate, "main.html", "static/blog/index.html")
 	if err != nil {
 		return err
 	}
