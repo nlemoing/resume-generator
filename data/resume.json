@@ -188,14 +188,27 @@
         },
         {
             "Title": "Interests",
-            "Description": {
-                "Bulleted": false,
-                "Contents": [
-                    "Ultimate Frisbee",
-                    "Rock climbing",
-                    "Creative Writing"
-                ]
-            }
+            "Items": [
+                {
+                    "Title": "Ultimate Frisbee",
+                    "Description": {
+                        "Bulleted": false,
+                        "Contents": [
+                            "I play for my university team as well as for a local club team.",
+                            "I also took on a leadership role with the NYU team while living in New York."
+                        ]
+                    }
+                },
+                {
+                    "Title": "Creative Writing",
+                    "Description": {
+                        "Bulleted": false,
+                        "Contents": [
+                            "I write articles about sports and business topics that interest me."
+                        ]
+                    }
+                }
+            ]
         }
     ]
 }
