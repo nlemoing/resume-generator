@@ -1,11 +1,6 @@
 {
-    "Details": {
-        "Name": "Nick Lemoing",
-        "Email": "nlemoing@uwaterloo.ca",
-        "Phone": "(929) 343-6446",
-        "GitHub": "nlemoing",
-        "LinkedIn": "nick-lemoing"
-    },
+    "Title": "Resume",
+    "Styles": ["resume.css"],
     "Sections": [
         {
             "Title": "Experience",
@@ -138,7 +133,11 @@
                     "Description": {
                         "Bulleted": false,
                         "Contents": [
-                            "Python, JavaScript, C, C++, Golang, Scheme"
+                            "Python",
+                            "JavaScript",
+                            "C/C++",
+                            "Golang",
+                            "Scheme"
                         ]
                     }
                 },
@@ -147,7 +146,8 @@
                     "Description": {
                         "Bulleted": false,
                         "Contents": [
-                            "AWS, Azure"
+                            "AWS",
+                            "Azure"
                         ]
                     }
                 },
@@ -156,7 +156,9 @@
                     "Description": {
                         "Bulleted": false,
                         "Contents": [
-                            "Docker, Kubernetes, Vagrant"
+                            "Docker",
+                            "Kubernetes",
+                            "Vagrant"
                         ]
                     }
                 },
@@ -165,7 +167,8 @@
                     "Description": {
                         "Bulleted": false,
                         "Contents": [
-                            "React, Angular"
+                            "React",
+                            "Angular"
                         ]
                     }
                 },
@@ -174,11 +177,25 @@
                     "Description": {
                         "Bulleted": false,
                         "Contents": [
-                            "NumPy, Pandas, Scikit-learn, Jupyter"
+                            "NumPy",
+                            "Pandas",
+                            "Scikit-learn",
+                            "Jupyter"
                         ]
                     }
                 }
             ]
+        },
+        {
+            "Title": "Interests",
+            "Description": {
+                "Bulleted": false,
+                "Contents": [
+                    "Ultimate Frisbee",
+                    "Rock climbing",
+                    "Creative Writing"
+                ]
+            }
         }
     ]
 }

@@ -1,14 +1,5 @@
 package main
 
-type PersonalDetails struct {
-	Name string
-	Email string
-	Phone string
-	GitHub string
-	LinkedIn string
-	Website string
-}
-
 type Description struct {
 	Bulleted bool
 	Contents []string
@@ -30,7 +21,7 @@ type Section struct {
 }
 
 type Resume struct {
-	Details PersonalDetails
 	Sections []Section
 	SideSections []Section
+	Page
 }

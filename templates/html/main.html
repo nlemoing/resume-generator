@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link href="/css/common.css" rel="stylesheet">
+  {{ range .Styles }}<link href="/css/{{.}}" rel="stylesheet">{{ end }}
+  <script src='https://kit.fontawesome.com/{{.Config "FA_KEY"}}.js' crossorigin="anonymous"></script>
+  <title>{{.Title}}</title>
+</head>
+<body>
+<header>
+    <div id="home" class="header-item"><h1><a href="/">Nick Lemoing</a><h1></div>
+    <div class='header-item'><h2><a href="/blog">Blog</a></h2></div>
+    <div class='header-item'><h2><a href="/resume">Resume</a></h2></div>
+    {{ with .Details }}
+    {{ if .Email }}<div class='header-item header-right'>{{.Email}}</div>{{end}}
+    {{ end }}
+</header>
+{{ template "content" .}}
+</body>
+{{ range .Scripts }}<script src="/scripts/{{.}}"></script>{{ end }}
+</html>

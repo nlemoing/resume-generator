@@ -1,0 +1,12 @@
+.main-sections {
+    display: flex;
+}
+
+.section {
+    background-color: beige;
+}
+
+.item {
+    background-color: aquamarine;
+    width: 400px;
+}

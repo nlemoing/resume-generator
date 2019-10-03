@@ -3,12 +3,8 @@ package main
 import (
 	"text/template"
 	"os"
-	"io/ioutil"
-	"encoding/json"
-	"path/filepath"
 )
 
-var BASE_PATH = os.Getenv("RESUME_BASE_PATH")
 
 func generateResumeFromTemplate(r Resume, t *template.Template, tname string, outputPath string) error {
 	outputFile, err := os.Create(outputPath)
@@ -24,26 +20,33 @@ func generateResumeFromTemplate(r Resume, t *template.Template, tname string, ou
 	return nil
 }
 
-func main() {
-	resumeRawData, err := ioutil.ReadFile(filepath.Join(BASE_PATH, "data/resume.json"))
-	if err != nil {
-		panic(err)
-	}
+func generateResume() error {
 
 	var resumeParsedData Resume
-	if err = json.Unmarshal(resumeRawData, &resumeParsedData); err != nil {
-		panic(err)
+	if err := ReadJson("data/resume.json", &resumeParsedData); err != nil {
+		return err
 	}
 
 	texTemplate := template.New("").Delims("<", ">")
-	texTemplate, err = texTemplate.ParseGlob(filepath.Join(BASE_PATH, "templates/tex/*"))
+	texTemplate, err := texTemplate.ParseGlob("templates/tex/*")
 	if err != nil {
-		panic(err)
+		return err
 	}
 
-	err = generateResumeFromTemplate(resumeParsedData, texTemplate, "main.tex", filepath.Join(BASE_PATH, "output/resume.tex"))
+	htmlTemplate, err := template.New("").ParseFiles("templates/html/main.html", "templates/html/content/resume.html")
 	if err != nil {
-		panic(err)
+		return err
 	}
 
+	err = generateResumeFromTemplate(resumeParsedData, texTemplate, "main.tex", "output/resume.tex")
+	if err != nil {
+		return err
+	}
+
+	err = generateResumeFromTemplate(resumeParsedData, htmlTemplate, "main.html", "static/resume/index.html")
+	if err != nil {
+		return err
+	}
+	
+	return nil
 }

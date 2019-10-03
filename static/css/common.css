@@ -1,0 +1,60 @@
+body {
+	font-family: 'Roboto', sans-serif;
+}
+header {
+	width: 100%;
+	display: flex;
+	align-items: baseline;
+}
+
+.header-item, .header-item > * {
+	display: inline;
+}
+.header-item {
+	padding: 12px 12px 12px 12px;
+}
+.header-item a {
+	position: relative;
+	color: #000;
+	text-decoration: none;
+}
+.header-active a {
+	color: blue;
+}
+.header-item a:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	background-color: #000;
+	visibility: hidden;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+}
+.header-active a:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	background-color: blue;
+	visibility: hidden;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+}
+.header-item > h1 > a:before {
+	height: 4px;
+}
+.header-item > h2 > a:before {
+	height: 2px;
+}
+.header-item a:hover:before {
+	visibility: visible;
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+}

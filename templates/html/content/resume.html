@@ -1,0 +1,25 @@
+{{ block "content" . }}
+<div class="main-sections">
+{{ range .Sections }}
+    <div class="section">
+        <h3>{{.Title}}</h3>
+        {{ with .Items }}{{ range . }}
+        <div class="item">
+            <h4>{{.Title}}{{with .Subtitle}} | {{.}}{{end}}</h4>
+            <h5>{{.Subheading}}</h5>
+            {{ with .Description }}
+            <ul>
+                {{range .Contents}}<li>{{.}}</li>{{end}}
+            </ul>
+            {{ end }}
+        </div>
+        {{ end }}{{ end }}
+        {{ with .Description }}
+        <ul>
+            {{range .Contents}}<li>{{.}}</li>{{end}}
+        </ul>
+        {{ end }}
+    </div>
+{{ end }}
+</div>
+{{ end }}
