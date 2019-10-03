@@ -33,7 +33,12 @@ func generateResume() error {
 		return err
 	}
 
-	htmlTemplate, err := template.New("").ParseFiles("templates/html/main.html", "templates/html/content/resume.html")
+	htmlTemplate, err := template.New("").ParseFiles("templates/html/main.html", "templates/html/resume/index.html")
+	if err != nil {
+		return err
+	}
+
+	homeTemplate, err := template.New("").ParseFiles("templates/html/main.html", "templates/html/home/index.html")
 	if err != nil {
 		return err
 	}
@@ -44,6 +49,11 @@ func generateResume() error {
 	}
 
 	err = generateResumeFromTemplate(resumeParsedData, htmlTemplate, "main.html", "static/resume/index.html")
+	if err != nil {
+		return err
+	}
+
+	err = generateResumeFromTemplate(resumeParsedData, homeTemplate, "main.html", "static/index.html")
 	if err != nil {
 		return err
 	}

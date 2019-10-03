@@ -13,7 +13,27 @@
     <div class='header-item'><h2><a href="/blog">Blog</a></h2></div>
     <div class='header-item'><h2><a href="/resume">Resume</a></h2></div>
     {{ with .Details }}
-    {{ if .Email }}<div class='header-item header-right'>{{.Email}}</div>{{end}}
+    <div class='header-item header-right'></div>
+    {{ with .Email }}
+    <div class='header-item'>
+      <a href='mailto:{{.}}'><i class="fas fa-envelope"></i></a>
+    </div>
+    {{ end }}
+    {{ with .Phone }}
+    <div class='header-item'>
+      <a href='tel:{{.}}'><i class="fas fa-phone"></i></a>
+    </div>
+    {{ end }}
+    {{ with .GitHub }}
+    <div class='header-item'>
+      <a href='https://github.com/{{.}}'><i class="fab fa-github"></i></a>
+    </div>
+    {{ end }}
+    {{ with .LinkedIn }}
+    <div class='header-item'>
+      <a href='https://linkedin.com/in/{{.}}'><i class="fab fa-linkedin"></i></a>
+    </div>
+    {{ end }}
     {{ end }}
 </header>
 {{ template "content" .}}
