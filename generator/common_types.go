@@ -3,6 +3,8 @@ package main
 import (
 	"encoding/json"
 	"io/ioutil"
+	"text/template"
+	"os"
 )
 
 type Contact struct {
@@ -30,6 +32,20 @@ func ReadJson(path string, output interface{}) error {
 		return err
 	}
 	
+	return nil
+}
+
+func TemplateToFile(data interface{}, t *template.Template, name string, outputPath string) error {
+	outputFile, err := os.Create(outputPath)
+	if err != nil {
+		return err
+	}
+	
+	err = t.ExecuteTemplate(outputFile, name, data)
+	if err != nil {
+		return err
+	}
+
 	return nil
 }
 

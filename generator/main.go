@@ -14,4 +14,14 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+
+	err = generateBlog()
+	if err != nil {
+		panic(err)
+	}
+
+	err = generateHomepage()
+	if err != nil {
+		panic(err)
+	}
 }

@@ -3,7 +3,7 @@
 <head>
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   <link href="/css/common.css" rel="stylesheet">
-  {{ range .Styles }}<link href="/css/{{.}}" rel="stylesheet">{{ end }}
+  {{ with .Styles }}{{ range . }}<link href="/css/{{.}}" rel="stylesheet">{{ end }}{{ end }}
   <script src='https://kit.fontawesome.com/{{.Config "FA_KEY"}}.js' crossorigin="anonymous"></script>
   <title>{{.Title}}</title>
 </head>
@@ -36,7 +36,9 @@
     {{ end }}
     {{ end }}
 </header>
+<div id="content-wrapper">
 {{ template "content" .}}
+</div>
 </body>
-{{ range .Scripts }}<script src="/scripts/{{.}}"></script>{{ end }}
+{{ with .Scripts}}{{ range . }}<script src="/scripts/{{.}}"></script>{{ end }}{{ end }}
 </html>

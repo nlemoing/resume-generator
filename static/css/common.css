@@ -62,3 +62,7 @@ header {
 .header-right {
 	margin-left: auto;
 }
+
+#content-wrapper {
+	padding: 12px 12px 12px 12px;
+}
