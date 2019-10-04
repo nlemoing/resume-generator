@@ -1,4 +1,11 @@
 {
     "Title": "Blog",
-    "Articles": []
+    "Articles": [
+        {
+            "Title": "A (Generalized) Knight's Quest",
+            "Subtitle": "subtitle goes here",
+            "BodyPath": "articles/knight.html",
+            "OutputPath": "knight.html"
+        }
+    ]
 }
