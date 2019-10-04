@@ -1,3 +1,5 @@
 {
-    "Title": "Home"
+    "Title": "Home",
+    "Styles": ["home.css"],
+    "Introduction": "<h2>Welcome to my page!</h2> My name is Nick."
 }

@@ -6,6 +6,7 @@ import (
 
 type Home struct {
 	Page
+	Introduction string
 }
 
 func generateHomepage() error {

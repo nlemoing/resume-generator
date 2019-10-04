@@ -1,3 +1,16 @@
 {{ block "content" . }}
-
+<div id="main-image">
+    <div id="main-image-caption">
+        {{ with .Introduction }}
+        <div id="main-image-text">
+            {{.}}
+        </div>
+        {{ end }}
+    </div>
+</div>
+<div id="main-information-wrapper">
+    <div id="main-information">
+        This is where the actual content of the page will go.
+    </div>
+</div>
 {{ end }}
