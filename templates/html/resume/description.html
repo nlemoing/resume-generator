@@ -1,0 +1,9 @@
+{{ if .Contents }}
+{{ if .Bulleted }}
+<ul>
+    {{range .Contents}}<li>{{.}}</li>{{end}}
+</ul>
+{{else}}
+{{ range .Contents }}{{.}}<br/>{{end}}
+{{ end }}
+{{ end }}

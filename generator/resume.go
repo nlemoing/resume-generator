@@ -2,6 +2,8 @@ package main
 
 import (
 	"text/template"
+	"path/filepath"
+	"os/exec"
 )
 
 type Description struct {
@@ -42,7 +44,10 @@ func generateResume() error {
 		return err
 	}
 
-	htmlTemplate, err := template.New("").ParseFiles("templates/html/main.html", "templates/html/resume/index.html")
+	var files []string
+	files, _ = filepath.Glob("templates/html/resume/*")	
+	files = append([]string{"templates/html/main.html"}, files...)
+	htmlTemplate, err := template.New("").ParseFiles(files...)
 	if err != nil {
 		return err
 	}
@@ -54,6 +59,11 @@ func generateResume() error {
 
 	err = TemplateToFile(resumeParsedData, htmlTemplate, "main.html", "static/resume/index.html")
 	if err != nil {
+		return err
+	}
+
+	cmd := exec.Command("./make_pdf.sh")
+	if err := cmd.Run(); err != nil {
 		return err
 	}
 	
