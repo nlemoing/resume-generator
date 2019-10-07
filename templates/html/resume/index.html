@@ -1,17 +1,22 @@
 {{ block "content" . }}
-<div id="pdf-download">
-If you'd prefer, you can download a PDF version of this resume <a href="/files/nlemoing_resume.pdf" download>here</a>.
+<div id="resume-sidebar">
+<div id="resume-contact">
+<img src="/images/nick.jpg" id="resume-headshot"></img>
+<h3>Get in touch</h3>
+{{ with .Details }}
+{{ with .Email }}<i class="fas fa-envelope"></i> <a href='mailto:{{.}}'>{{.}}</a><br/>{{end}}
+{{ with .LinkedIn }}<i class="fab fa-linkedin"></i> <a href='https://linkedin.com/in/{{.}}'>LinkedIn</a><br/>{{end}}
+{{ with .GitHub }}<i class="fab fa-github"></i> <a href='https://github.com/{{.}}'>GitHub</a><br/>{{end}}
+{{ end }}
+</div>
+<p>If you'd prefer, you can download a PDF version of this resume <a href="/files/nlemoing_resume.pdf" download>here</a>.</p>
 </div>
 <div id="resume-container">
 <div class="main-sections">
-{{ range .Sections }}
-{{ template "section.html" . }}
-{{ end }}
+{{ range .Sections }}{{ template "section.html" . }}{{ end }}
 </div>
 <div class="side-sections">
-{{ range .SideSections}}
-{{ template "section.html" . }}
-{{ end }}
+{{ range .SideSections}}{{ template "section.html" . }}{{ end }}
 </div>
 </div>
 {{ end }}

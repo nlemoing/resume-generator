@@ -1,8 +1,8 @@
 <div class="section">
     <div class="section-title"><h1>{{.Title}}</h1></div>
-    {{ with .Items }}
+    {{ with .Items -}}
     <div class="section-items">
-    {{ range . }}
+    {{ range . -}}
     <div class="item">
         <h2>{{.Title}}{{with .Subtitle}} | {{.}}{{end}}</h2>
         <h3>{{.Subheading}}</h3>

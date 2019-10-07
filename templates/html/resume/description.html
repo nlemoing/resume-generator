@@ -1,9 +1,7 @@
-{{ if .Contents }}
-{{ if .Bulleted }}
+{{ if .Contents }}{{ if .Bulleted }}
 <ul>
     {{range .Contents}}<li>{{.}}</li>{{end}}
 </ul>
-{{else}}
+{{ else }}
 {{ range .Contents }}{{.}}<br/>{{end}}
-{{ end }}
-{{ end }}
+{{ end }}{{ end }}

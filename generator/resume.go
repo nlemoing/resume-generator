@@ -47,7 +47,9 @@ func generateResume() error {
 	var files []string
 	files, _ = filepath.Glob("templates/html/resume/*")	
 	files = append([]string{"templates/html/main.html"}, files...)
-	htmlTemplate, err := template.New("").ParseFiles(files...)
+	htmlTemplate := template.New("")
+	htmlTemplate.Funcs(template.FuncMap{"mod": func(i, j int) int { return i % j }})
+	htmlTemplate, err = htmlTemplate.ParseFiles(files...)
 	if err != nil {
 		return err
 	}
