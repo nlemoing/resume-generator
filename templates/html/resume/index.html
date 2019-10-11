@@ -1,7 +1,7 @@
 {{ block "content" . }}
 <div id="resume-sidebar">
-<div id="resume-contact">
 <img src="/images/nick.jpg" id="resume-headshot"></img>
+<div id="resume-contact">
 <h3>Get in touch</h3>
 {{ with .Details }}
 {{ with .Email }}<i class="fas fa-envelope"></i> <a href='mailto:{{.}}'>{{.}}</a><br/>{{end}}
@@ -12,11 +12,7 @@
 <p>If you'd prefer, you can download a PDF version of this resume <a href="/files/nlemoing_resume.pdf" download>here</a>.</p>
 </div>
 <div id="resume-container">
-<div class="main-sections">
 {{ range .Sections }}{{ template "section.html" . }}{{ end }}
-</div>
-<div class="side-sections">
 {{ range .SideSections}}{{ template "section.html" . }}{{ end }}
-</div>
 </div>
 {{ end }}

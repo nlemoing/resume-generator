@@ -1,9 +1,30 @@
-#resume-sidebar {
-    margin: 12px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 226px;
+/*
+Big screens:
+    resume-sidebar top left, width 250px
+    resume-container top, offset from left by width of sidebar
+Small screens:
+    resume-sidebar and resume container positioned normally
+All screens:
+    image width 100%, shouldn't grow wider than ~250-300px
+    All items centered: image, h3, and links
+    Links in div, text aligned on left side
+*/
+
+@media only screen and (min-device-width: 750px) {
+    #resume-sidebar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 15px;
+        width: 220px;
+    }
+
+    #resume-container {
+        position: absolute;
+        top: 0;
+        left: 250px;
+        width: calc(100% - 250px);
+    }
 }
 
 #resume-contact h3 {
@@ -22,14 +43,8 @@
 
 #resume-headshot {
     width: 100%;
+    max-width: 300px;
     border-radius: 50%;
-}
-
-#resume-container {
-    margin: 12px 0 0 0;
-    position: absolute;
-    top: 0;
-    left: 250px;
 }
 
 .section {
@@ -53,12 +68,15 @@
 .section-items {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .item {
     padding: 12px;
     margin: 30px; 
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     background-color: white;
+    border-radius: 20px;
+
 }
