@@ -4,6 +4,7 @@ import (
 	"text/template"
 	"io/ioutil"
 	"path/filepath"
+	"gopkg.in/russross/blackfriday.v2"
 )
 
 type Blog struct {
@@ -19,13 +20,13 @@ type Article struct {
 	Date string
 }
 
-func (a Article) BodyFromPath() (string, error) {
-	data, err := ioutil.ReadFile(a.BodyPath)
+func (a Article) Body() (string, error) {
+	md, err := ioutil.ReadFile(a.BodyPath)
 	if err != nil {
 		return "", err
 	}
-
-	return string(data), nil
+	html := blackfriday.Run(md)
+	return string(html), nil
 }
 
 func generateBlog() error {

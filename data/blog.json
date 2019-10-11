@@ -4,7 +4,7 @@
         {
             "Title": "A (Generalized) Knight's Quest",
             "Subtitle": "subtitle goes here",
-            "BodyPath": "articles/knight.html",
+            "BodyPath": "articles/knight.md",
             "OutputPath": "knight.html"
         }
     ]
