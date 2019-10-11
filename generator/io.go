@@ -6,18 +6,8 @@ import (
 	"io/ioutil"
 	"encoding/json"
 	"regexp"
+	"bytes"
 )
-
-type Formatter struct {
-	file *os.File
-}
-
-var emptylineRegex *regexp.Regexp = regexp.MustCompile("\n([\t\f\r\v ]*\n)+")
-func (f Formatter) Write(p []byte) (n int, err error) {
-	p = emptylineRegex.ReplaceAll(p, []byte("\n"))
-	n, err = f.file.Write(p)
-	return
-}
 
 func ReadJson(path string, output interface{}) error {
 	
@@ -33,21 +23,23 @@ func ReadJson(path string, output interface{}) error {
 	return nil
 }
 
+var emptylineRegex *regexp.Regexp = regexp.MustCompile("\n([\t ]*\n)+")
 func TemplateToFile(data interface{}, t *template.Template, name string, outputPath string) error {
 
-
+	var b bytes.Buffer
+	err := t.ExecuteTemplate(&b, name, data)
+	if err != nil {
+		return err
+	}
+	output := emptylineRegex.ReplaceAll(b.Bytes(), []byte("\n"))
 	outputFile, err := os.Create(outputPath)
 	if err != nil {
 		return err
 	}
 	defer outputFile.Close()
-
-	f := Formatter{outputFile}
-	
-	err = t.ExecuteTemplate(f, name, data)
+	_, err = outputFile.Write(output)
 	if err != nil {
 		return err
 	}
-
 	return nil
 }
