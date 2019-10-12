@@ -1,0 +1,16 @@
+.chessboard {
+	width: 400px;
+	height: 400px;
+	position: relative;
+}
+.tile {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+}
+.bt {
+	background-color: #8B4513;
+}
+.wt {
+	background-color: #FFDEAD;
+}

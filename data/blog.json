@@ -5,7 +5,9 @@
             "Title": "A (Generalized) Knight's Quest",
             "Subtitle": "subtitle goes here",
             "BodyPath": "articles/knight.md",
-            "OutputPath": "knight.html"
+            "OutputPath": "knight.html",
+            "Scripts": ["chess.js", "createGame.js"],
+            "Styles": ["knight.css"]
         }
     ]
 }
