@@ -27,6 +27,7 @@ type Section struct {
 }
 
 type Resume struct {
+	Tagline string
 	Sections []Section
 	SideSections []Section
 	Page

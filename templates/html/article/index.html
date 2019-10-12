@@ -1,8 +1,11 @@
 {{ block "content" . }}
-
-<h1>{{.Title}}</h1>
-<h2>{{.Subtitle}}</h2>
-
+<div id="article-container">
+<h1 id="article-title">{{.Title}}</h1>
+<p>{{.Subtitle}}</p>
+<div id="article-body">
+<br/>
 {{ .Body }}
+</div>
+</div>
 
 {{ end }}

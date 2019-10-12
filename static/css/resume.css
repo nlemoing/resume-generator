@@ -8,23 +8,29 @@ All screens:
     image width 100%, shouldn't grow wider than ~250-300px
     All items centered: image, h3, and links
     Links in div, text aligned on left side
-*/
 
 @media only screen and (min-device-width: 750px) {
     #resume-sidebar {
         position: absolute;
         top: 0;
         left: 0;
-        padding: 15px;
-        width: 220px;
+        width: 270px;
     }
 
     #resume-container {
         position: absolute;
         top: 0;
-        left: 250px;
-        width: calc(100% - 250px);
+        left: 300px;
+        width: calc(100% - 300px);
     }
+}
+*/
+
+#resume-sidebar {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 #resume-contact h3 {
@@ -44,6 +50,7 @@ All screens:
 #resume-headshot {
     width: 100%;
     max-width: 300px;
+    max-height: 300px;
     border-radius: 50%;
 }
 
@@ -78,5 +85,8 @@ All screens:
     max-width: 400px;
     background-color: white;
     border-radius: 20px;
+}
 
+.item h2 {
+    margin: 0;
 }

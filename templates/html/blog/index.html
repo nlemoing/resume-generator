@@ -1,9 +1,9 @@
 {{ block "content" . }}
-<div class="articles-holder">
+<div id="articles-holder">
 {{ range .Articles }}
 <div class="article-preview">
-    <h3><a href='/blog/{{.OutputPath}}'>{{.Title}}</a></h3>
-    <p>{{.Subtitle}}</p>
+    <h1><a href='/blog/{{.OutputPath}}'>{{.Title}}</a></h1>
+    <p class="article-subtitle">{{.Subtitle}}</p>
 </div>
 {{ end }}
 </div>

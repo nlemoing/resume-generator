@@ -1,0 +1,14 @@
+#articles-holder {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+#articles-holder a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#articles-holder a:hover {
+    text-decoration: underline;
+}

@@ -1,7 +1,7 @@
 #main-image {
     position: relative;
     background-image: url("/images/mountains.jpg");
-    height: 80%;
+    height: 500px;
     background-attachment: fixed;
     background-position: left;
     background-repeat: no-repeat;

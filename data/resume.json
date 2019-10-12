@@ -1,6 +1,7 @@
 {
     "Title": "Resume",
     "Styles": ["resume.css"],
+    "Tagline": "Tech enthusiast who loves working with data and writing code across the stack.",
     "Sections": [
         {
             "Title": "Experience",

@@ -8,6 +8,7 @@
   <title>{{.Title}}</title>
 </head>
 <body>
+<div id="site-wrapper">
 <header>
     <div id="home" class="header-item"><h1><a href="/">Nick Lemoing</a><h1></div>
     <div class='header-item'><h2><a href="/blog">Blog</a></h2></div>
@@ -38,6 +39,7 @@
 </header>
 <div id="content-wrapper">
 {{ template "content" .}}
+</div>
 </div>
 </body>
 {{ with .Scripts}}{{ range . }}<script src="/scripts/{{.}}"></script>{{ end }}{{ end }}

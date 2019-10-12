@@ -3,11 +3,12 @@
 <head>
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   <link href="/css/common.css" rel="stylesheet">
-  <link href="/css/knight.css" rel="stylesheet">
+  <link href="/css/knight.css" rel="stylesheet"><link href="/css/article.css" rel="stylesheet">
   <script src='https://kit.fontawesome.com/2a2ea5f2a1.js' crossorigin="anonymous"></script>
   <title>A (Generalized) Knight's Quest</title>
 </head>
 <body>
+<div id="site-wrapper">
 <header>
     <div id="home" class="header-item"><h1><a href="/">Nick Lemoing</a><h1></div>
     <div class='header-item'><h2><a href="/blog">Blog</a></h2></div>
@@ -27,8 +28,11 @@
     </div>
 </header>
 <div id="content-wrapper">
-<h1>A (Generalized) Knight's Quest</h1>
-<h2>subtitle goes here</h2>
+<div id="article-container">
+<h1 id="article-title">A (Generalized) Knight's Quest</h1>
+<p>Knights in chess move in an L-shape: 2 squares in one direction and 1 square perpendicular. But what if it didn't have to be like that?</p>
+<div id="article-body">
+<br/>
 <p>Knights in chess are weird. If you look at every other piece, they&rsquo;re allowed to move according to
 some reasonable set of restrictions. Rooks and kings move in cardinal directions. Bishops move along
 the diagonals. Queens can do either. To a lesser extend, so can pawns, but they always have to move
@@ -122,6 +126,9 @@ already seen. On the same chessboard, a <strong>(5,2)</strong>-knight will not b
 even though 2 and 5 seem to satisfy our criteria above. See if you can figure out why that would be. Once
 you&rsquo;ve got that, why would it happen in general?</p>
 <div class="chessboard" id="game5"></div> 
+</div>
+</div>
+</div>
 </div>
 </body>
 <script src="/scripts/chess.js"></script><script src="/scripts/createGame.js"></script>
