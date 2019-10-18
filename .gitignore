@@ -1,4 +1,5 @@
 output
 generator/generator
+server/server
 data/contact.json
 data/config.json
