@@ -1,7 +1,7 @@
 {
     "Title": "Resume",
     "Styles": ["resume.css"],
-    "Tagline": "Tech enthusiast who loves working with data and writing code across the stack.",
+    "Tagline": "4th-year Computer Science major at the University of Waterloo. Tech enthusiast who loves working with data and writing code across the stack.",
     "Sections": [
         {
             "Title": "Experience",
@@ -10,6 +10,7 @@
                     "Title": "Data Engineer",
                     "Subtitle": "Munich Re",
                     "Location": "New York",
+                    "Date": "9/2019 - Present",
                     "Subheading": "9/2019 (Ongoing)",
                     "Description": {
                         "Bulleted": true, 
@@ -24,6 +25,7 @@
                     "Title": "Data Scientist",
                     "Subtitle": "Munich Re",
                     "Location": "New York",
+                    "Date": "1/2019 - 4/2019",
                     "Subheading": "1/2019 - 4/2019",
                     "Description": {
                         "Bulleted": true,
@@ -38,6 +40,7 @@
                     "Title": "Software Developer",
                     "Subtitle": "Bonfire Interactive",
                     "Location": "Kitchener",
+                    "Date": "5/2019 - 8/2019",
                     "Subheading": "5/2019 - 8/2019",
                     "Description": {
                         "Bulleted": true,
@@ -57,6 +60,7 @@
                     "Title": "GNight",
                     "Subtitle": "Generalized knight simulator and visualizer",
                     "Subheading": "C++, OpenCV (7/2019)",
+                    "Date": "7/2019",
                     "Description": {
                         "Bulleted": true,
                         "Contents": [
@@ -69,6 +73,7 @@
                     "Title": "GoCV",
                     "Subtitle": "Templated resume generator",
                     "Subheading": "Golang (9/2019)",
+                    "Date": "9/2019",
                     "Description": {
                         "Bulleted": true, 
                         "Contents": [
@@ -85,6 +90,7 @@
                 {
                     "Title": "Research Assistant",
                     "Subheading": "3D Images (5/2019 - 8/2019)",
+                    "Date": "5/2019 - 8/2019",
                     "Description": {
                         "Bulleted": true,
                         "Contents": [
@@ -97,6 +103,7 @@
                 {
                     "Title": "Teaching Assistant",
                     "Subheading": "Math and CS (9/2017 - Present)",
+                    "Date": "9/2017 - Present",
                     "Description": {
                         "Bulleted": true,
                         "Contents": [

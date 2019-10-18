@@ -33,6 +33,11 @@ All screens:
     flex-direction: column;
 }
 
+#resume-sidebar p {
+    max-width: 500px;
+    text-align: center;
+}
+
 #resume-contact h3 {
     margin: 10px;
     text-align: center;
@@ -87,6 +92,19 @@ All screens:
     border-radius: 20px;
 }
 
-.item h2 {
+.item h2, .item h3, .item p {
     margin: 0;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-titles {
+    max-width: 60%;
+}
+
+.item-metadata {
+    color: rgb(78, 78, 78);
 }

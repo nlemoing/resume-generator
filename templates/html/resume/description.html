@@ -1,7 +1,11 @@
-{{ if .Contents }}{{ if .Bulleted }}
+{{ if .Contents }}
+<div class="description">
+{{ if .Bulleted }}
 <ul>
     {{range .Contents}}<li>{{.}}</li>{{end}}
 </ul>
 {{ else }}
 {{ range .Contents }}{{.}}<br/>{{end}}
-{{ end }}{{ end }}
+{{ end }}
+</div>
+{{ end }}

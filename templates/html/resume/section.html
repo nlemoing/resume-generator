@@ -4,8 +4,16 @@
     <div class="section-items">
     {{ range . -}}
     <div class="item">
-        <h2>{{.Title}}{{with .Subtitle}} | {{.}}{{end}}</h2>
-        <h3>{{.Subheading}}</h3>
+        <div class="item-header">
+        <div class="item-titles">
+            <h2>{{.Title}}</h2>
+            {{with .Subtitle}}<h3>{{.}}</h3>{{ end }}
+        </div>
+        <div class="item-metadata">
+            {{with .Date}}<p><i class="fas fa-calendar-alt"></i> {{.}}</p>{{end}}
+            {{with .Location}}<p><i class="fas fa-map-marker-alt"></i> {{.}}</p>{{end}}
+        </div>
+        </div>
         {{ with .Description }}{{ template "description.html" .}}{{ end }}
     </div>
     {{ end }}
