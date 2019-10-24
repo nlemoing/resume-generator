@@ -10,10 +10,13 @@
 {{ with .GitHub }}<i class="fab fa-github"></i> <a href='https://github.com/{{.}}'>GitHub</a><br/>{{end}}
 {{ end }}
 </div>
-<p>If you'd prefer, you can download a PDF version of this resume <a href="/files/nlemoing_resume.pdf" download>here</a>.</p>
+<p>
+    If you'd prefer, you can download a PDF version of this resume here.
+    <a href="/files/nlemoing_resume.pdf">View</a> <a href="/files/nlemoing_resume.pdf" download>Download</a>
+</p>
 </div>
 <div id="resume-container">
 {{ range .Sections }}{{ template "section.html" . }}{{ end }}
-{{ range .SideSections}}{{ template "section.html" . }}{{ end }}
+{{ with .SideSections}}{{ template "side-section.html" . }}{{ end }}
 </div>
 {{ end }}

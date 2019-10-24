@@ -1,0 +1,17 @@
+<div class="side-sections">
+    {{ range . }}{{ $SectionTitle := .Title }}
+    <div class="side-section">
+    <div class="side-section-title"><h1>{{$SectionTitle}}</h1></div>
+    {{ range .Items }}
+    <div class="side-section-item">
+        <h2>{{.Title}}</h2>
+        {{ if eq $SectionTitle "Skills" }}
+        {{ with .Description }}{{ template "skills-description.html" .}}{{ end }}
+        {{ else }}
+        {{ with .Description }}{{ template "description.html" . }}{{ end }}
+        {{ end }}
+    </div>
+    {{ end }}
+    </div>
+    {{ end }}
+</div>

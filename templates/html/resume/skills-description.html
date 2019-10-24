@@ -1,0 +1,3 @@
+{{ with .Contents }}
+{{ range $index, $element := . }}{{ if not (eq $index 0) }}, {{ end }}{{ $element }}{{ end }}
+{{ end }}

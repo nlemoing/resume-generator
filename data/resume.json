@@ -143,27 +143,6 @@
                     }
                 },
                 {
-                    "Title": "Cloud environments",
-                    "Description": {
-                        "Bulleted": false,
-                        "Contents": [
-                            "AWS",
-                            "Azure"
-                        ]
-                    }
-                },
-                {
-                    "Title": "DevOps",
-                    "Description": {
-                        "Bulleted": false,
-                        "Contents": [
-                            "Docker",
-                            "Kubernetes",
-                            "Vagrant"
-                        ]
-                    }
-                },
-                {
                     "Title": "Frontend Frameworks",
                     "Description": {
                         "Bulleted": false,
@@ -182,6 +161,27 @@
                             "Pandas",
                             "Scikit-learn",
                             "Jupyter"
+                        ]
+                    }
+                },
+                {
+                    "Title": "DevOps",
+                    "Description": {
+                        "Bulleted": false,
+                        "Contents": [
+                            "Docker",
+                            "Kubernetes",
+                            "Vagrant"
+                        ]
+                    }
+                },
+                {
+                    "Title": "Cloud environments",
+                    "Description": {
+                        "Bulleted": false,
+                        "Contents": [
+                            "AWS",
+                            "Azure"
                         ]
                     }
                 }
