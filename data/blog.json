@@ -8,6 +8,12 @@
             "OutputPath": "knight.html",
             "Scripts": ["chess.js", "createGame.js"],
             "Styles": ["knight.css"]
+        },
+        {
+            "Title": "Get Excited About Learning Racket",
+            "Subtitle": "If you're a first year Waterloo student, chances are you've never worked with a language like Racket. Here's why you should be excited.",
+            "BodyPath": "articles/racket.md",
+            "OutputPath": "racket.html"
         }
     ],
     "Styles": ["blog.css"]

@@ -25,6 +25,7 @@
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     padding: 12px 12px 12px 12px;
+    max-width: 80%;
 }
 #main-image-text h2 {
     margin: 0 0 0 0;

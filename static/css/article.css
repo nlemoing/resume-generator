@@ -3,3 +3,8 @@
     max-width: 500px;
     margin: auto;
 }
+
+#article-subtitle {
+    color: #555555;
+    font-size: 14pt;
+}
