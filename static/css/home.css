@@ -37,17 +37,22 @@
 
 #main-information {
     width: 800px;
+    max-width: 100%;
     margin: 20px auto;
 }
 
-#information-grid {
-    display: grid;
-    grid-template-columns: 25% auto;
-    column-gap: 5px;
-    align-items: center;
+@media only screen and (min-device-width: 600px) {
+    #information-grid {
+        display: grid;
+        grid-template-columns: 25% auto;
+        column-gap: 5px;
+        align-items: center;
+        max-width: 100%;
+    }
 }
 
-#information-grid img {
+#information-grid img,
+#information-grid p {
     width: 100%;
 }
 

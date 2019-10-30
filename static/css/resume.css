@@ -65,7 +65,9 @@ All screens:
 
 .section-title {
     padding: 20px;
-    background-color: black;
+    background-color: rgba(0,0,0,0.5);
+    background-size: cover;
+    background-blend-mode: overlay;
     color: white;
     text-align: center;
     display: flex;
@@ -76,6 +78,21 @@ All screens:
     padding: 0 0 0 0;
 }
 
+.section-title.t0 {
+    background-image: url("/images/brooklyn_bridge.jpg");
+    background-position-y: center;
+}
+
+.section-title.t1 {
+    background-image: url("/images/east_river_skyline.jpg");
+    background-position-y: center;
+}
+
+.section-title.t2 {
+    background-image: url("/images/domino_park.jpg");
+    background-position-y: 35%;
+}
+
 .section-items {
     display: flex;
     flex-wrap: wrap;
@@ -83,10 +100,10 @@ All screens:
 }
 
 .item {
-    padding: 12px;
-    margin: 30px; 
+    padding: 6px;
+    margin: 12px 20px; 
     width: 100%;
-    max-width: 400px;
+    max-width: 330px;
     background-color: white;
     border-radius: 20px;
 }

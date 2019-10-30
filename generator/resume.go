@@ -24,6 +24,7 @@ type Section struct {
 	Title string
 	Items []SectionItems
 	Description Description
+	Position int
 }
 
 type Resume struct {
@@ -38,6 +39,9 @@ func generateResume() error {
 	var resumeParsedData Resume
 	if err := ReadJson("data/resume.json", &resumeParsedData); err != nil {
 		return err
+	}
+	for i := 0; i < len(resumeParsedData.Sections); i++ {
+		resumeParsedData.Sections[i].Position = i;
 	}
 
 	texTemplate, err := template.New("").Delims("<", ">").ParseGlob("templates/tex/*")
