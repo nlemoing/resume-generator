@@ -126,29 +126,23 @@ All screens:
 }
 
 .side-sections {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: stretch;
-}
-
-.side-section {
-    flex: auto;
-}
-
-.side-section-title {
-    padding: 20px;
-    text-align: center;
-    background-color: black;
-    color: white;
+    display: grid;
+    row-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 }
 
 .side-section h2 {
     margin: 0;
 }
 
+.side-section-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .side-section-item {
-    max-width: 100%;
-    margin: auto;
-    padding: 10px;
+    width: 45%;
+    min-width: 180px;
+    padding: 5px;
 }
