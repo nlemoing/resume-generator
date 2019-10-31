@@ -1,7 +1,7 @@
 <div class="side-sections">
     {{ range . }}{{ $SectionTitle := .Title }}
     <div class="side-section">
-    <div class="section-title"><h1>{{$SectionTitle}}</h1></div>
+    <div class="section-title t{{.Position}}"><h1>{{$SectionTitle}}</h1></div>
     <div class="side-section-items">
     {{ range .Items }}
     <div class="side-section-item">

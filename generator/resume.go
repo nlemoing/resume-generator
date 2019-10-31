@@ -40,8 +40,13 @@ func generateResume() error {
 	if err := ReadJson("data/resume.json", &resumeParsedData); err != nil {
 		return err
 	}
-	for i := 0; i < len(resumeParsedData.Sections); i++ {
+	ii := len(resumeParsedData.Sections)
+	jj := len(resumeParsedData.SideSections)
+	for i := 0; i < ii; i++ {
 		resumeParsedData.Sections[i].Position = i;
+	}
+	for j := 0; j < jj; j++ {
+		resumeParsedData.SideSections[j].Position = j + ii;
 	}
 
 	texTemplate, err := template.New("").Delims("<", ">").ParseGlob("templates/tex/*")

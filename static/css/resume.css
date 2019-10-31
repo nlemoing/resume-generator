@@ -93,6 +93,18 @@ All screens:
     background-position-y: 35%;
 }
 
+.section-title.t3 {
+    background-image: url("/images/m3.jpg");
+}
+
+.section-title.t4 {
+    background-image: url("/images/williamsburg_factory.jpg");
+}
+
+.section-title.t5 {
+    background-image: url("/images/ultimate_catch.jpg");
+}
+
 .section-items {
     display: flex;
     flex-wrap: wrap;
