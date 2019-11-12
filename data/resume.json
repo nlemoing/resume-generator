@@ -57,10 +57,25 @@
             "Title": "Projects",
             "Items": [
                 {
+                    "Title": "PlanUW",
+                    "Subtitle": "Web-based schedule planner for uWaterloo courses",
+                    "Subheading": "Node.js, Postgres",
+                    "Date": "11/2019",
+                    "Link": "https://github.com/nlemoing/uwaterloo-course-scheduler",
+                    "Description": {
+                        "Bulleted": true,
+                        "Contents": [
+                            "Features include course exploration, planning and degree requirement visualizations",
+                            "Lightweight frontend for blazing fast load times (60KB for all assets)"
+                        ]
+                    }
+                },
+                {
                     "Title": "GNight",
                     "Subtitle": "Generalized knight simulator and visualizer",
                     "Subheading": "C++, OpenCV (7/2019)",
                     "Date": "7/2019",
+                    "Link": "https://github.com/nlemoing/generalized-knight",
                     "Description": {
                         "Bulleted": true,
                         "Contents": [
@@ -74,6 +89,7 @@
                     "Subtitle": "Templated resume generator",
                     "Subheading": "Golang (9/2019)",
                     "Date": "9/2019",
+                    "Link": "https://github.com/nlemoing/resume-generator",
                     "Description": {
                         "Bulleted": true, 
                         "Contents": [
@@ -191,6 +207,16 @@
                             "Azure"
                         ]
                     }
+                },
+                {
+                    "Title": "Communication",
+                    "Description": {
+                        "Bulleted": false,
+                        "Contents": [
+                            "Client pitches and presentations",
+                            "Strong technical and informal writer"
+                        ]
+                    }
                 }
             ]
         },
@@ -202,8 +228,8 @@
                     "Description": {
                         "Bulleted": false,
                         "Contents": [
-                            "I play for my university team as well as for a local club team.",
-                            "I also took on a leadership role with the NYU team while living in New York."
+                            "I've played for my university's school team for three seasons.",
+                            "I also took on a leadership role on NYU's team while living in New York"
                         ]
                     }
                 },
@@ -212,7 +238,8 @@
                     "Description": {
                         "Bulleted": false,
                         "Contents": [
-                            "I write articles about sports and business topics that interest me."
+                            "I write articles about sports and business topics that interest me.",
+                            "I'm also a hobbyist short story writer."
                         ]
                     }
                 }
