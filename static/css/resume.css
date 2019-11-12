@@ -26,6 +26,11 @@ All screens:
 }
 */
 
+#resume-container ul {
+    padding-left: 0px;
+    margin-left: 0px;
+}
+
 #resume-sidebar {
     padding: 15px;
     display: flex;
@@ -135,6 +140,7 @@ All screens:
 
 .item-metadata {
     color: rgb(78, 78, 78);
+    font-size: 11pt;
 }
 
 .side-sections {
