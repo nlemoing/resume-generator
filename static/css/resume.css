@@ -138,6 +138,10 @@ All screens:
     max-width: 60%;
 }
 
+.item-titles a:visited {
+    color: rgb(78, 78, 78);
+}
+
 .item-metadata {
     color: rgb(78, 78, 78);
     font-size: 11pt;

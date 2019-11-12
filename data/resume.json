@@ -58,7 +58,7 @@
             "Items": [
                 {
                     "Title": "PlanUW",
-                    "Subtitle": "Web-based schedule planner for uWaterloo courses",
+                    "Subtitle": "Schedule planner for uWaterloo courses",
                     "Subheading": "Node.js, Postgres",
                     "Date": "11/2019",
                     "Link": "https://github.com/nlemoing/uwaterloo-course-scheduler",

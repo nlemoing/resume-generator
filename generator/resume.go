@@ -17,6 +17,7 @@ type SectionItems struct {
 	Subheading string
 	Location string
 	Date string
+	Link string
 	Description Description
 }
 
