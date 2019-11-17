@@ -4,12 +4,12 @@
     margin: auto;
 }
 
-#blog-container a {
+.article-title-container a {
     color: inherit;
     text-decoration: none;
 }
 
-#blog-container a:hover {
+.article-title-container a:hover {
     text-decoration: underline;
 }
 
