@@ -2,18 +2,18 @@
     "Title": "Blog",
     "Articles": [
         {
-            "Title": "A (Generalized) Knight's Quest",
-            "Subtitle": "Knights in chess move in an L-shape: 2 squares in one direction and 1 square perpendicular. But what if it didn't have to be like that?",
-            "BodyPath": "articles/knight.md",
-            "OutputPath": "knight.html",
-            "Scripts": ["chess.js", "createGame.js"],
-            "Styles": ["knight.css"]
+            "Title": "Spotify vs. Apple: Why We Need To Stop Using Bad Analogies",
+            "Subtitle": "Spotify and Apple have been fighting recently, and commentary from both sides has been shaped by potentially misleading analogies.",
+            "BodyPath": "articles/spotify.md",
+            "OutputPath": "bad-analogies.html",
+            "Date": "March 15, 2019"
         },
         {
             "Title": "Get Excited About Learning Racket",
             "Subtitle": "If you're a first year Waterloo student, chances are you've never worked with a language like Racket. Here's why you should be excited.",
             "BodyPath": "articles/racket.md",
-            "OutputPath": "racket.html"
+            "OutputPath": "racket.html",
+            "Date": "September 6, 2018"
         }
     ],
     "Styles": ["blog.css"]
