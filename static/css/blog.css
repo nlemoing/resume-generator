@@ -14,11 +14,16 @@
 }
 
 .article-title {
-    margin: 10px 0;
+    margin: 0 0 10px 0;
 }
 
 .article-subtitle {
     color: #555555;
     font-size: 16pt;
     margin: 5px 0;
+}
+
+.article-date {
+    font-size: 12pt;
+    margin: 5px 0 0 0;
 }
