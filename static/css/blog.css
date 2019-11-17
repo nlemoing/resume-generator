@@ -1,14 +1,24 @@
-#articles-holder {
+#blog-container {
     width: 100%;
     max-width: 500px;
     margin: auto;
 }
 
-#articles-holder a {
+#blog-container a {
     color: inherit;
     text-decoration: none;
 }
 
-#articles-holder a:hover {
+#blog-container a:hover {
     text-decoration: underline;
+}
+
+.article-title {
+    margin: 10px 0;
+}
+
+.article-subtitle {
+    color: #555555;
+    font-size: 16pt;
+    margin: 5px 0;
 }

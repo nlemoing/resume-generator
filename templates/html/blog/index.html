@@ -1,10 +1,7 @@
 {{ block "content" . }}
-<div id="articles-holder">
+<div id="blog-container">
 {{ range .Articles }}
-<div class="article-preview">
-    <h1><a href='/blog/{{.OutputPath}}'>{{.Title}}</a></h1>
-    <p class="article-subtitle">{{.Subtitle}}</p>
-</div>
+{{ template "title.html" . }}
 {{ end }}
 </div>
 {{ end }}

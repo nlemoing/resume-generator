@@ -36,7 +36,8 @@ func generateBlog() error {
 		return err
 	}
 
-	blogTemplate, err := template.New("").ParseFiles("templates/html/main.html", "templates/html/blog/index.html")
+	blogTemplate, err := template.New("").ParseFiles("templates/html/main.html", 
+		"templates/html/blog/index.html", "templates/html/blog/title.html")
 	if err != nil {
 		return err
 	}
@@ -46,13 +47,14 @@ func generateBlog() error {
 		return err
 	}
 
-	articleTemplate, err := template.New("").ParseFiles("templates/html/main.html", "templates/html/article/index.html")
+	articleTemplate, err := template.New("").ParseFiles("templates/html/main.html", 
+		"templates/html/article/index.html", "templates/html/blog/title.html")
 	if err != nil {
 		return err
 	}
 	var out string
 	for _, article := range blog.Articles {
-		article.Styles = append(article.Styles, "article.css")
+		article.Styles = append(article.Styles, "blog.css")
 		out = filepath.Join("static/blog", article.OutputPath)
 		err = TemplateToFile(article, articleTemplate, "main.html", out)
 		if err != nil {

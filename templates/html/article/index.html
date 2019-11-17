@@ -1,7 +1,6 @@
 {{ block "content" . }}
-<div id="article-container">
-<h1 id="article-title">{{.Title}}</h1>
-<p id="article-subtitle"><i>{{.Subtitle}}</i></p>
+<div id="blog-container">
+{{ template "title.html" . }}
 <div id="article-body">
 <br/>
 {{ .Body }}
