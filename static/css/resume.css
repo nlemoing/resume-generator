@@ -168,3 +168,7 @@ All screens:
     min-width: 180px;
     padding: 5px;
 }
+
+.description-item {
+    margin: 5px 0;
+}
