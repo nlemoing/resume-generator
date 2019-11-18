@@ -2,6 +2,13 @@
     "Title": "Blog",
     "Articles": [
         {
+            "Title": "On the importance of buying domain names early",
+            "Subtitle": "Too slow, Jacob.",
+            "BodyPath": "articles/jabon.md",
+            "OutputPath": "jabon.html",
+            "Date": "November 17, 2019"
+        },
+        {
             "Title": "Spotify vs. Apple: Why We Need To Stop Using Bad Analogies",
             "Subtitle": "Spotify and Apple have been fighting recently, and commentary from both sides has been shaped by potentially misleading analogies.",
             "BodyPath": "articles/spotify.md",
