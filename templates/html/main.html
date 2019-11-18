@@ -10,38 +10,37 @@
 </head>
 <body>
 <div id="site-wrapper">
-<header>
-    <div id="home" class="header-item"><h1><a href="/">Nick Lemoing</a><h1></div>
-    <div class='header-item'><h2><a href="/blog">Blog</a></h2></div>
-    <div class='header-item'><h2><a href="/resume">Resume</a></h2></div>
-    {{ with .Details }}
-    <div class='header-item header-right'></div>
-    {{ with .Email }}
-    <div class='header-item'>
-      <a href='mailto:{{.}}'><i class="fas fa-envelope"></i></a>
-    </div>
-    {{ end }}
-    {{ with .Phone }}
-    <div class='header-item'>
-      <a href='tel:{{.}}'><i class="fas fa-phone"></i></a>
-    </div>
-    {{ end }}
-    {{ with .GitHub }}
-    <div class='header-item'>
-      <a href='https://github.com/{{.}}'><i class="fab fa-github"></i></a>
-    </div>
-    {{ end }}
-    {{ with .LinkedIn }}
-    <div class='header-item'>
-      <a href='https://linkedin.com/in/{{.}}'><i class="fab fa-linkedin"></i></a>
-    </div>
-    {{ end }}
-    {{ end }}
-</header>
+<nav class="top-navbar">
+    <div id="nav-link-home" class="header-item"><strong><a href="/">Nick Lemoing</a></strong></div>
+    <div class='header-item'><a href="/blog">Blog</a></div>
+    <div class='header-item'><a href="/resume">Resume</a></div>
+</nav>
 <div id="content-wrapper">
 {{ template "content" .}}
 </div>
 </div>
+{{ with .Details }}
+<footer>
+    Get in touch
+    <div class="contact-links">
+    {{ with .Email }}
+    <div class='footer-item'>
+      <a href='mailto:{{.}}'><i class="fas fa-envelope"></i></a>
+    </div>
+    {{ end }}
+    {{ with .GitHub }}
+    <div class='footer-item'>
+      <a href='https://github.com/{{.}}'><i class="fab fa-github"></i></a>
+    </div>
+    {{ end }}
+    {{ with .LinkedIn }}
+    <div class='footer-item'>
+      <a href='https://linkedin.com/in/{{.}}'><i class="fab fa-linkedin"></i></a>
+    </div>
+    {{ end }}
+    </div>
+</footer>
+{{ end }}
 </body>
 {{ with .Scripts}}{{ range . }}<script src="/scripts/{{.}}"></script>{{ end }}{{ end }}
 </html>

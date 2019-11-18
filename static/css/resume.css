@@ -121,11 +121,9 @@ All screens:
     margin: 12px 20px; 
     width: 100%;
     max-width: 330px;
-    background-color: white;
-    border-radius: 20px;
 }
 
-.item h2, .item h3, .item p {
+.item h3, .item h4, .item p {
     margin: 0;
 }
 
@@ -147,28 +145,37 @@ All screens:
     font-size: 11pt;
 }
 
+.item-metadata p {
+    margin: 5px 0;
+}
+
 .side-sections {
     display: grid;
     row-gap: 10px;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 }
 
-.side-section h2 {
+.side-section h3 {
     margin: 0;
 }
 
 .side-section-items {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .side-section-item {
-    width: 45%;
-    min-width: 180px;
+    padding: 6px;
+    margin: 12px 20px; 
+    width: calc(50% - 52px);
     padding: 5px;
 }
 
 .description-item {
     margin: 5px 0;
 }
+
+/* .item h3, .side-section-item h3 {
+    color: rgb(0, 81, 212)
+} */

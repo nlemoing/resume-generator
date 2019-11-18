@@ -28,32 +28,23 @@
     max-width: 80%;
 }
 #main-image-text h2 {
-    margin: 0 0 0 0;
+    margin: 0;
 }
 
-#main-information-wrapper {
-    width: 100%;
+#main-image-text p {
+    margin: 5px 0 0;
 }
 
 #main-information {
     width: 800px;
-    max-width: 100%;
+    max-width: 90%;
     margin: 20px auto;
 }
 
-@media only screen and (min-device-width: 600px) {
-    #information-grid {
-        display: grid;
-        grid-template-columns: 25% auto;
-        column-gap: 20px;
-        align-items: center;
-        max-width: 100%;
-    }
-}
-
-#information-grid img,
-#information-grid p {
-    width: 100%;
+#main-information img {
+    display: block;
+    max-width: 70%;
+    margin: auto;
 }
 
 @media only screen and (max-device-width: 600px) {
