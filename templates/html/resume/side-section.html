@@ -5,7 +5,7 @@
     <div class="side-section-items">
     {{ range .Items }}
     <div class="side-section-item">
-        <h2>{{with .Link}}<a href='{{.}}'>{{end}}{{.Title}}{{if .Link}}</a>{{end}}</h2>
+        <h3>{{with .Link}}<a href='{{.}}'>{{end}}{{.Title}}{{if .Link}}</a>{{end}}</h3>
         {{ if eq $SectionTitle "Skills" }}
         {{ with .Description }}{{ template "skills-description.html" .}}{{ end }}
         {{ else }}

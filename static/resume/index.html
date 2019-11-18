@@ -10,24 +10,11 @@
 </head>
 <body>
 <div id="site-wrapper">
-<header>
-    <div id="home" class="header-item"><h1><a href="/">Nick Lemoing</a><h1></div>
-    <div class='header-item'><h2><a href="/blog">Blog</a></h2></div>
-    <div class='header-item'><h2><a href="/resume">Resume</a></h2></div>
-    <div class='header-item header-right'></div>
-    <div class='header-item'>
-      <a href='mailto:nlemoing@uwaterloo.ca'><i class="fas fa-envelope"></i></a>
-    </div>
-    <div class='header-item'>
-      <a href='tel:(929) 343-6446'><i class="fas fa-phone"></i></a>
-    </div>
-    <div class='header-item'>
-      <a href='https://github.com/nlemoing'><i class="fab fa-github"></i></a>
-    </div>
-    <div class='header-item'>
-      <a href='https://linkedin.com/in/nick-lemoing'><i class="fab fa-linkedin"></i></a>
-    </div>
-</header>
+<nav class="top-navbar">
+    <div id="nav-link-home" class="header-item"><strong><a href="/">Nick Lemoing</a></strong></div>
+    <div class='header-item'><a href="/blog">Blog</a></div>
+    <div class='header-item'><a href="/resume">Resume</a></div>
+</nav>
 <div id="content-wrapper">
 <div id="resume-sidebar">
 <img src="/images/nick.jpg" id="resume-headshot"></img>
@@ -50,8 +37,8 @@
     <div class="item">
         <div class="item-header">
         <div class="item-titles">
-            <h2>Data Engineer</h2>
-            <h3>Munich Re</h3>
+            <h3>Data Engineer</h3>
+            <h4>Munich Re</h4>
         </div>
         <div class="item-metadata">
             <p><i class="fas fa-calendar-alt"></i> 9/2019 - Present</p>
@@ -67,8 +54,8 @@
     <div class="item">
         <div class="item-header">
         <div class="item-titles">
-            <h2>Data Scientist</h2>
-            <h3>Munich Re</h3>
+            <h3>Data Scientist</h3>
+            <h4>Munich Re</h4>
         </div>
         <div class="item-metadata">
             <p><i class="fas fa-calendar-alt"></i> 1/2019 - 4/2019</p>
@@ -84,8 +71,8 @@
     <div class="item">
         <div class="item-header">
         <div class="item-titles">
-            <h2>Software Developer</h2>
-            <h3>Bonfire Interactive</h3>
+            <h3>Software Developer</h3>
+            <h4>Bonfire Interactive</h4>
         </div>
         <div class="item-metadata">
             <p><i class="fas fa-calendar-alt"></i> 5/2019 - 8/2019</p>
@@ -105,8 +92,8 @@
     <div class="item">
         <div class="item-header">
         <div class="item-titles">
-            <h2><a href='https://github.com/nlemoing/uwaterloo-course-scheduler'>PlanUW</a></h2>
-            <h3>Schedule planner for uWaterloo courses</h3>
+            <h3><a href='https://github.com/nlemoing/uwaterloo-course-scheduler'>PlanUW</a></h3>
+            <h4>Schedule planner for uWaterloo courses</h4>
         </div>
         <div class="item-metadata">
             <p><i class="fas fa-calendar-alt"></i> 11/2019</p>
@@ -121,8 +108,8 @@
     <div class="item">
         <div class="item-header">
         <div class="item-titles">
-            <h2><a href='https://github.com/nlemoing/generalized-knight'>GNight</a></h2>
-            <h3>Generalized knight simulator and visualizer</h3>
+            <h3><a href='https://github.com/nlemoing/generalized-knight'>GNight</a></h3>
+            <h4>Generalized knight simulator and visualizer</h4>
         </div>
         <div class="item-metadata">
             <p><i class="fas fa-calendar-alt"></i> 7/2019</p>
@@ -137,8 +124,8 @@
     <div class="item">
         <div class="item-header">
         <div class="item-titles">
-            <h2><a href='https://github.com/nlemoing/resume-generator'>GoCV</a></h2>
-            <h3>Templated resume generator</h3>
+            <h3><a href='https://github.com/nlemoing/resume-generator'>GoCV</a></h3>
+            <h4>Templated resume generator</h4>
         </div>
         <div class="item-metadata">
             <p><i class="fas fa-calendar-alt"></i> 9/2019</p>
@@ -157,7 +144,7 @@
     <div class="item">
         <div class="item-header">
         <div class="item-titles">
-            <h2>Research Assistant</h2>
+            <h3>Research Assistant</h3>
         </div>
         <div class="item-metadata">
             <p><i class="fas fa-calendar-alt"></i> 5/2019 - 8/2019</p>
@@ -172,7 +159,7 @@
     <div class="item">
         <div class="item-header">
         <div class="item-titles">
-            <h2>Teaching Assistant</h2>
+            <h3>Teaching Assistant</h3>
         </div>
         <div class="item-metadata">
             <p><i class="fas fa-calendar-alt"></i> 9/2017 - Present</p>
@@ -191,7 +178,7 @@
     <div class="section-title t3"><h1>Education</h1></div>
     <div class="side-section-items">
     <div class="side-section-item">
-        <h2>University of Waterloo</h2>
+        <h3>University of Waterloo</h3>
 <div class="description">
 <p class="description-item">91 Average, Dean's List in 5 of 6 terms</p><p class="description-item">Favourite Courses: Game Theory, Theory of Computation</p>
 </div>
@@ -202,27 +189,27 @@
     <div class="section-title t4"><h1>Skills</h1></div>
     <div class="side-section-items">
     <div class="side-section-item">
-        <h2>Programming Languages</h2>
+        <h3>Programming Languages</h3>
 Python, JavaScript, C/C++, Golang, Scheme
     </div>
     <div class="side-section-item">
-        <h2>Frontend Frameworks</h2>
+        <h3>Frontend Frameworks</h3>
 React, Angular
     </div>
     <div class="side-section-item">
-        <h2>Data Science</h2>
+        <h3>Data Science</h3>
 NumPy, Pandas, Scikit-learn, Jupyter
     </div>
     <div class="side-section-item">
-        <h2>DevOps</h2>
+        <h3>DevOps</h3>
 Docker, Kubernetes, Vagrant
     </div>
     <div class="side-section-item">
-        <h2>Cloud environments</h2>
+        <h3>Cloud environments</h3>
 AWS, Azure
     </div>
     <div class="side-section-item">
-        <h2>Communication</h2>
+        <h3>Communication</h3>
 Client pitches and presentations, Strong technical and informal writer
     </div>
     </div>
@@ -231,13 +218,13 @@ Client pitches and presentations, Strong technical and informal writer
     <div class="section-title t5"><h1>Interests</h1></div>
     <div class="side-section-items">
     <div class="side-section-item">
-        <h2>Ultimate Frisbee</h2>
+        <h3>Ultimate Frisbee</h3>
 <div class="description">
 <p class="description-item">I've played for my university's school team for three seasons.</p><p class="description-item">I also took on a leadership role on NYU's team while living in New York.</p>
 </div>
     </div>
     <div class="side-section-item">
-        <h2>Creative Writing</h2>
+        <h3>Creative Writing</h3>
 <div class="description">
 <p class="description-item">I write articles about sports and business topics that interest me.</p><p class="description-item">I'm also a hobbyist short story writer.</p>
 </div>
@@ -248,5 +235,19 @@ Client pitches and presentations, Strong technical and informal writer
 </div>
 </div>
 </div>
+<footer>
+    Get in touch
+    <div class="contact-links">
+    <div class='footer-item'>
+      <a href='mailto:nlemoing@uwaterloo.ca'><i class="fas fa-envelope"></i></a>
+    </div>
+    <div class='footer-item'>
+      <a href='https://github.com/nlemoing'><i class="fab fa-github"></i></a>
+    </div>
+    <div class='footer-item'>
+      <a href='https://linkedin.com/in/nick-lemoing'><i class="fab fa-linkedin"></i></a>
+    </div>
+    </div>
+</footer>
 </body>
 </html>
