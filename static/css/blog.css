@@ -32,3 +32,15 @@
 #article-body > p {
     text-indent: 20px;
 }
+
+#article-body > figure {
+    margin: 10px;
+    width: calc(100% - 10px);
+    text-align: center;
+    font-size: 10pt;
+    color: #555555;
+}
+
+#article-body > figure > figcaption {
+    margin: 5px 0;
+}

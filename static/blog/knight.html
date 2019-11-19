@@ -6,33 +6,20 @@
   <link href="/css/common.css" rel="stylesheet">
   <link href="/css/knight.css" rel="stylesheet"><link href="/css/blog.css" rel="stylesheet">
   <script src='https://kit.fontawesome.com/2a2ea5f2a1.js' crossorigin="anonymous"></script>
-  <title>A (Generalized) Knight's Quest</title>
+  <title>A Generalized Knight's Quest</title>
 </head>
 <body>
 <div id="site-wrapper">
-<header>
-    <div id="home" class="header-item"><h1><a href="/">Nick Lemoing</a><h1></div>
-    <div class='header-item'><h2><a href="/blog">Blog</a></h2></div>
-    <div class='header-item'><h2><a href="/resume">Resume</a></h2></div>
-    <div class='header-item header-right'></div>
-    <div class='header-item'>
-      <a href='mailto:nlemoing@uwaterloo.ca'><i class="fas fa-envelope"></i></a>
-    </div>
-    <div class='header-item'>
-      <a href='tel:(929) 343-6446'><i class="fas fa-phone"></i></a>
-    </div>
-    <div class='header-item'>
-      <a href='https://github.com/nlemoing'><i class="fab fa-github"></i></a>
-    </div>
-    <div class='header-item'>
-      <a href='https://linkedin.com/in/nick-lemoing'><i class="fab fa-linkedin"></i></a>
-    </div>
-</header>
+<nav class="top-navbar">
+    <div id="nav-link-home" class="header-item"><strong><a href="/">Nick Lemoing</a></strong></div>
+    <div class='header-item'><a href="/blog">Blog</a></div>
+    <div class='header-item'><a href="/resume">Resume</a></div>
+</nav>
 <div id="content-wrapper">
 <div id="blog-container">
 <div class="article-title-container">
-    <p class="article-date"><i class="far fa-clock"></i> November 16, 2019</p>
-    <h1 class="article-title"><a href='/blog/knight.html'>A (Generalized) Knight's Quest</a></h1>
+    <p class="article-date"><i class="far fa-clock"></i> November 19, 2019</p>
+    <h1 class="article-title"><a href='/blog/knight.html'>A Generalized Knight's Quest</a></h1>
     <p class="article-subtitle"><i>Knights in chess move in an L-shape: 2 squares in one direction and 1 square perpendicular. But what if it didn't have to be like that?</i></p>
 </div>
 <div id="article-body">
@@ -54,76 +41,62 @@ movement pattern makes it easy for them to attack multiple pieces at once.</p>
 and 1? Or 4 and 2? The knight is one of the oldest and most consistent pieces in history, but it also
 feels like the one with which we can do the most experimentation. Let&rsquo;s see what happens to the knight if
 we change things up a bit.</p>
-<h2>New and Improved: The Generalized Knight</h2>
+<figure>
+<svg id='knight-intro-animation'></svg>
+<figcaption>A regular knight, randomly roaming.</figcaption>
+</figure>
+<h2>The Generalized Knight</h2>
 <p>We&rsquo;ve seen how knights move normally: <strong>2</strong> steps in one direction followed by <strong>1</strong> perpendicular
 step. 2 and 1 seem fairly arbitrary. We can replace these with pretty much any pair of whole numbers.
-Each of these new knights will still have the same &ldquo;L&rdquo;-shaped movement pattern, just with slightly
+Each of these new knights will still have the same &ldquo;L&rdquo;-shaped movement pattern, just with
 different distances.</p>
-<p>An <strong>(a, b)</strong>-knight takes <strong>a</strong> steps in any cardinal direction and then <strong>b</strong> steps in a perpendicular
-direction. Using this definition, our original knight was a <strong>(2,1)</strong>-knight. Try using it below to capture
-the black knight. Valid moves are highlighted in green and you can reset the knight to its original
-position by clicking on it.</p>
-<div class="chessboard" id="game1"></div>
-<p>Knights are tricky to move, at least compared with other pieces that move in a straight line.
-Even with the most optimal set of moves, a knight still takes <strong>5</strong> moves to capture the black knight from
-its starting position. So what happens to the movement if we try some other knight varieties?</p>
-<h2>The common factor problem</h2>
-<p>Our first experiment involves a &ldquo;doubled&rdquo; knight. Instead of a <strong>(2,1)</strong>-knight, we&rsquo;ll double its movements
-and use a <strong>(4, 2)</strong>-knight.</p>
-<div class="chessboard" id="game2"></div>
-<p>Part of what makes this knight tricky to maneuver is its size relative to the board; each step takes the
-knight halfway across the board in some direction. Even with an infinite board, though, we wouldn&rsquo;t be
-able to capture the black knight. Because of this choice of knight, there&rsquo;s a whole swath of unreachable
-squares.</p>
-<p>Imagine the board was on a co-ordinate grid, with a number corresponding to each square&rsquo;s row and column.
-Our knight starts at row 0, column 0. With the <strong>(4,2)</strong>-knight, each movement changes the knight&rsquo;s x
-co-ordinate by either 2 or 4 squares in either direction. The same applies for the y co-ordinate. Because
-of this, the knight will always stay on squares with even co-ordinates, so any odd rows or columns are
-inaccessible. Capturing the black knight with the <strong>(4,2)</strong>-knight is impossible because it lives in the
-7th column.</p>
-<p>In fact, if <strong>a</strong> and <strong>b</strong> share <em>any</em> factors (not including 1), there will be a number of squares that are impossible to reach. Even if we
-have a chessboard that extends forever.</p>
-<p>So, if we want to be able to reach every square, we can&rsquo;t choose <strong>a</strong> and <strong>b</strong> if they share any factors that aren&rsquo;t 1.</p>
-<h2>The parity problem</h2>
-<p>The next experiment will be with a <strong>(3, 1)</strong>-knight. 3 and 1 don&rsquo;t have any common factors (excluding one),
-so we should be able to reach every row and column.</p>
-<div class="chessboard" id="game3"></div> 
-<p>It turns out that this choice has its own set of problems. Even though we&rsquo;re able to get to every row and
-every column somehow, we still can&rsquo;t capture the other piece. To see why, take a look at the color of the
-squares that we&rsquo;re able to reach. We start on a dark square. Each new move leaves us on a dark square as
-well. With the knight we chose, there&rsquo;s no way to get to any of the light squares.</p>
-<p>It turns out there&rsquo;s quite a few knights that are similarly confined to one color of squares.
-A <strong>(7, 5)</strong> knight would have the same problem, as would a <strong>(6, 4)</strong> knight. These knights all share
-the same problem because they are all <em>even</em>. In the same way that individual numbers can be even or odd,
-so can pairs of numbers (or triplets, or quadruplets, or&hellip; you get the point).</p>
-<p>Before we go into how this is defined, there&rsquo;s some useful vocab we should know: the even-ness or odd-ness of a number is known as its <em>parity</em>. To find the parity of individual numbers, we check if they&rsquo;re divisible by two. If they are, they&rsquo;re even. Otherwise, they&rsquo;re odd. We can extend that definition to pairs of numbers: first, add the two numbers in the pair together, then check the parity of the result. The parity of the pair is the parity of whatever the result is. So, (7,3) and (6,4) are both even because their sums, 12 and 10, are even as well.</p>
-<p>What does that have to do with the color of the squares? Recall that whenever you add an even number to another number, the parity stays the same. This is also true for two dimensions! When we move the knight, we can think of it as adding the knight pair to our current co-ordinate pair. If the knight is even, the parity of the co-ordinate will stay the same as well. This means that if our starting parity is odd, it will stay odd no matter which moves we can make, so we can never reach a square with even parity.</p>
-<p>This is easy to see visually because the chessboard is colored according to the parity of the squares!</p>
-<h2>Finally, a working example</h2>
-<p>So far we&rsquo;ve only looked at examples that haven&rsquo;t worked. Are there any that do?
-Well, <strong>(2,1)</strong>-knights can reach any square, so there is at least one example that works.
-It turns out that, for an <strong>(a, b)</strong>-knight, as long as <strong>a</strong> and <strong>b</strong>
- - have no common factors besides one, and
- - add up to an odd number,
-then we can reach any other square (if we have an unlimited amount of space).
-Below is a <strong>(4,1)</strong>-knight. It feels a lot harder to control than the <strong>(2,1)</strong>-knight, but it can still capture the other piece in <strong>6</strong> moves.</p>
-<div class="chessboard" id="game4"></div> 
-<h2>The small board problem</h2>
-<p>There&rsquo;s one last problem. I mentioned earlier that the conditions for reaching every square depend on
-having a certain amount of space. What does the amount of space have to do with anything? Well, when we
-have a larger chessboard, some moves would be possible that weren&rsquo;t before. First, imagine we have the same
-8 by 8 chessboard with a <strong>(9, 1)</strong>-knight. Clearly, the knight won&rsquo;t be able to move, since each move will
-take it outside the chessboard. With a 100 by 100 chessboard, on the other hand, the knight can move
-around with relative ease.</p>
-<p>This was an extreme example, but interesting things happen by making small adjustments to knights we&rsquo;ve
-already seen. On the same chessboard, a <strong>(5,2)</strong>-knight will not be able to reach the inner four squares,
-even though 2 and 5 seem to satisfy our criteria above.</p>
-<div class="chessboard" id="game5"></div> 
-<h2>Visualizations</h2>
+<p>From now on, when we refer to an <strong>(a, b)</strong>-knight, we&rsquo;re referring to a knight that takes <strong>a</strong> steps
+in any cardinal direction and then <strong>b</strong> steps in a perpendicular direction.
+Using this definition, our original knight was a <strong>(2,1)</strong>-knight.</p>
+<h3>Limitations</h3>
+<figure>
+<svg id='2-1-knight-bfs'></svg>
+<figcaption>For a regular knight, every square is reachable.</figcaption>
+</figure>
+<p>A regular knight can eventually reach any square from any other square on any rectangular board, given enough steps.
+Therefore, it&rsquo;s more interesting to look at what a knight <em>can&rsquo;t</em> do than what it can. We&rsquo;ll set the knights up to explore
+every possible path from their starting position and look for any unreachable area.</p>
+<h4>Commonality calamities</h4>
+<figure>
+<svg id='common-4-2-knight-bfs'></svg>
+<svg id='common-6-9-knight-bfs'></svg>
+<figcaption>For these knights, some rows and columns are entirely inaccessible.</figcaption>
+</figure>
+<h4>Parity problems</h4>
+<figure>
+<svg id='parity-3-1-knight-bfs'></svg>
+<figcaption>This knight can't reach certain diagonals.</figcaption>
+</figure>
+<div id='parity-grid'></div>
+<h4>Claustrophobic concerns</h4>
+<figure>
+<svg id='5-2-knight-bfs'></svg>
+<figcaption>These knights have inaccessible squares in the middle.</figcaption>
+</figure>
+<h3>Visualizations</h3>
 </div>
 </div>
 </div>
 </div>
+<footer>
+    Get in touch
+    <div class="contact-links">
+    <div class='footer-item'>
+      <a href='mailto:nlemoing@uwaterloo.ca'><i class="fas fa-envelope"></i></a>
+    </div>
+    <div class='footer-item'>
+      <a href='https://github.com/nlemoing'><i class="fab fa-github"></i></a>
+    </div>
+    <div class='footer-item'>
+      <a href='https://linkedin.com/in/nick-lemoing'><i class="fab fa-linkedin"></i></a>
+    </div>
+    </div>
+</footer>
 </body>
-<script src="/scripts/chess.js"></script><script src="/scripts/createGame.js"></script>
+<script src="https://d3js.org/d3.v5.min.js"></script><script src="/scripts/knight.js"></script>
 </html>
