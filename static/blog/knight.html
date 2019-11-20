@@ -24,20 +24,18 @@
 </div>
 <div id="article-body">
 <br/>
-<p>Knights in chess are weird. If you look at every other piece, they&rsquo;re allowed to move according to
-some reasonable set of restrictions. Rooks and kings move in cardinal directions. Bishops move along
-the diagonals. Queens can do either. To a lesser extend, so can pawns, but they always have to move
-forward. If you can accept the fact that certain pieces move in certain ways, then these seem like
-the first ones you would come up with.</p>
-<p>Knights are&hellip; different. While some pieces, like rooks, bishops and the queen, are unlimited in the
-number of squares they can move, none of them can jump over a piece in their path. Furthermore, all other
-pieces are restricted to either cardinal (North, South, East, West) or intercardinal (NW, NE, SW, SE)
-movements. Knights don&rsquo;t have either of these restrictions: they can jump over other pieces and they
-move in an &ldquo;L&rdquo; shape: two squares in a cardinal direction followed by one square in a perpendicular
+<p>Knights in chess are weird. If you look at every other piece, their movements are more-or-less straightforward.
+Rooks and kings move up, down, left or right. Bishops move along the diagonals.
+Queens can do either. Pawns can be a little weird, but in general they always have to move forward on the row they started on.</p>
+<p>Knights are&hellip; different. While some pieces, like rooks, bishops and the queen, have no limits on the number of
+squares they can travel with each move, no piece besides the knight can jump over another piece in its path. Furthermore, all other
+pieces are restricted to either cardinal (up, down, left, right) or intercardinal (diagonal)
+directions. Knights don&rsquo;t have either of these restrictions; they can jump over other pieces, and their
+movement is &ldquo;L&rdquo;-shaped: two squares in a cardinal direction followed by one square in a perpendicular
 direction. It&rsquo;s because of this that knights have such a unique role in chess; knights are one of the
 first pieces that can be moved (since they can jump over the pieces in front of them), and their unique
 movement pattern makes it easy for them to attack multiple pieces at once.</p>
-<p>Still, the movement of knights just feels arbitrary. If a knight can move 2 squares, then 1, why not 3
+<p>Still, the movement of knights just feels arbitrary. Why should a knight move in a 2-then-1 pattern? Why not 3
 and 1? Or 4 and 2? The knight is one of the oldest and most consistent pieces in history, but it also
 feels like the one with which we can do the most experimentation. Let&rsquo;s see what happens to the knight if
 we change things up a bit.</p>
@@ -46,13 +44,13 @@ we change things up a bit.</p>
 <figcaption>A regular knight, randomly roaming.</figcaption>
 </figure>
 <h2>The Generalized Knight</h2>
-<p>We&rsquo;ve seen how knights move normally: <strong>2</strong> steps in one direction followed by <strong>1</strong> perpendicular
+<p>We&rsquo;ve seen how knights move normally: 2 steps in one direction followed by 1 perpendicular
 step. 2 and 1 seem fairly arbitrary. We can replace these with pretty much any pair of whole numbers.
-Each of these new knights will still have the same &ldquo;L&rdquo;-shaped movement pattern, just with
-different distances.</p>
+Each of these new knights will still have the same &ldquo;L&rdquo;-shaped movement pattern.</p>
 <p>From now on, when we refer to an <strong>(a, b)</strong>-knight, we&rsquo;re referring to a knight that takes <strong>a</strong> steps
 in any cardinal direction and then <strong>b</strong> steps in a perpendicular direction.
 Using this definition, our original knight was a <strong>(2,1)</strong>-knight.</p>
+<p>To make room for knights of all shapes and sizes, we&rsquo;ll also increase the size of the board when necessary.</p>
 <h3>Limitations</h3>
 <figure>
 <svg id='2-1-knight-bfs'></svg>
@@ -67,15 +65,57 @@ every possible path from their starting position and look for any unreachable ar
 <svg id='common-6-9-knight-bfs'></svg>
 <figcaption>For these knights, some rows and columns are entirely inaccessible.</figcaption>
 </figure>
+<p>Above, we have a <strong>(4,2)</strong>-knight (left) and a <strong>(6,9)</strong>-knight (right). Both knights are unable to reach entire rows and columns because they share factors. 4 and 2 are both multiples of 2, while 6 and 9 are multiples of 3. Let&rsquo;s focus on the <strong>(6,9)</strong>-knight. Every time we move somewhere, we&rsquo;re adding or subtracting either 6 or 9 from our co-ordinates. As a result, we&rsquo;re always adding a multiple of 2. There&rsquo;s no way for us to get to a number that&rsquo;s between those multiples of two.</p>
+<figure>
+<svg id='common-6-9-rw'></svg>
+</figure>
+<p>Any time there&rsquo;s a knight whose numbers share a common factor, there will be some rows and columns that are inaccessible because there&rsquo;s no way to get a co-ordinate between multiples.</p>
 <h4>Parity problems</h4>
 <figure>
 <svg id='parity-3-1-knight-bfs'></svg>
 <figcaption>This knight can't reach certain diagonals.</figcaption>
 </figure>
-<div id='parity-grid'></div>
+<p>Although the <strong>(2,1)</strong>-knight had no problems reaching every square, the <strong>(3,1)</strong>-knight can&rsquo;t reach half of them. Since 3 and 1 have no numbers in common, this is a different problem than we ran into earlier.</p>
+<p>My first instinct when I first saw this was that there was a bug in my code somewhere. My second instinct was to check a bunch of examples and see if I could see a pattern.</p>
+<figure>
+<div id='parity-grid'>
+    <span></span>
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+    <span>1</span>
+    <img src="/images/knight/1-1.png"></img>
+    <img src="/images/knight/1-2.png"></img>
+    <img src="/images/knight/1-3.png"></img>
+    <img src="/images/knight/1-4.png"></img>
+    <span>2</span>
+    <img src="/images/knight/1-2.png"></img>
+    <img src="/images/knight/2-2.png"></img>
+    <img src="/images/knight/2-3.png"></img>
+    <img src="/images/knight/2-4.png"></img>
+    <span>3</span>
+    <img src="/images/knight/1-3.png"></img>
+    <img src="/images/knight/2-3.png"></img>
+    <img src="/images/knight/3-3.png"></img>
+    <img src="/images/knight/3-4.png"></img>
+    <span>4</span>
+    <img src="/images/knight/1-4.png"></img>
+    <img src="/images/knight/2-4.png"></img>
+    <img src="/images/knight/3-4.png"></img>
+    <img src="/images/knight/4-4.png"></img>
+</div>
+<figcaption>Breadth-first-search with several knight configurations. Squares are colored by the number of steps it takes to reach. Black squares aren't reached by the knight.</figcaption>
+</figure>
+<p>Take a look at the ones where the knight is able to reach every square. In this chart, they&rsquo;re organized in a checkerboard pattern not unlike the checkerboard pattern made by the <strong>(3,1)</strong>-knight. It turns out that for any knight that&rsquo;s able to reach every square on a board, their numbers have to add up to an odd number.</p>
+<figure>
+<svg id='parity-2-1-rw'></svg>
+<svg id='parity-3-1-rw'></svg>
+</figure>
 <h4>Claustrophobic concerns</h4>
 <figure>
 <svg id='5-2-knight-bfs'></svg>
+<svg id='8-17-knight-bfs'></svg>
 <figcaption>These knights have inaccessible squares in the middle.</figcaption>
 </figure>
 <h3>Visualizations</h3>

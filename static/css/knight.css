@@ -20,3 +20,21 @@
 	width: 200px;
 	height: 200px;
 }
+
+#parity-grid {
+	display: grid;
+	grid-template-columns: 20px repeat(4, 100px);
+	grid-template-rows: 20px repeat(4, 100px);
+	grid-gap: 10px;
+}
+
+#parity-grid > img {
+	width: 100%;
+	height: 100%;
+}
+
+#parity-grid > span {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

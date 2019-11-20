@@ -85,7 +85,16 @@ function animateKnight(options) {
 
     }
 
-    step(r, c);
+    let started = false;
+    document.addEventListener('scroll', () => {
+        if (started) return;
+        const { top, bottom } = svgContainer.getBoundingClientRect();
+        const { scrollY } = window;
+        if (scrollY > bottom) {
+            started = true;
+            setTimeout(() => step(r, c), 500);
+        }        
+    })
 
 };
 
@@ -99,6 +108,13 @@ function randomColor() {
 
 function sequentialColor(low, high, gap) {
     return (r, c, i) => d3.interpolateHslLong(low, high)((i % gap) / gap);
+}
+
+function parityColor(r, c, i) {
+    if (r % 2 && c % 2) return 'red';
+    if (r % 2) return 'green';
+    if (c % 2) return 'yellow';
+    return 'blue';
 }
 
 class Board {
@@ -153,7 +169,16 @@ const cf69Board = new Board(cf69Options);
 cf69Options.nextFn = cf69Board.next.bind(cf69Board);
 animateKnight(cf69Options);
 
+const cf69rw = {
+    svgContainer: document.getElementById('common-6-9-rw'),
+    w: 25, h: 25, r: 0, c: 0, a: 6, b: 9,
+    colorFn: () => 'red',
+    nextFn: randomNextMove
+}
+animateKnight(cf69rw);
+
 // Parity: BFS with 3,1 knight on a regular board
+// More in-depth example with a 2,1 and 3,1 knight side by side
 const p31Options = {
     svgContainer: document.getElementById('parity-3-1-knight-bfs'),
     w: 8, h: 8, r: 0, c: 0, a: 1, b: 3,
@@ -163,8 +188,23 @@ const p31Board = new Board(p31Options);
 p31Options.nextFn = p31Board.next.bind(p31Board);
 animateKnight(p31Options);
 
+const p21rwOptions = {
+    svgContainer: document.getElementById('parity-2-1-rw'),
+    w: 8, h: 8, r: 0, c: 0, a: 1, b: 2,
+    colorFn: parityColor,
+    nextFn: randomNextMove
+}
+animateKnight(p21rwOptions);
+
+const p31rwOptions = {
+    svgContainer: document.getElementById('parity-3-1-rw'),
+    w: 8, h: 8, r: 0, c: 0, a: 1, b: 3,
+    colorFn: parityColor,
+    nextFn: randomNextMove
+}
+animateKnight(p31rwOptions)
+
 // Tight Spaces: BFS with 5,2 knight on a regular board, 8,17 knight on a 25x25 board
-// Add a third one with the weird patterns from earlier
 const ts52Options = {
     svgContainer: document.getElementById('5-2-knight-bfs'),
     w: 8, h: 8, r: 0, c: 0, a: 5, b: 2,
@@ -173,3 +213,12 @@ const ts52Options = {
 const ts52Board = new Board(ts52Options);
 ts52Options.nextFn = ts52Board.next.bind(ts52Board);
 animateKnight(ts52Options);
+
+const ts817Options = {
+    svgContainer: document.getElementById('8-17-knight-bfs'),
+    w: 25, h: 25, r: 0, c: 0, a: 8, b: 17,
+    colorFn: sequentialColor('red', 'purple', 8),
+}
+const ts817Board = new Board(ts817Options);
+ts817Options.nextFn = ts817Board.next.bind(ts817Board);
+animateKnight(ts817Options);
