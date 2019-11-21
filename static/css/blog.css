@@ -1,6 +1,6 @@
 #blog-container {
     width: calc(100% - 40px);
-    max-width: 500px;
+    max-width: 550px;
     padding: 20px;
     margin: auto;
 }
