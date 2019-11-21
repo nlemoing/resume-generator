@@ -67,7 +67,10 @@ every possible path from their starting position and look for any unreachable ar
 </figure>
 <p>Above, we have a <strong>(4,2)</strong>-knight (left) and a <strong>(6,9)</strong>-knight (right). Both knights are unable to reach entire rows and columns because they share factors. 4 and 2 are both multiples of 2, while 6 and 9 are multiples of 3. Let&rsquo;s focus on the <strong>(6,9)</strong>-knight. Every time we move somewhere, we&rsquo;re adding or subtracting either 6 or 9 from our co-ordinates. As a result, we&rsquo;re always adding a multiple of 2. There&rsquo;s no way for us to get to a number that&rsquo;s between those multiples of two.</p>
 <figure>
+<div class='stacked-knight-graphics'>
 <svg id='common-6-9-rw'></svg>
+<svg id='common-6-9-rw-text'></svg>
+</div>
 </figure>
 <p>Any time there&rsquo;s a knight whose numbers share a common factor, there will be some rows and columns that are inaccessible because there&rsquo;s no way to get a co-ordinate between multiples.</p>
 <h4>Parity problems</h4>

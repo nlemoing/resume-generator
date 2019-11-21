@@ -1,6 +1,6 @@
 function animateKnight(options) {
 
-    const { svgContainer, w, h, r, c, a, b, colorFn, nextFn } = options;
+    const { svgContainer, w, h, r, c, a, b, colorFn, nextFn, listener } = options;
 
     const svg = d3.select(svgContainer).attr('viewBox', `0 0 ${w} ${h}`);
     const highlights = new Array(h);
@@ -75,6 +75,9 @@ function animateKnight(options) {
                 .attrTween('y1', () => earlyInterpolator(rowInterpolator))
                 .attrTween('x2', () => lateInterpolator(colInterpolator))
                 .attrTween('y2', () => lateInterpolator(rowInterpolator))
+                .on('start', () => {
+                    if (listener) listener(newR, newC);
+                })
                 .on('end', () => {
                     line.remove();
                     step(newR, newC, i + 1);
@@ -133,6 +136,181 @@ class Board {
     }
 }
 
+function gcd(a, b) {
+    return b ? gcd(b, a % b) : a;
+}
+
+function textAnimation(options) {
+
+    const { svgTextContainer, a, b } = options;
+    const cf = gcd(a, b);
+    const aq = a / cf;
+    const bq = b / cf;
+
+    const svg = d3.select(svgTextContainer);
+    svg.attr('viewBox', '0 0 60 30');
+    
+
+    Object.getPrototypeOf(svg).length = function () { return this.node().getComputedTextLength() };
+    Object.getPrototypeOf(svg).left = function () { return this.node().getBBox().x; }
+    Object.getPrototypeOf(svg).right = function () { return this.node().getBBox().width + this.left(); };
+
+    const FIRST_ROW = 16;
+    const SECOND_ROW = 23;
+    const THIRD_ROW = 30;
+    const SPACE = 1;
+    const OFFSET = 30;
+    const LINE = 10;
+
+    function text(t, x = 0, y = 0) {
+        return svg.append('text')
+            .text(t)
+            .style('font-size', '6px')
+            .attr('x', x)
+            .attr('y', y)
+    }
+
+    function line(x1, x2) {
+        return svg.append('line')
+            .attr('y1', LINE).attr('y2', LINE)
+            .attr('x1', x1).attr('x2', x2)
+            .style('stroke-width', 0.5)
+            .style('stroke', 'black');
+    }
+
+    const [aq_len, bq_len] = (() => {
+        const aq_obj = text(`${aq}`)
+        const aq_len = aq_obj.length();
+        const bq_obj = text(`${bq}`);
+        const bq_len = bq_obj.length();
+        aq_obj.remove();
+        bq_obj.remove();
+        return [aq_len, bq_len];
+    })();
+
+    let { r, c } = options;
+    const cq = Math.floor(c / cf);
+    const C_REM    = text(`${c % cf}`, 0,                       FIRST_ROW);
+    const C_OP     = text('+',         C_REM.right() + SPACE,   FIRST_ROW);
+    const C_CF     = text(`${cf}`,     C_OP.right() + SPACE,    FIRST_ROW);
+    const C_LPAREN = text('(',         C_CF.right(),            FIRST_ROW);
+    let   C_QUOT   = text(`${cq}`,     C_LPAREN.right(),        FIRST_ROW);
+    const C_RPAREN = text(')',         C_QUOT.right(),          FIRST_ROW);
+    const C_NAME   = text('X:',        0,                       LINE - 1);
+    let   C_NUM    = text(`${c}`,      C_NAME.right() + SPACE,  LINE - 1);
+    const C_LINE   = line(0, C_RPAREN.right());
+
+    const rq = Math.floor(r / cf);
+    const R_REM    = text(`${r % cf}`, OFFSET,                  FIRST_ROW);
+    const R_OP     = text('+',         R_REM.right() + SPACE,   FIRST_ROW);
+    const R_CF     = text(`${cf}`,     R_OP.right() + SPACE,    FIRST_ROW);
+    const R_LPAREN = text('(',         R_CF.right(),            FIRST_ROW);
+    let   R_QUOT   = text(`${rq}`,     R_LPAREN.right(),        FIRST_ROW);
+    const R_RPAREN = text(')',         R_QUOT.right(),          FIRST_ROW);
+    const R_NAME   = text('Y:',        OFFSET,                  LINE - 1);
+    let   R_NUM    = text(`${r}`,      R_NAME.right() + SPACE,  LINE - 1);
+    const R_LINE   = line(OFFSET, R_RPAREN.right());
+    
+    text(`${a}`, C_CF.left(), THIRD_ROW);
+    text(`${b}`, R_CF.left(), THIRD_ROW);
+
+    function animate(newR, newC) {
+        const diffC = newC - c;
+        const diffR = newR - r;
+        const swapped = Math.abs(diffC) === b;
+
+        [
+            { name: `${a}`, start: C_CF.left(), swap: R_CF.left() },
+            { name: `${b}`, start: R_CF.left(), swap: C_CF.left() }
+        ].forEach(({name, start, swap, diff}) => {
+            text(name, start, THIRD_ROW)
+                .transition()
+                    .duration(1000)
+                    .attr('x', swapped ? swap : start)
+                    .attr('y', SECOND_ROW) 
+                .transition()
+                    .duration(1000)
+                    .style('opacity', 0)
+                .on('end', function () { this.remove(); });
+        });
+
+        [
+            { diff: diffC, start: C_OP.left() },
+            { diff: diffR, start: R_OP.left() }
+        ].forEach(({diff, start}) => {
+            text(diff < 0 ? '–' : '+', start, SECOND_ROW)
+                .style('opacity', 0)
+                .style('fill', diff < 0 ? 'red' : 'green')
+                .transition()
+                    .duration(1000)
+                    .style('opacity', 1)
+                .transition()
+                    .delay(1000)
+                    .duration(1000)
+                    .attr('y', FIRST_ROW)
+                    .style('opacity', 0)
+                .on('end', function () { this.remove(); });
+        });
+
+        // Animate factoring
+        [
+            { name: `${cf}`, dest: C_CF.left(), start: C_CF.left() },
+            { name: `(`, dest: C_LPAREN.left(), start: C_CF.left() },
+            { name: `${swapped ? bq : aq}`, dest: C_QUOT.left(), start: C_CF.left() },
+            { name: ')', dest: C_QUOT.left() + (swapped ? bq_len : aq_len), start: C_CF.left() },
+            { name: `${cf}`, dest: R_CF.left(), start: R_CF.left() },
+            { name: `(`, dest: R_LPAREN.left(), start: R_CF.left() },
+            { name: `${swapped ? aq : bq}`, dest: R_QUOT.left(), start: R_CF.left() },
+            { name: ')', dest: R_QUOT.left() + (swapped ? aq_len : bq_len), start: R_CF.left() }
+        ].forEach(({ name, dest, start }) => {
+            text(name, start, SECOND_ROW)
+                .style('opacity', 0)
+                .transition()
+                    .delay(1000)
+                    .duration(1000)
+                    .attr('x', dest)
+                    .style('opacity', 1)
+                .transition()
+                    .duration(1000)
+                    .attr('y', FIRST_ROW)
+                    .style('opacity', 0)
+                .on('end', function () { this.remove(); });
+        });
+
+        // Fade out and remove old numbers
+        [C_QUOT, R_QUOT, C_NUM, R_NUM].forEach(num => {
+            num.transition()
+                .delay(2000)
+                .duration(1000)
+                .style('opacity', 0)
+                .on('end', function () { this.remove(); });
+        });
+        // Append and fade in new numbers
+        C_QUOT = text(`${Math.floor(newC / cf)}`, C_LPAREN.right(), FIRST_ROW).style('opacity', 0);
+        R_QUOT = text(`${Math.floor(newR / cf)}`, R_LPAREN.right(), FIRST_ROW).style('opacity', 0);
+        C_NUM = text(`${newC}`, C_NAME.right() + SPACE, LINE - 1).style('opacity', 0);
+        R_NUM = text(`${newR}`, R_NAME.right() + SPACE, LINE - 1).style('opacity', 0);
+        [C_QUOT, R_QUOT, C_NUM, R_NUM].forEach(num => {
+            num.transition()
+                .delay(2000)
+                .duration(1000)
+                .style('opacity', 1)
+                .transition();
+        });
+        // Adjust right parens to fit new numbers
+        [{ paren: C_RPAREN, dest: C_QUOT.right() },
+         { paren: R_RPAREN, dest: R_QUOT.right() }].forEach(({paren, dest}) => {
+            paren.transition()
+                .delay(2000)
+                .duration(1000)
+                .attr('x', dest);
+        });
+        r = newR;
+        c = newC;
+    }
+    return animate;
+}
+
 // Introduction: Default Knight, default board, random walk with random colors
 animateKnight({
     svgContainer: document.getElementById('knight-intro-animation'),
@@ -171,10 +349,12 @@ animateKnight(cf69Options);
 
 const cf69rw = {
     svgContainer: document.getElementById('common-6-9-rw'),
+    svgTextContainer: document.getElementById('common-6-9-rw-text'),
     w: 25, h: 25, r: 0, c: 0, a: 6, b: 9,
     colorFn: () => 'red',
     nextFn: randomNextMove
 }
+cf69rw.listener = textAnimation(cf69rw);
 animateKnight(cf69rw);
 
 // Parity: BFS with 3,1 knight on a regular board
