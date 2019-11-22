@@ -91,13 +91,13 @@ function animateKnight(options) {
     let started = false;
     document.addEventListener('scroll', () => {
         if (started) return;
-        const { top, bottom } = svgContainer.getBoundingClientRect();
-        const { scrollY } = window;
-        if (scrollY > bottom) {
+        const { top } = svgContainer.getBoundingClientRect();
+        const { innerHeight } = window;
+        if (top > 0 && top < innerHeight) {
             started = true;
-            setTimeout(() => step(r, c), 500);
+            step(r, c);
         }        
-    })
+    });
 
 };
 
