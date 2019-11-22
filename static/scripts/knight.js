@@ -18,9 +18,25 @@ function animateKnight(options) {
         return moves.filter(move => valid(move[0], move[1]));
     }
 
+    function isActive() {
+        const { top, bottom } = svgContainer.getBoundingClientRect();
+	const { innerHeight } = window;
+	// A graphic is active if either endpoint is in view
+	return (top >= 0 && top <= innerHeight) ||
+	       (bottom >= 0 && bottom <= innerHeight);
+    }
+    
+    let active = isActive();
+    const queue = [];
     function step(r, c, i = 0) {
-        const moves = nextFn(nextMoves(r, c));
+        
+	if (!active) {
+		queue.push({r, c, i});
+		return;
+	}
 
+	const moves = nextFn(nextMoves(r, c));
+	
         if (!highlights[r][c]) {
             highlights[r][c] = svg.append('rect').attr('x', c).attr('y', r)
         }
@@ -88,16 +104,19 @@ function animateKnight(options) {
 
     }
 
-    let started = false;
     document.addEventListener('scroll', () => {
-        if (started) return;
-        const { top } = svgContainer.getBoundingClientRect();
-        const { innerHeight } = window;
-        if (top > 0 && top < innerHeight) {
-            started = true;
-            step(r, c);
-        }        
+	if (active === isActive()) return;
+	if (!active) {
+	    active = true;
+	    // Move everything out of queue and into tempQueue
+	    const tempQueue = queue.splice(0, queue.length);
+	    tempQueue.forEach(({r, c, i}) => { step(r, c, i); });
+        } else {
+	    active = false;
+	}
     });
+
+    step(r, c);
 
 };
 
