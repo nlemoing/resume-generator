@@ -20,22 +20,23 @@ function animateKnight(options) {
 
     function isActive() {
         const { top, bottom } = svgContainer.getBoundingClientRect();
-	const { innerHeight } = window;
-	// A graphic is active if either endpoint is in view
-	return (top >= 0 && top <= innerHeight) ||
-	       (bottom >= 0 && bottom <= innerHeight);
+        const { innerHeight } = window;
+        // A graphic is active if either endpoint is in view
+        return (top >= 0 && top <= innerHeight) ||
+               (bottom >= 0 && bottom <= innerHeight);
     }
     
     let active = isActive();
     const queue = [];
+
     function step(r, c, i = 0) {
         
-	if (!active) {
-		queue.push({r, c, i});
-		return;
-	}
+        if (!active) {
+            queue.push({r, c, i});
+            return;
+        }
 
-	const moves = nextFn(nextMoves(r, c));
+        const moves = nextFn(nextMoves(r, c));
 	
         if (!highlights[r][c]) {
             highlights[r][c] = svg.append('rect').attr('x', c).attr('y', r)
@@ -105,15 +106,15 @@ function animateKnight(options) {
     }
 
     document.addEventListener('scroll', () => {
-	if (active === isActive()) return;
-	if (!active) {
-	    active = true;
-	    // Move everything out of queue and into tempQueue
-	    const tempQueue = queue.splice(0, queue.length);
-	    tempQueue.forEach(({r, c, i}) => { step(r, c, i); });
+	    if (active === isActive()) return;
+	    if (!active) {
+            active = true;
+            // Move everything out of queue and into tempQueue
+            const tempQueue = queue.splice(0, queue.length);
+            tempQueue.forEach(({r, c, i}) => { step(r, c, i); });
         } else {
-	    active = false;
-	}
+            active = false;
+        }
     });
 
     step(r, c);
@@ -128,29 +129,31 @@ function randomColor() {
     return `hsl(${Math.random() * 360},100%,50%)`;
 }
 
-function sequentialColor(low, high, gap) {
-    return (r, c, i) => d3.interpolateHslLong(low, high)((i % gap) / gap);
+function sequentialColor(low, high, gap, long = false) {
+    const lowHue = `hsl(${low}, 85%, 50%)`;
+    const highHue = `hsl(${high}, 85%, 50%)`;
+    const interp = long ?
+        d3.interpolateHslLong(lowHue, highHue) :
+        d3.interpolateHsl(lowHue, highHue);
+    return (r, c, i) => interp((i % gap) / gap);
 }
 
 function parityColor(r, c, i) {
-    if (r % 2 && c % 2) return 'red';
-    if (r % 2) return 'green';
-    if (c % 2) return 'yellow';
-    return 'blue';
+    return ((r + c) % 2) ? 'red' : 'blue';
 }
 
 class Board {
     constructor({w, h, r, c}) {
         this.visited = new Array(h);
         for (let row = 0; row < h; row++) {
-            this.visited[row] = new Array(w).fill(false);
+            this.visited[row] = new Array(w).fill(0);
         }
         this.visited[r][c] = true;
     }
 
     next(moves) {
         moves = moves.filter(([r, c]) => !this.visited[r][c]);
-        moves.forEach(([r, c]) => { this.visited[r][c] = true; });
+        moves.forEach(([r, c]) => { this.visited[r][c] += 1; });
         return moves;
     }
 }
@@ -341,17 +344,16 @@ animateKnight({
 const cf21Options = {
     svgContainer: document.getElementById('2-1-knight-bfs'),
     w: 8, h: 8, r: 0, c: 0, a: 1, b: 2,
-    colorFn: sequentialColor('red', 'purple', 12)
+    colorFn: sequentialColor(180, 330, 8)
 }
 const cf21Board = new Board(cf21Options);
 cf21Options.nextFn = cf21Board.next.bind(cf21Board);
 animateKnight(cf21Options);
 
-// Common factors: BFS with various knights with a large (25x25) board.
 const cf42Options = {
     svgContainer: document.getElementById('common-4-2-knight-bfs'),
     w: 25, h: 25, r: 0, c: 0, a: 2, b: 4,
-    colorFn: sequentialColor('red', 'purple', 12)
+    colorFn: sequentialColor(0, 180, 12)
 }
 const cf42Board = new Board(cf42Options);
 cf42Options.nextFn = cf42Board.next.bind(cf42Board);
@@ -360,7 +362,7 @@ animateKnight(cf42Options);
 const cf69Options = {
     svgContainer: document.getElementById('common-6-9-knight-bfs'),
     w: 25, h: 25, r: 0, c: 0, a: 6, b: 9,
-    colorFn: sequentialColor('red', 'purple', 12)
+    colorFn: sequentialColor(0, 180, 12)
 }
 const cf69Board = new Board(cf69Options);
 cf69Options.nextFn = cf69Board.next.bind(cf69Board);
@@ -381,7 +383,7 @@ animateKnight(cf69rw);
 const p31Options = {
     svgContainer: document.getElementById('parity-3-1-knight-bfs'),
     w: 8, h: 8, r: 0, c: 0, a: 1, b: 3,
-    colorFn: sequentialColor('red', 'purple', 12)
+    colorFn: sequentialColor(0, 180,12)
 }
 const p31Board = new Board(p31Options);
 p31Options.nextFn = p31Board.next.bind(p31Board);
@@ -407,7 +409,7 @@ animateKnight(p31rwOptions)
 const ts52Options = {
     svgContainer: document.getElementById('5-2-knight-bfs'),
     w: 8, h: 8, r: 0, c: 0, a: 5, b: 2,
-    colorFn: sequentialColor('red', 'purple', 8),
+    colorFn: sequentialColor(0, 180,8),
 }
 const ts52Board = new Board(ts52Options);
 ts52Options.nextFn = ts52Board.next.bind(ts52Board);
@@ -416,7 +418,7 @@ animateKnight(ts52Options);
 const ts817Options = {
     svgContainer: document.getElementById('8-17-knight-bfs'),
     w: 25, h: 25, r: 0, c: 0, a: 8, b: 17,
-    colorFn: sequentialColor('red', 'purple', 8),
+    colorFn: sequentialColor(0, 180,8),
 }
 const ts817Board = new Board(ts817Options);
 ts817Options.nextFn = ts817Board.next.bind(ts817Board);
