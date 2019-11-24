@@ -132,7 +132,7 @@ It turns out a lot of the same properties of single-number parities apply to par
 <figure>
 <svg id='parity-2-1-rw'></svg>
 <svg id='parity-3-1-rw'></svg>
-<figcaption>Odd squares are colored red while even squaresy are blue. A (2,1)-knight (left) can reach both even and odd squares, while the (3,1)-knight (right) is stuck with even ones.</figcaption>
+<figcaption>Odd squares are colored red while even squares are blue. A (2,1)-knight (left) can reach both even and odd squares, while the (3,1)-knight (right) is stuck with even ones.</figcaption>
 </figure>
 
 This is a clue as to why knights with odd parity can reach more squares than even-parity knights. Odd parity knights swap the parity of the coordinate with each move, so we can reach both even and odd squares regardless of where we start. With even knights, on the other hand, we are stuck on the same parity as we started with.
