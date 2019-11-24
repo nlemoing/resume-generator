@@ -29,9 +29,9 @@ Each of these new knights will still have the same "L"-shaped movement pattern.
 
 From now on, when we refer to an **(a, b)**-knight, we're referring to a knight that takes **a** steps 
 in any cardinal direction and then **b** steps in a perpendicular direction. 
-Using this definition, our original knight was a **(2,1)**-knight.
+Using this definition, our original knight was a (2,1)-knight.
 
-To make room for knights of all shapes and sizes, we'll also increase the size of the board when necessary.
+Since we're going to have all shapes and sizes of knights as well, we'll be increasing the board to allow for space to move as needed.
 
 ### Limitations
 
@@ -42,7 +42,7 @@ To make room for knights of all shapes and sizes, we'll also increase the size o
 
 A regular knight can eventually reach any square from any other square on any rectangular board, given enough steps.
 Therefore, it's more interesting to look at what a knight *can't* do than what it can. We'll set the knights up to explore
-every possible path from their starting position and look for any unreachable area.
+every possible path from their starting position and look for any squares they can't reach.
 
 #### Commonality calamities
 
@@ -52,16 +52,25 @@ every possible path from their starting position and look for any unreachable ar
 <figcaption>For these knights, some rows and columns are entirely inaccessible.</figcaption>
 </figure>
 
-Above, we have a **(4,2)**-knight (left) and a **(6,9)**-knight (right). Both knights are unable to reach entire rows and columns because they share factors. 4 and 2 are both multiples of 2, while 6 and 9 are multiples of 3. Let's focus on the **(6,9)**-knight. Every time we move somewhere, we're adding or subtracting either 6 or 9 from our co-ordinates. As a result, we're always adding a multiple of 2. There's no way for us to get to a number that's between those multiples of two.
+Above, we have a (4,2)-knight (left) and a (6,9)-knight (right). Some of the rows and columns remain white even after the knights have finished moving. The knight simply can't reach them from its starting position. This happens because the numbers associated with the knights share a common factor: 4 and 2 are both multiples of 2, while 6 and 9 are multiples of 3. 
+
+Why should this matter? Think of the knight's position as a coordinate on a grid. Each time the knight moves, we are adding or subtracting the knight's numbers with the old coordinates to get new ones. Since the knight's numbers have a factor in common, we are always changing our coordinates by some multiple of that factor.
 
 <figure>
 <div class='stacked-knight-graphics'>
 <svg id='common-6-9-rw'></svg>
 <svg id='common-6-9-rw-text'></svg>
 </div>
+<figcaption>Since 6 and 9 are both multiples of 3, we are always changing our coordinates by a multiple of 3.</figcaption>
 </figure>
 
-Any time there's a knight whose numbers share a common factor, there will be some rows and columns that are inaccessible because there's no way to get a co-ordinate between multiples.
+Let's say we pick (4, 5) as our starting position. 4 is one above a multiple of 3, so we can write it as 1 + 3(1). If we add a 6 or a 9, we can add them to the right part of the number without affecting the left since they are also multiples of 3. Our x coordinate will always be one above a multiple of 3; never two above a multiple of 3, nor a multiple of 3 itself.
+
+Mathematicians have special terminology for being "one above a multiple of 3". They would say that 4 is *congruent* to 1, *modulo* 3. Basically, this means that 1 and 4 have the same remainder when divided by 3. This is also true of 7, 10, and an infinite amount of other numbers. Mathematicians don't have time to list an infinite amount of numbers, so when they want to talk about *all* the numbers with this property, they call this group the *congruence class* of 1, *modulo* 3. 
+
+Like we saw above, if we add a multiple of 3 to a number, it'll remain in the same congruence class, *modulo* 3. We can also define congruence classes *modulo* other numbers as well; the same property will hold.
+
+If a knight's numbers share a factor, then we will always be adding a multiple of that factor to our coordinates, trapping us in the same congruence class forever.
 
 #### Parity problems
 
@@ -70,7 +79,7 @@ Any time there's a knight whose numbers share a common factor, there will be som
 <figcaption>This knight can't reach certain diagonals.</figcaption>
 </figure>
 
-Although the **(2,1)**-knight had no problems reaching every square, the **(3,1)**-knight can't reach half of them. Since 3 and 1 have no numbers in common, this is a different problem than we ran into earlier. 
+Although the (2,1)-knight had no problems reaching every square, the (3,1)-knight can't reach half of them. Since 3 and 1 have no numbers in common, this is a different problem than we ran into earlier.
 
 My first instinct when I first saw this was that there was a bug in my code somewhere. My second instinct was to check a bunch of examples and see if I could see a pattern.
 
@@ -105,12 +114,28 @@ My first instinct when I first saw this was that there was a bug in my code some
 <figcaption>Breadth-first-search with several knight configurations. Squares are colored by the number of steps it takes to reach. Black squares aren't reached by the knight.</figcaption>
 </figure>
 
-Take a look at the ones where the knight is able to reach every square. In this chart, they're organized in a checkerboard pattern not unlike the checkerboard pattern made by the **(3,1)**-knight. It turns out that for any knight that's able to reach every square on a board, their numbers have to add up to an odd number. 
+Take a look at the ones where the knight is able to reach every square. In this chart, they're organized in a checkerboard pattern not unlike the checkerboard pattern made by the (3,1)-knight. This all has to do with the *parity* of the knight.
+
+*Parity* is just another way of saying if something is even or odd. Normally, we deal with parity of numbers: 4 has even parity while 7 has odd parity. It turns out pairs of numbers have parity as well: you just take the parity of the two numbers added together. For example, (2,1) is odd since 3 is odd, while (3,1) is even since 4 is even.
+
+Every knight that is able to reach every square has the same parity: odd. Why would that be?
+
+<figure>
+<svg viewBox="0 0 100 100">
+
+</svg>
+<figcaption>Adding evens and odds, illustrated</figcaption>
+</figure>
+
+It turns out a lot of the same properties of single-number parities apply to parities of pairs as well. For example, when you add an even number to another number, the parity will stay the same. If you add an odd number, the parity will swap!
 
 <figure>
 <svg id='parity-2-1-rw'></svg>
 <svg id='parity-3-1-rw'></svg>
+<figcaption>Odd squares are colored red while even squaresy are blue. A (2,1)-knight (left) can reach both even and odd squares, while the (3,1)-knight (right) is stuck with even ones.</figcaption>
 </figure>
+
+This is a clue as to why knights with odd parity can reach more squares than even-parity knights. Odd parity knights swap the parity of the coordinate with each move, so we can reach both even and odd squares regardless of where we start. With even knights, on the other hand, we are stuck on the same parity as we started with.
 
 #### Claustrophobic concerns
 
@@ -119,6 +144,13 @@ Take a look at the ones where the knight is able to reach every square. In this 
 <svg id='8-17-knight-bfs'></svg>
 <figcaption>These knights have inaccessible squares in the middle.</figcaption>
 </figure>
+
+Everything we've talked about to this point would hold true regardless of the board size. But in some situations, we get interesting patterns if the knight is just a little too big for the board. In these cases, squares in the middle become impossible to reach because the knight can't maneuver tightly enough in the small spaces.
+
+I don't have any insight for the mathematical reason behind this one. If you have any ideas, let me know!
+
+The animations are reminiscent of the [bouncing DVD logo](https://www.youtube.com/watch?v=QOtuX0jL85Y), though.
+
 
 ### Visualizations
 
