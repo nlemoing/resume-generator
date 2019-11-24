@@ -1,6 +1,6 @@
 function animateKnight(options) {
 
-    const { svgContainer, w, h, r, c, a, b, colorFn, nextFn, listener } = options;
+    const { svgContainer, w, h, r, c, a, b, colorFn, nextFn, mod, listener } = options;
 
     const svg = d3.select(svgContainer).attr('viewBox', `0 0 ${w} ${h}`);
     const highlights = new Array(h);
@@ -15,7 +15,7 @@ function animateKnight(options) {
     function nextMoves(r, c) {
         let moves = [[r + a, c + b], [r + a, c - b], [r - a, c + b], [r - a, c - b],
                      [r + b, c + a], [r + b, c - a], [r - b, c + a], [r - b, c - a]];
-        return moves.filter(move => valid(move[0], move[1]));
+        return mod ? moves : moves.filter(move => valid(move[0], move[1]));
     }
 
     function isActive() {
@@ -69,12 +69,23 @@ function animateKnight(options) {
         }, 1000);
 
         function next([newR, newC]) {
+            const newR_mod = (newR + h) % h,
+                  newC_mod = (newC + w) % w,
+                  r_mod = r - (newR - newR_mod)
+                  c_mod = c - (newC - newC_mod);
+
             const line = svg.append('line')
                 .style('stroke-width', 0.1)
                 .style('stroke', 'black');
+            
+            const modLine = mod ? svg.append('line')
+                .style('stroke-width', 0.1)
+                .style('stroke', 'black') : null;
 
             const rowInterpolator = d3.interpolateNumber(r + 0.5, newR + 0.5);
             const colInterpolator = d3.interpolateNumber(c + 0.5, newC + 0.5);
+            const modRowInterpolator = d3.interpolateNumber(r_mod + 0.5, newR_mod + 0.5);
+            const modColInterpolator = d3.interpolateNumber(c_mod + 0.5, newC_mod + 0.5);
             function earlyInterpolator(interpolator) {
                 return function (t) {
                     return interpolator(Math.min(t / 0.8, 1));
@@ -93,12 +104,24 @@ function animateKnight(options) {
                 .attrTween('x2', () => lateInterpolator(colInterpolator))
                 .attrTween('y2', () => lateInterpolator(rowInterpolator))
                 .on('start', () => {
-                    if (listener) listener(newR, newC);
+                    if (listener) listener(newR_mod, newC_mod);
                 })
                 .on('end', () => {
                     line.remove();
-                    step(newR, newC, i + 1);
+                    step(newR_mod, newC_mod, i + 1);
                 });
+            if (modLine) {
+                modLine.transition()
+                    .delay(2500)
+                    .duration(1000)
+                    .attrTween('x1', () => earlyInterpolator(modColInterpolator))
+                    .attrTween('y1', () => earlyInterpolator(modRowInterpolator))
+                    .attrTween('x2', () => lateInterpolator(modColInterpolator))
+                    .attrTween('y2', () => lateInterpolator(modRowInterpolator))
+                    .on('end', () => {
+                        modLine.remove();
+                    });
+            }
         }
 
         moves.forEach(next);
@@ -144,6 +167,8 @@ function parityColor(r, c, i) {
 
 class Board {
     constructor({w, h, r, c}) {
+        this.w = w;
+        this.h = h;
         this.visited = new Array(h);
         for (let row = 0; row < h; row++) {
             this.visited[row] = new Array(w).fill(0);
@@ -152,9 +177,16 @@ class Board {
     }
 
     next(moves) {
-        moves = moves.filter(([r, c]) => !this.visited[r][c]);
-        moves.forEach(([r, c]) => { this.visited[r][c] += 1; });
-        return moves;
+        const newMoves = [];
+        for (const [r, c] of moves) {
+            const modR = (r + this.h) % this.h,
+                  modC = (c + this.w) % this.w;
+            if (!this.visited[modR][modC]) {
+                newMoves.push([r,c]);
+            }
+            this.visited[modR][modC] += 1;
+        }
+        return newMoves;
     }
 }
 
@@ -423,3 +455,30 @@ const ts817Options = {
 const ts817Board = new Board(ts817Options);
 ts817Options.nextFn = ts817Board.next.bind(ts817Board);
 animateKnight(ts817Options);
+
+const fix42Options = {
+    svgContainer: document.getElementById('fix-4-2'),
+    w: 7, h: 7, r: 0, c: 0, a: 4, b: 2, mod: true,
+    colorFn: () => 'red'
+};
+const fix42Board = new Board(fix42Options);
+fix42Options.nextFn = fix42Board.next.bind(fix42Board);
+animateKnight(fix42Options);
+
+const fix31Options = {
+    svgContainer: document.getElementById('fix-3-1'),
+    w: 7, h: 7, r: 0, c: 0, a: 3, b: 1, mod: true,
+    colorFn: () => 'red'
+};
+const fix31Board = new Board(fix31Options);
+fix31Options.nextFn = fix31Board.next.bind(fix31Board);
+animateKnight(fix31Options);
+
+const fix52Options = {
+    svgContainer: document.getElementById('fix-5-2'),
+    w: 7, h: 7, r: 0, c: 0, a: 5, b: 2, mod: true,
+    colorFn: () => 'red'
+};
+const fix52Board = new Board(fix52Options);
+fix52Options.nextFn = fix52Board.next.bind(fix52Board);
+animateKnight(fix52Options);

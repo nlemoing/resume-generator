@@ -151,6 +151,14 @@ I don't have any insight for the mathematical reason behind this one. If you hav
 
 The animations are reminiscent of the [bouncing DVD logo](https://www.youtube.com/watch?v=QOtuX0jL85Y), though.
 
+### Fixing Limitations (TODO)
+
+<figure>
+<svg id='fix-4-2'></svg>
+<svg id='fix-3-1'></svg>
+<svg id='fix-5-2'></svg>
+<figcaption>It's all fixed!</figcaption>
+</figure>
 
 ### Visualizations
 
