@@ -151,15 +151,35 @@ I don't have any insight for the mathematical reason behind this one. If you hav
 
 The animations are reminiscent of the [bouncing DVD logo](https://www.youtube.com/watch?v=QOtuX0jL85Y), though.
 
-### Fixing Limitations (TODO)
+### When in doubt, use the modulus
+
+We've already talked a little bit about the modulus when we looked at knights that shared common factors. In that context, we saw how knights with common factors would miss some rows and columns because they were restricted to the same congruence class: the coordinates always had the same remainder when divided by the common factor.
+
+We can also use the modulus in the context of the knight's coordinates. Instead of preventing the knight from moving past the board's boundary, what if we allowed the knight to wrap around to the other side of the board? To do so, we could first add the knight's coordinates, like before. To get the knight's final position, we can take the modulus of the resulting coordinates with respect to the board's size to ensure that the new coordinates are within the board's boundary. This has the effect of making the knight wrap around the board as it moves.
+
+It also turns out that the board size used when using this wrap-around effect will have an impact on the number of squares reached. To visualize this, let's look at the 1-dimensional case. Let's say we start at 1 and continually add 3.
+
+<figure>
+<svg id='clock-12'></svg>
+<svg id='clock-11'></svg>
+<figcaption>Continuously adding 3 while taking the modulus with respect to 12 and 11. If the size of step we take shares factors with the modulus we use, we won't be able to reach some numbers.</figcaption>
+</figure>
+
+By continually adding 3, we'll only be able to reach the same four numbers, modulo 12. But modulo 11, we'll be able to reach every single one. This is because 11 and 3 share no factors. In general, taking the modulus with prime numbers will allow us to reach every number because primes share no factors with any numbers that are smaller than they are.
 
 <figure>
 <svg id='fix-4-2'></svg>
 <svg id='fix-3-1'></svg>
 <svg id='fix-5-2'></svg>
-<figcaption>It's all fixed!</figcaption>
+<figcaption>The same boards that gave us problems earlier, this time on a 7 by 7 grid using the modulus to compute coordinates. Since 7 is prime, we can reach every square with any knight we choose.</figcaption>
 </figure>
 
-### Visualizations
+Using the modulus eliminates each of the limitations we discussed because it allows more numbers to be reached by eliminating spatial restrictions. It turns out the secret to unlocking the potential of a generalized knight is to extend our idea of the board as well. What we're left with doesn't very closely resemble chess, but it does generate some pretty pictures.
 
+### Further reading
+
+- [Tom7's chess](http://tom7.org/chess/): some awesome chess-related explorations that inspired me to write this post
+- [Generalized knight’s tours on rectangular chessboards](https://core.ac.uk/download/pdf/82621071.pdf): more fun with generalized knights
+- [Modular arithmetic](https://en.wikipedia.org/wiki/Modular_arithmetic): some more detailed mathematical explanations of modular arithmetic
+- [Cryptonomicon, by Neal Stephenson](https://en.wikipedia.org/wiki/Cryptonomicon): excellent book that contains descriptions of modular arithmetic as it applies to cryptography
 

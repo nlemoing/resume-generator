@@ -8,7 +8,8 @@
             "OutputPath": "knight.html",
             "Scripts": [
                 "https://d3js.org/d3.v5.min.js",
-                "/scripts/knight.js"
+                "/scripts/knight.js",
+                "/scripts/clock.js"
             ],
             "Styles": ["knight.css"],
             "Date": "November 19, 2019"
