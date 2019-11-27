@@ -1,7 +1,8 @@
 \section{<.Title>}
 <range .Items>
-\subsection{\textbf{<.Title>}<with .Subtitle> <.><end>}
-<with .Subheading><.><end><with .Date> \hfill \faCalendar \ <.><end>
+\subsection{<if .Link>\href{<.Link>}{\textbf{<.Title>}}<else>\textbf{<.Title>}<end>
+<with .Subtitle> <.><end><with .Date> \hfill \mydate{<.>}<end>}
+<with .Subheading><.><end>
 <with .Description>
 <template "description.tex" .>
 <end></* Description */>

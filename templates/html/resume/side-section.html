@@ -4,8 +4,9 @@
     <div class="section-title t{{.Position}}"><h1>{{$SectionTitle}}</h1></div>
     <div class="side-section-items">
     {{ range .Items }}
-    <div class="side-section-item">
+    <div class='side-section-item{{if eq $SectionTitle "Education"}} wide{{end}}'>
         <h3>{{with .Link}}<a href='{{.}}'>{{end}}{{.Title}}{{if .Link}}</a>{{end}}</h3>
+        {{with .Subheading}}<i>{{.}}</i>{{ end }}
         {{ if eq $SectionTitle "Skills" }}
         {{ with .Description }}{{ template "skills-description.html" .}}{{ end }}
         {{ else }}

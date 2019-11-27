@@ -8,6 +8,7 @@
         <div class="item-titles">
             <h3>{{with .Link}}<a href='{{.}}'>{{end}}{{.Title}}{{if .Link}}</a>{{end}}</h3>
             {{with .Subtitle}}<h4>{{.}}</h4>{{ end }}
+            {{with .Subheading}}<i>{{.}}</i>{{ end }}
         </div>
         <div class="item-metadata">
             {{with .Date}}<p><i class="fas fa-calendar-alt"></i> {{.}}</p>{{end}}

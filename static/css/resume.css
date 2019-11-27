@@ -169,8 +169,11 @@ All screens:
 .side-section-item {
     padding: 6px;
     margin: 12px 20px; 
-    width: calc(50% - 52px);
     padding: 5px;
+}
+
+.side-section-item:not(.wide) {
+    width: calc(50% - 52px);
 }
 
 .description-item {

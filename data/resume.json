@@ -1,7 +1,7 @@
 {
     "Title": "Resume",
     "Styles": ["resume.css"],
-    "Tagline": "4th-year Computer Science major at the University of Waterloo. Tech enthusiast who loves working with data and writing code across the stack.",
+    "Tagline": "4th-year Computer Science major at the University of Waterloo. Tech enthusiast who loves working with data and writing code across the stack.<br><br><i>Seeking internships for Spring 2020 and Fall 2020.</i>",
     "Sections": [
         {
             "Title": "Experience",
@@ -11,7 +11,6 @@
                     "Subtitle": "Munich Re",
                     "Location": "New York",
                     "Date": "9/2019 - Present",
-                    "Subheading": "9/2019 (Ongoing)",
                     "Description": {
                         "Bulleted": true, 
                         "Contents": [
@@ -26,7 +25,6 @@
                     "Subtitle": "Munich Re",
                     "Location": "New York",
                     "Date": "1/2019 - 4/2019",
-                    "Subheading": "1/2019 - 4/2019",
                     "Description": {
                         "Bulleted": true,
                         "Contents": [
@@ -41,7 +39,6 @@
                     "Subtitle": "Bonfire Interactive",
                     "Location": "Kitchener",
                     "Date": "5/2019 - 8/2019",
-                    "Subheading": "5/2019 - 8/2019",
                     "Description": {
                         "Bulleted": true,
                         "Contents": [
@@ -73,7 +70,7 @@
                 {
                     "Title": "GNight",
                     "Subtitle": "Generalized knight simulator and visualizer",
-                    "Subheading": "C++, OpenCV (7/2019)",
+                    "Subheading": "C++, OpenCV",
                     "Date": "7/2019",
                     "Link": "https://github.com/nlemoing/generalized-knight",
                     "Description": {
@@ -87,7 +84,7 @@
                 {
                     "Title": "GoCV",
                     "Subtitle": "Templated resume generator",
-                    "Subheading": "Golang (9/2019)",
+                    "Subheading": "Golang",
                     "Date": "9/2019",
                     "Link": "https://github.com/nlemoing/resume-generator",
                     "Description": {
@@ -105,7 +102,7 @@
             "Items": [
                 {
                     "Title": "Research Assistant",
-                    "Subheading": "3D Images (5/2019 - 8/2019)",
+                    "Subheading": "3D Images",
                     "Date": "5/2019 - 8/2019",
                     "Description": {
                         "Bulleted": true,
@@ -118,7 +115,7 @@
                 },
                 {
                     "Title": "Teaching Assistant",
-                    "Subheading": "Math and CS (9/2017 - Present)",
+                    "Subheading": "Math and CS",
                     "Date": "9/2017 - Present",
                     "Description": {
                         "Bulleted": true,
