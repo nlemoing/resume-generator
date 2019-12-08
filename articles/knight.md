@@ -64,13 +64,11 @@ Why should this matter? Think of the knight's position as a coordinate on a grid
 <figcaption>Since 6 and 9 are both multiples of 3, we are always changing our coordinates by a multiple of 3.</figcaption>
 </figure>
 
-Let's say we pick (4, 5) as our starting position. 4 is one above a multiple of 3, so we can write it as 1 + 3(1). If we add a 6 or a 9, we can add them to the right part of the number without affecting the left since they are also multiples of 3. Our x coordinate will always be one above a multiple of 3; never two above a multiple of 3, nor a multiple of 3 itself.
+Let's say we pick (4, 5) as our starting position. 4 is one above a multiple of 3, so we can write it as 1 + 3(1). Similarly, we can write 5 as 2 + 3(1). We're breaking 4 and 5 up into their quotient (1) and remainder (1 and 2, respectively) when they're divided by 3. If we want to add any multiple of 3 to these numbers, only the quotient will change. That's exactly what is happening when we move the knight, since we are always changing each coordinate by either 6 or 9. Therefore, our x coordinate will always be one above a multiple of 3; never two above a multiple of 3, nor a multiple of 3 itself. 
 
-Mathematicians have special terminology for being "one above a multiple of 3". They would say that 4 is *congruent* to 1, *modulo* 3. Basically, this means that 1 and 4 have the same remainder when divided by 3. This is also true of 7, 10, and an infinite amount of other numbers. Mathematicians don't have time to list an infinite amount of numbers, so when they want to talk about *all* the numbers with this property, they call this group the *congruence class* of 1, *modulo* 3. 
+Mathematicians have special terminology for being "one above a multiple of 3". They would say that 4 is *congruent* to 1, *modulo* 3. Basically, this means that 1 and 4 have the same remainder when divided by 3. This is also true of 7, 10, and an infinite amount of other numbers. Mathematicians don't have time to list an infinite amount of numbers, so when they want to talk about *all* the numbers with this property, they call this group the *congruence class* of 1, *modulo* 3. Because of the remainder property we saw above, our coordinates will always stay in the same congruence class (*modulo* 3) that they began in because we are always adding multiples of 3. This is why our knight can only reach every third row and column.
 
-Like we saw above, if we add a multiple of 3 to a number, it'll remain in the same congruence class, *modulo* 3. We can also define congruence classes *modulo* other numbers as well; the same property will hold.
-
-If a knight's numbers share a factor, then we will always be adding a multiple of that factor to our coordinates, trapping us in the same congruence class forever.
+The same general idea happens when the knight's numbers share any factor other than 1. If a knight's numbers share a factor, then we will always be adding a multiple of that factor to our coordinates, trapping us in the same congruence class forever.
 
 #### Parity problems
 
@@ -79,9 +77,7 @@ If a knight's numbers share a factor, then we will always be adding a multiple o
 <figcaption>This knight can't reach certain diagonals.</figcaption>
 </figure>
 
-Although the (2,1)-knight had no problems reaching every square, the (3,1)-knight can't reach half of them. Since 3 and 1 have no numbers in common, this is a different problem than we ran into earlier.
-
-My first instinct when I first saw this was that there was a bug in my code somewhere. My second instinct was to check a bunch of examples and see if I could see a pattern.
+Although the (2,1)-knight had no problems reaching every square, the (3,1)-knight can't reach half of them. Since 3 and 1 have no numbers in common, this is a different problem than we ran into earlier. If we look at some more examples, we might get more insight into why this is happening. 
 
 <figure>
 <div id='parity-grid'>
@@ -118,13 +114,81 @@ Take a look at the ones where the knight is able to reach every square. In this 
 
 *Parity* is just another way of saying if something is even or odd. Normally, we deal with parity of numbers: 4 has even parity while 7 has odd parity. It turns out pairs of numbers have parity as well: you just take the parity of the two numbers added together. For example, (2,1) is odd since 3 is odd, while (3,1) is even since 4 is even.
 
-Every knight that is able to reach every square has the same parity: odd. Why would that be?
+Every knight that is able to reach every square has odd parity. Why would that be?
 
 <figure>
-<svg viewBox="0 0 100 100">
+<svg viewBox="0 0 105 51">
+    <style>
+        .odd-even text { font: 6px monospace; }
+        .odd-even tspan.o { fill: red; }
+        .odd-even tspan.e { fill: blue; }
+        .odd-even line { stroke: grey; stroke-width: 0.5px; }
+    </style>
 
+    <g class="odd-even">
+    <line x1="33" x2="33" y1="0" y2="51"></line>
+
+    <text y="9.5">
+        <tspan class="o">O</tspan> +
+        <tspan class="o">O</tspan> =
+        <tspan class="e">E</tspan>
+    </text>
+    <text x="35" y="6">
+        (<tspan class="o">O</tspan>,<tspan class="e">E</tspan>) +
+        (<tspan class="e">E</tspan>,<tspan class="o">O</tspan>) =
+        (<tspan class="o">O</tspan>,<tspan class="o">O</tspan>)
+    </text>
+    <text x="35" y="13">
+        (<tspan class="o">O</tspan>,<tspan class="e">E</tspan>) +
+        (<tspan class="o">O</tspan>,<tspan class="e">E</tspan>) =
+        (<tspan class="e">E</tspan>,<tspan class="e">E</tspan>)
+    </text>
+
+    <line x1="0" x2="105" y1="15.5" y2="15.5"></line>
+
+    <text y="24.5">
+        <tspan class="o">O</tspan> +
+        <tspan class="e">E</tspan> =
+        <tspan class="o">O</tspan>
+    </text>
+    <line x1="33" x2="33" y1="17" y2="29"></line>
+    <text x="35" y="21">
+        (<tspan class="o">O</tspan>,<tspan class="e">E</tspan>) +
+        (<tspan class="o">O</tspan>,<tspan class="o">O</tspan>) =
+        (<tspan class="e">E</tspan>,<tspan class="o">O</tspan>)
+    </text>
+    <text x="35" y="28">
+        (<tspan class="o">O</tspan>,<tspan class="e">E</tspan>) +
+        (<tspan class="e">E</tspan>,<tspan class="e">E</tspan>) =
+        (<tspan class="o">O</tspan>,<tspan class="e">E</tspan>)
+    </text>
+
+    <line x1="0" x2="105" y1="30.5" y2="30.5"></line>
+
+    <text y="43">
+        <tspan class="e">E</tspan> +
+        <tspan class="e">E</tspan> =
+        <tspan class="e">E</tspan>
+    </text>
+    <line x1="33" x2="33" y1="31" y2="50"></line>
+    <text x="35" y="36">
+        (<tspan class="o">O</tspan>,<tspan class="o">O</tspan>) +
+        (<tspan class="o">O</tspan>,<tspan class="o">O</tspan>) =
+        (<tspan class="e">E</tspan>,<tspan class="e">E</tspan>)
+    </text>
+    <text x="35" y="43">
+        (<tspan class="e">E</tspan>,<tspan class="e">E</tspan>) +
+        (<tspan class="e">E</tspan>,<tspan class="e">E</tspan>) =
+        (<tspan class="e">E</tspan>,<tspan class="e">E</tspan>)
+    </text>
+    <text x="35" y="50">
+        (<tspan class="o">O</tspan>,<tspan class="o">O</tspan>) +
+        (<tspan class="e">E</tspan>,<tspan class="e">E</tspan>) =
+        (<tspan class="o">O</tspan>,<tspan class="o">O</tspan>)
+    </text>
+    </g>
 </svg>
-<figcaption>Adding evens and odds, illustrated</figcaption>
+<figcaption>Adding evens and odds, illustrated. For a pair to be even, both numbers in the pair must have the same color. The same rules apply to pairs as to single numbers when it comes to parity and addition.</figcaption>
 </figure>
 
 It turns out a lot of the same properties of single-number parities apply to parities of pairs as well. For example, when you add an even number to another number, the parity will stay the same. If you add an odd number, the parity will swap!
@@ -135,7 +199,7 @@ It turns out a lot of the same properties of single-number parities apply to par
 <figcaption>Odd squares are colored red while even squares are blue. A (2,1)-knight (left) can reach both even and odd squares, while the (3,1)-knight (right) is stuck with even ones.</figcaption>
 </figure>
 
-This is a clue as to why knights with odd parity can reach more squares than even-parity knights. Odd parity knights swap the parity of the coordinate with each move, so we can reach both even and odd squares regardless of where we start. With even knights, on the other hand, we are stuck on the same parity as we started with.
+This is a clue as to why knights with odd parity can reach more squares than even-parity knights. Odd parity knights swap the parity of their coordinate with each move, so we can reach both even and odd squares regardless of where we start. With even knights, on the other hand, we are stuck on the same parity as we started with. This is why the (3,1)-knight can only reach half the squares that the (2,1)-knight can.
 
 #### Claustrophobic concerns
 
@@ -147,17 +211,27 @@ This is a clue as to why knights with odd parity can reach more squares than eve
 
 Everything we've talked about to this point would hold true regardless of the board size. But in some situations, we get interesting patterns if the knight is just a little too big for the board. In these cases, squares in the middle become impossible to reach because the knight can't maneuver tightly enough in the small spaces.
 
-I don't have any insight for the mathematical reason behind this one. If you have any ideas, let me know!
+I don't have any insight for explaining when patterns like these will occur. If you have any ideas, let me know!
 
 The animations are reminiscent of the [bouncing DVD logo](https://www.youtube.com/watch?v=QOtuX0jL85Y), though.
 
-### When in doubt, use the modulus
+### Reaching every square
 
-We've already talked a little bit about the modulus when we looked at knights that shared common factors. In that context, we saw how knights with common factors would miss some rows and columns because they were restricted to the same congruence class: the coordinates always had the same remainder when divided by the common factor.
+Generalizing knights thus far has been unsuccessful. Because many of our generalized knights are unable to reach some of the squares, they have been rendered much less useful on the chessboard. Only *(a,b)*-knights that meet a very specific set of criteria can reach every square:
+- *a* and *b* must not share any factors
+- *a + b* must be odd
+- *a* and *b* can't be too big relative to the size of the board
+However, it turns out a small tweak to the board itself will allow any of the limited knights we've discussed to reach any square.
+
+#### When in doubt, take the modulus
+
+The modulo operation (referred to from now on as the modulus) gives the remainder when dividing one number by another. We've already talked a little bit about the modulus when we looked at knights that shared common factors. In that context, we saw how knights with common factors would miss some rows and columns because they were restricted to the same congruence class: the coordinates always had the same remainder when divided by the common factor.
+
+The most common place to encounter the modulus outside of a math classroom is on a wall clock. If it's 10 and you wait 3 hours, it'll be 1 o'clock. We're taking the modulus with respect to 12 after we perform the addition. After 12, the hours wrap back around to 1. Effectively, the modulus makes numbers wrap around to 0 in a cyclical manner.
 
 We can also use the modulus in the context of the knight's coordinates. Instead of preventing the knight from moving past the board's boundary, what if we allowed the knight to wrap around to the other side of the board? To do so, we could first add the knight's coordinates, like before. To get the knight's final position, we can take the modulus of the resulting coordinates with respect to the board's size to ensure that the new coordinates are within the board's boundary. This has the effect of making the knight wrap around the board as it moves.
 
-It also turns out that the board size used when using this wrap-around effect will have an impact on the number of squares reached. To visualize this, let's look at the 1-dimensional case. Let's say we start at 1 and continually add 3.
+It's not immediately clear how the modulus will help us solve the problems we had with the knight. First, let's answer a simpler question from the 1D case: what happens if we repeatedly add 3 hours on a regular wall clock? It turns out we'll only see 4 different times. On the other hand, if our wall clock had 11 hours instead of 12, we would eventually see all the hours.
 
 <figure>
 <svg id='clock-12'></svg>
@@ -165,7 +239,11 @@ It also turns out that the board size used when using this wrap-around effect wi
 <figcaption>Continuously adding 3 while taking the modulus with respect to 12 and 11. If the size of step we take shares factors with the modulus we use, we won't be able to reach some numbers.</figcaption>
 </figure>
 
-By continually adding 3, we'll only be able to reach the same four numbers, modulo 12. But modulo 11, we'll be able to reach every single one. This is because 11 and 3 share no factors. In general, taking the modulus with prime numbers will allow us to reach every number because primes share no factors with any numbers that are smaller than they are.
+The difference between the two cases is that 12 and 3 share a common factor, while 11 and 3 don't. This is similar to the common factor problem we saw earlier: sharing factors causes some numbers to be skipped. However, if we make sure that the number we take the modulus with doesn't share factors with our knight, we should be able to reach every square. By picking a prime number, like 11, we can guarantee that no knight will have a shared factor with it.
+
+So long as the prime we pick is odd, we'll also solve our parity problem. Adding two even numbers can result in an odd number if the numbers we add are large enough to cause a wrap-around. Suppose we pick 7 for our modulus. Normally, 4 + 4 = 8, which is even as expected. However, 8 is congruent to 1 *modulo* 7, and 1 is an odd number. Before, we saw issues with even knights because there was no way of changing parities by adding even numbers. With the modulus, we now have a way of getting an odd number by adding two evens.
+
+Finally, our spatial constraint problem should be solved as well, albeit for a less interesting reason: the modulus removes the boundaries at the edge of the board by allowing knights to pass through to the other side. With no spatial constraints, the knight is able to reach every square on the board.
 
 <figure>
 <svg id='fix-4-2'></svg>
@@ -174,7 +252,7 @@ By continually adding 3, we'll only be able to reach the same four numbers, modu
 <figcaption>The same boards that gave us problems earlier, this time on a 7 by 7 grid using the modulus to compute coordinates. Since 7 is prime, we can reach every square with any knight we choose.</figcaption>
 </figure>
 
-Using the modulus eliminates each of the limitations we discussed because it allows more numbers to be reached by eliminating spatial restrictions. It turns out the secret to unlocking the potential of a generalized knight is to extend our idea of the board as well. What we're left with doesn't very closely resemble chess, but it does generate some pretty pictures.
+It turns out the secret to unlocking the potential of a generalized knight is to extend our idea of the board as well. What we're left with doesn't very closely resemble chess, but it does generate some pretty pictures.
 
 ### Further reading
 
@@ -182,4 +260,3 @@ Using the modulus eliminates each of the limitations we discussed because it all
 - [Generalized knight’s tours on rectangular chessboards](https://core.ac.uk/download/pdf/82621071.pdf): more fun with generalized knights
 - [Modular arithmetic](https://en.wikipedia.org/wiki/Modular_arithmetic): some more detailed mathematical explanations of modular arithmetic
 - [Cryptonomicon, by Neal Stephenson](https://en.wikipedia.org/wiki/Cryptonomicon): excellent book that contains descriptions of modular arithmetic as it applies to cryptography
-
