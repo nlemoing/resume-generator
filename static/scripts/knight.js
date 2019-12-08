@@ -376,7 +376,7 @@ animateKnight({
 const cf21Options = {
     svgContainer: document.getElementById('2-1-knight-bfs'),
     w: 8, h: 8, r: 0, c: 0, a: 1, b: 2,
-    colorFn: sequentialColor(180, 330, 8)
+    colorFn: sequentialColor(0, 120, 7)
 }
 const cf21Board = new Board(cf21Options);
 cf21Options.nextFn = cf21Board.next.bind(cf21Board);
@@ -385,7 +385,7 @@ animateKnight(cf21Options);
 const cf42Options = {
     svgContainer: document.getElementById('common-4-2-knight-bfs'),
     w: 25, h: 25, r: 0, c: 0, a: 2, b: 4,
-    colorFn: sequentialColor(0, 180, 12)
+    colorFn: sequentialColor(0, 120, 10)
 }
 const cf42Board = new Board(cf42Options);
 cf42Options.nextFn = cf42Board.next.bind(cf42Board);
@@ -394,7 +394,7 @@ animateKnight(cf42Options);
 const cf69Options = {
     svgContainer: document.getElementById('common-6-9-knight-bfs'),
     w: 25, h: 25, r: 0, c: 0, a: 6, b: 9,
-    colorFn: sequentialColor(0, 180, 12)
+    colorFn: sequentialColor(0, 120, 7)
 }
 const cf69Board = new Board(cf69Options);
 cf69Options.nextFn = cf69Board.next.bind(cf69Board);
@@ -403,7 +403,7 @@ animateKnight(cf69Options);
 const cf69rw = {
     svgContainer: document.getElementById('common-6-9-rw'),
     svgTextContainer: document.getElementById('common-6-9-rw-text'),
-    w: 25, h: 25, r: 0, c: 0, a: 6, b: 9,
+    w: 25, h: 25, r: 5, c: 4, a: 6, b: 9,
     colorFn: () => 'red',
     nextFn: randomNextMove
 }
@@ -415,7 +415,7 @@ animateKnight(cf69rw);
 const p31Options = {
     svgContainer: document.getElementById('parity-3-1-knight-bfs'),
     w: 8, h: 8, r: 0, c: 0, a: 1, b: 3,
-    colorFn: sequentialColor(0, 180,12)
+    colorFn: sequentialColor(0, 120, 6)
 }
 const p31Board = new Board(p31Options);
 p31Options.nextFn = p31Board.next.bind(p31Board);
@@ -441,7 +441,7 @@ animateKnight(p31rwOptions)
 const ts52Options = {
     svgContainer: document.getElementById('5-2-knight-bfs'),
     w: 8, h: 8, r: 0, c: 0, a: 5, b: 2,
-    colorFn: sequentialColor(0, 180,8),
+    colorFn: sequentialColor(0, 120, 14),
 }
 const ts52Board = new Board(ts52Options);
 ts52Options.nextFn = ts52Board.next.bind(ts52Board);
@@ -450,7 +450,7 @@ animateKnight(ts52Options);
 const ts817Options = {
     svgContainer: document.getElementById('8-17-knight-bfs'),
     w: 25, h: 25, r: 0, c: 0, a: 8, b: 17,
-    colorFn: sequentialColor(0, 180,8),
+    colorFn: sequentialColor(0, 120, 77),
 }
 const ts817Board = new Board(ts817Options);
 ts817Options.nextFn = ts817Board.next.bind(ts817Board);
@@ -459,7 +459,7 @@ animateKnight(ts817Options);
 const fix42Options = {
     svgContainer: document.getElementById('fix-4-2'),
     w: 7, h: 7, r: 0, c: 0, a: 4, b: 2, mod: true,
-    colorFn: () => 'red'
+    colorFn: sequentialColor(0, 120, 4),
 };
 const fix42Board = new Board(fix42Options);
 fix42Options.nextFn = fix42Board.next.bind(fix42Board);
@@ -468,7 +468,7 @@ animateKnight(fix42Options);
 const fix31Options = {
     svgContainer: document.getElementById('fix-3-1'),
     w: 7, h: 7, r: 0, c: 0, a: 3, b: 1, mod: true,
-    colorFn: () => 'red'
+    colorFn: sequentialColor(0, 120, 4),
 };
 const fix31Board = new Board(fix31Options);
 fix31Options.nextFn = fix31Board.next.bind(fix31Board);
@@ -477,7 +477,7 @@ animateKnight(fix31Options);
 const fix52Options = {
     svgContainer: document.getElementById('fix-5-2'),
     w: 7, h: 7, r: 0, c: 0, a: 5, b: 2, mod: true,
-    colorFn: () => 'red'
+    colorFn: sequentialColor(0, 120, 6),
 };
 const fix52Board = new Board(fix52Options);
 fix52Options.nextFn = fix52Board.next.bind(fix52Board);
