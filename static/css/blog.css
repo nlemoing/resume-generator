@@ -35,7 +35,7 @@
 
 #article-body > figure {
     margin: 10px;
-    width: calc(100% - 10px);
+    width: calc(100% - 20px);
     text-align: center;
     font-size: 10pt;
     color: #555555;

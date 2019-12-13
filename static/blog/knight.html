@@ -27,17 +27,12 @@
 <br/>
 <p>Knights in chess are weird. If you look at every other piece, their movements are more-or-less straightforward.
 Rooks and kings move up, down, left or right. Bishops move along the diagonals.
-Queens can do either. Pawns can be a little weird, but in general they always have to move forward on the row they started on.</p>
-<p>Knights are&hellip; different. While some pieces, like rooks, bishops and the queen, have no limits on the number of
-squares they can travel with each move, no piece besides the knight can jump over another piece in its path. Furthermore, all other
-pieces are restricted to either cardinal (up, down, left, right) or intercardinal (diagonal)
-directions. Knights don&rsquo;t have either of these restrictions; they can jump over other pieces, and their
-movement is &ldquo;L&rdquo;-shaped: two squares in a cardinal direction followed by one square in a perpendicular
-direction. It&rsquo;s because of this that knights have such a unique role in chess; knights are one of the
+Queens can do either. Pawns are a little weird, but in general they always have to move forward.</p>
+<p>Knights are&hellip; different. No piece besides the knight can jump over another piece in its path. Furthermore, all other
+pieces are restricted to moving up, down, left, right or diagonally. With their &ldquo;L&rdquo;-shaped movement, knights fall somewhere between the 8 compass points, moving in a direction no other piece can. It&rsquo;s because of these unique features that knights have such an interesting and important role in chess; knights are one of the
 first pieces that can be moved (since they can jump over the pieces in front of them), and their unique
 movement pattern makes it easy for them to attack multiple pieces at once.</p>
-<p>Still, the movement of knights just feels arbitrary. Why should a knight move in a 2-then-1 pattern? Why not 3
-and 1? Or 4 and 2? The knight is one of the oldest and most consistent pieces in history, but it also
+<p>Still, the movement of knights feels somewhat arbitrary. Knights travel by taking two steps in one direction and then another step perpendicularly. But why shouldn&rsquo;t a knight take three steps, then another perpendicular one? Or four and two? There are a number of other possibilities that can be chosen while maintaining the &ldquo;L&rdquo;-shaped <em>spirit</em> of the knight. The knight is one of the oldest and most consistent pieces in history, but it also
 feels like the one with which we can do the most experimentation. Let&rsquo;s see what happens to the knight if
 we change things up a bit.</p>
 <figure>
@@ -45,28 +40,24 @@ we change things up a bit.</p>
 <figcaption>A regular knight, randomly roaming.</figcaption>
 </figure>
 <h2>The Generalized Knight</h2>
-<p>We&rsquo;ve seen how knights move normally: 2 steps in one direction followed by 1 perpendicular
-step. 2 and 1 seem fairly arbitrary. We can replace these with pretty much any pair of whole numbers.
-Each of these new knights will still have the same &ldquo;L&rdquo;-shaped movement pattern.</p>
-<p>From now on, when we refer to an <strong>(a, b)</strong>-knight, we&rsquo;re referring to a knight that takes <strong>a</strong> steps
-in any cardinal direction and then <strong>b</strong> steps in a perpendicular direction.
-Using this definition, our original knight was a (2,1)-knight.</p>
-<p>Since we&rsquo;re going to have all shapes and sizes of knights as well, we&rsquo;ll be increasing the board to allow for space to move as needed.</p>
+<p>The idea is this: we replace the normal two-then-one pattern knights have with an <em>a</em>-then-<em>b</em> pattern, where <em>a</em> and <em>b</em> can be any whole number. From now on, when we refer to an <strong>(a, b)</strong>-knight, we&rsquo;re referring to a knight that takes <strong>a</strong> steps
+in any direction and then <strong>b</strong> steps in a perpendicular direction.
+Using this definition, the original knight is a (2,1)-knight.</p>
+<p>The regular 8-by-8 board will be too small for most of these knights to move around in. We&rsquo;ll adjust the board size based on the knight we look at to account for this.</p>
 <h3>Limitations</h3>
 <figure>
 <svg id='2-1-knight-bfs'></svg>
 <figcaption>For a regular knight, every square is reachable.</figcaption>
 </figure>
-<p>A regular knight can eventually reach any square from any other square on any rectangular board, given enough steps.
-Therefore, it&rsquo;s more interesting to look at what a knight <em>can&rsquo;t</em> do than what it can. We&rsquo;ll set the knights up to explore
-every possible path from their starting position and look for any squares they can&rsquo;t reach.</p>
+<p>A regular knight can eventually reach <em>any</em> square from <em>any</em> other square on <em>any</em> rectangular board, given enough steps.
+Therefore, it&rsquo;s more interesting to look at what a knight <em>can&rsquo;t</em> do than what it can. The knights we&rsquo;ll look at will explore every possible path they can take from their starting position. We&rsquo;ll take a look at the squares that they can&rsquo;t reach and try to understand why.</p>
 <h4>Commonality calamities</h4>
 <figure>
 <svg id='common-4-2-knight-bfs'></svg>
 <svg id='common-6-9-knight-bfs'></svg>
 <figcaption>For these knights, some rows and columns are entirely inaccessible.</figcaption>
 </figure>
-<p>Above, we have a (4,2)-knight (left) and a (6,9)-knight (right). Some of the rows and columns remain white even after the knights have finished moving. The knight simply can&rsquo;t reach them from its starting position. This happens because the numbers associated with the knights share a common factor: 4 and 2 are both multiples of 2, while 6 and 9 are multiples of 3.</p>
+<p>Above, we have a (4,2)-knight (left) and a (6,9)-knight (right). Some of the rows and columns remain unvisited even after the knights have finished moving. The knights simply can&rsquo;t reach them from their starting positions. This happens because the numbers associated with the knights share a common factor: 4 and 2 are both multiples of 2, while 6 and 9 are multiples of 3.</p>
 <p>Why should this matter? Think of the knight&rsquo;s position as a coordinate on a grid. Each time the knight moves, we are adding or subtracting the knight&rsquo;s numbers with the old coordinates to get new ones. Since the knight&rsquo;s numbers have a factor in common, we are always changing our coordinates by some multiple of that factor.</p>
 <figure>
 <div class='stacked-knight-graphics'>
@@ -75,8 +66,8 @@ every possible path from their starting position and look for any squares they c
 </div>
 <figcaption>Since 6 and 9 are both multiples of 3, we are always changing our coordinates by a multiple of 3.</figcaption>
 </figure>
-<p>Let&rsquo;s say we pick (4, 5) as our starting position. 4 is one above a multiple of 3, so we can write it as 1 + 3(1). Similarly, we can write 5 as 2 + 3(1). We&rsquo;re breaking 4 and 5 up into their quotient (1) and remainder (1 and 2, respectively) when they&rsquo;re divided by 3. If we want to add any multiple of 3 to these numbers, only the quotient will change. That&rsquo;s exactly what is happening when we move the knight, since we are always changing each coordinate by either 6 or 9. Therefore, our x coordinate will always be one above a multiple of 3; never two above a multiple of 3, nor a multiple of 3 itself.</p>
-<p>Mathematicians have special terminology for being &ldquo;one above a multiple of 3&rdquo;. They would say that 4 is <em>congruent</em> to 1, <em>modulo</em> 3. Basically, this means that 1 and 4 have the same remainder when divided by 3. This is also true of 7, 10, and an infinite amount of other numbers. Mathematicians don&rsquo;t have time to list an infinite amount of numbers, so when they want to talk about <em>all</em> the numbers with this property, they call this group the <em>congruence class</em> of 1, <em>modulo</em> 3. Because of the remainder property we saw above, our coordinates will always stay in the same congruence class (<em>modulo</em> 3) that they began in because we are always adding multiples of 3. This is why our knight can only reach every third row and column.</p>
+<p>Let&rsquo;s say we pick (4, 5) as our starting position. 4 is one above a multiple of 3, so we can write it as 1 + 3(1). Similarly, we can write 5 as 2 + 3(1). We&rsquo;re breaking 4 and 5 up into their quotient (1) and remainder (1 and 2, respectively) when they&rsquo;re divided by 3. If we want to add any multiple of 3 to these numbers, only the quotient will change. That&rsquo;s exactly what&rsquo;s happening when we move the knight since we are always changing each coordinate by either 6 or 9. Our x coordinate will always be one above a multiple of 3; never two above a multiple of 3, nor a multiple of 3 itself.</p>
+<p>Mathematicians have special terminology for being &ldquo;one above a multiple of 3&rdquo;. They would say that 4 is <em>congruent</em> to 1, <em>modulo</em> 3. Basically, this means that 1 and 4 have the same remainder when divided by 3. This is also true of 7, 10, and an infinite amount of other numbers. It&rsquo;s not very convenient list an infinite amount of numbers, so there&rsquo;s a catch-all term for when you want to talk about <em>all</em> the numbers with this property: the set of all numbers one greater than a multiple of 3 is the <em>congruence class</em> of 1, <em>modulo</em> 3. Because of the remainder property we saw above, our coordinates will always stay in the same congruence class (<em>modulo</em> 3) that they began in because we&rsquo;re always adding multiples of 3. This is why our knight can only reach every third row and column.</p>
 <p>The same general idea happens when the knight&rsquo;s numbers share any factor other than 1. If a knight&rsquo;s numbers share a factor, then we will always be adding a multiple of that factor to our coordinates, trapping us in the same congruence class forever.</p>
 <h4>Parity problems</h4>
 <figure>
@@ -91,32 +82,37 @@ every possible path from their starting position and look for any squares they c
     <span>2</span>
     <span>3</span>
     <span>4</span>
+    <span></span>
     <span>1</span>
     <img src="/images/knight/1-1.png"></img>
     <img src="/images/knight/1-2.png"></img>
     <img src="/images/knight/1-3.png"></img>
     <img src="/images/knight/1-4.png"></img>
+    <span></span>
     <span>2</span>
     <img src="/images/knight/1-2.png"></img>
     <img src="/images/knight/2-2.png"></img>
     <img src="/images/knight/2-3.png"></img>
     <img src="/images/knight/2-4.png"></img>
+    <span></span>
     <span>3</span>
     <img src="/images/knight/1-3.png"></img>
     <img src="/images/knight/2-3.png"></img>
     <img src="/images/knight/3-3.png"></img>
     <img src="/images/knight/3-4.png"></img>
+    <span></span>
     <span>4</span>
     <img src="/images/knight/1-4.png"></img>
     <img src="/images/knight/2-4.png"></img>
     <img src="/images/knight/3-4.png"></img>
     <img src="/images/knight/4-4.png"></img>
+    <span></span>
 </div>
 <figcaption>Breadth-first-search with several knight configurations. Squares are colored by the number of steps it takes to reach. Black squares aren't reached by the knight.</figcaption>
 </figure>
 <p>Take a look at the ones where the knight is able to reach every square. In this chart, they&rsquo;re organized in a checkerboard pattern not unlike the checkerboard pattern made by the (3,1)-knight. This all has to do with the <em>parity</em> of the knight.</p>
 <p><em>Parity</em> is just another way of saying if something is even or odd. Normally, we deal with parity of numbers: 4 has even parity while 7 has odd parity. It turns out pairs of numbers have parity as well: you just take the parity of the two numbers added together. For example, (2,1) is odd since 3 is odd, while (3,1) is even since 4 is even.</p>
-<p>Every knight that is able to reach every square has odd parity. Why would that be?</p>
+<p>In the figure above, each knight that is able to reach every square has odd parity. Why would that be?</p>
 <figure>
 <svg viewBox="0 0 105 51">
     <style>
@@ -208,18 +204,18 @@ every possible path from their starting position and look for any squares they c
 - <em>a</em> and <em>b</em> can&rsquo;t be too big relative to the size of the board
 However, it turns out a small tweak to the board itself will allow any of the limited knights we&rsquo;ve discussed to reach any square.</p>
 <h4>When in doubt, take the modulus</h4>
-<p>The modulo operation (referred to from now on as the modulus) gives the remainder when dividing one number by another. We&rsquo;ve already talked a little bit about the modulus when we looked at knights that shared common factors. In that context, we saw how knights with common factors would miss some rows and columns because they were restricted to the same congruence class: the coordinates always had the same remainder when divided by the common factor.</p>
-<p>The most common place to encounter the modulus outside of a math classroom is on a wall clock. If it&rsquo;s 10 and you wait 3 hours, it&rsquo;ll be 1 o&rsquo;clock. We&rsquo;re taking the modulus with respect to 12 after we perform the addition. After 12, the hours wrap back around to 1. Effectively, the modulus makes numbers wrap around to 0 in a cyclical manner.</p>
+<p>The modulus operation is another name for the process of taking the remainder of one number divided by another. We&rsquo;ve already talked a little bit about the modulus when we looked at knights that shared common factors. In that context, we saw how knights with common factors would miss some rows and columns because they were restricted to the same congruence class: the coordinates always had the same remainder when divided by the common factor.</p>
+<p>The most common place to encounter the modulus outside of a math classroom is on a wall clock. If it&rsquo;s 10 o&rsquo;clock and you wait 3 hours, it&rsquo;ll be 1 o&rsquo;clock. We&rsquo;re taking the modulus with respect to 12 after we add 3 hours. After 12, the hours wrap back around to 1. Effectively, the modulus makes numbers wrap around to 0 in a cyclical manner.</p>
 <p>We can also use the modulus in the context of the knight&rsquo;s coordinates. Instead of preventing the knight from moving past the board&rsquo;s boundary, what if we allowed the knight to wrap around to the other side of the board? To do so, we could first add the knight&rsquo;s coordinates, like before. To get the knight&rsquo;s final position, we can take the modulus of the resulting coordinates with respect to the board&rsquo;s size to ensure that the new coordinates are within the board&rsquo;s boundary. This has the effect of making the knight wrap around the board as it moves.</p>
 <p>It&rsquo;s not immediately clear how the modulus will help us solve the problems we had with the knight. First, let&rsquo;s answer a simpler question from the 1D case: what happens if we repeatedly add 3 hours on a regular wall clock? It turns out we&rsquo;ll only see 4 different times. On the other hand, if our wall clock had 11 hours instead of 12, we would eventually see all the hours.</p>
 <figure>
 <svg id='clock-12'></svg>
 <svg id='clock-11'></svg>
-<figcaption>Continuously adding 3 while taking the modulus with respect to 12 and 11. If the size of step we take shares factors with the modulus we use, we won't be able to reach some numbers.</figcaption>
+<figcaption>Each step adds three hours to the time. On the left, the clock has 12 hours while the one on the right has 11. If the size of step we take shares factors with the modulus we use, we won't be able to reach some numbers.</figcaption>
 </figure>
-<p>The difference between the two cases is that 12 and 3 share a common factor, while 11 and 3 don&rsquo;t. This is similar to the common factor problem we saw earlier: sharing factors causes some numbers to be skipped. However, if we make sure that the number we take the modulus with doesn&rsquo;t share factors with our knight, we should be able to reach every square. By picking a prime number, like 11, we can guarantee that no knight will have a shared factor with it.</p>
-<p>So long as the prime we pick is odd, we&rsquo;ll also solve our parity problem. Adding two even numbers can result in an odd number if the numbers we add are large enough to cause a wrap-around. Suppose we pick 7 for our modulus. Normally, 4 + 4 = 8, which is even as expected. However, 8 is congruent to 1 <em>modulo</em> 7, and 1 is an odd number. Before, we saw issues with even knights because there was no way of changing parities by adding even numbers. With the modulus, we now have a way of getting an odd number by adding two evens.</p>
-<p>Finally, our spatial constraint problem should be solved as well, albeit for a less interesting reason: the modulus removes the boundaries at the edge of the board by allowing knights to pass through to the other side. With no spatial constraints, the knight is able to reach every square on the board.</p>
+<p>The difference between the two cases is that 12 and 3 share a common factor but 11 and 3 don&rsquo;t. This is similar to the common factor problem we saw earlier: sharing factors causes some numbers to be skipped. However, if we make sure that the number we take the modulus with doesn&rsquo;t share factors with our knight, we should be able to reach every square. By picking a prime number, like 11, we can guarantee that no knight will have a shared factor with it.</p>
+<p>So long as the prime we pick is odd, we&rsquo;ll also solve our parity problem. Adding two even numbers can result in an odd number if the numbers we add are large enough to cause a wrap-around. Suppose we pick 7 for our modulus. Normally, 4 + 4 = 8, which is even as expected. However, 8 is congruent to 1 <em>modulo</em> 7, and 1 is an odd number. If we add 4 and 4 modulo 7, we actually get an odd result by adding even numbers. Before, we saw issues with even knights because there was no way of changing parities by adding even numbers. With the modulus, we now have a way of getting an odd number by adding two evens.</p>
+<p>Finally, our spatial constraint problem should be solved as well, albeit for a less interesting reason: the modulus removes the boundaries at the edge of the board by allowing knights to wrap around to the other side. With no spatial constraints, the knight is able to reach every square on the board.</p>
 <figure>
 <svg id='fix-4-2'></svg>
 <svg id='fix-3-1'></svg>
