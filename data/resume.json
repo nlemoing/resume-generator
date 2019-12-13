@@ -241,6 +241,15 @@
                             "I'm also a hobbyist short story writer."
                         ]
                     }
+                },
+                {
+                    "Title": "Bike Rides",
+                    "Description": {
+                        "Bulleted": false,
+                        "Contents": [
+                            "While in New York I biked to work every day, as well as to all five boroughs."
+                        ]
+                    }
                 }
             ]
         }
