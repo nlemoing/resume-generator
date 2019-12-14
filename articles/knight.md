@@ -111,81 +111,6 @@ Take a look at the ones where the knight is able to reach every square. In this 
 
 In the figure above, each knight that is able to reach every square has odd parity. Why would that be?
 
-<figure>
-<svg viewBox="0 0 105 51">
-    <style>
-        .odd-even text { font: 6px monospace; }
-        .odd-even tspan.o { fill: red; }
-        .odd-even tspan.e { fill: blue; }
-        .odd-even line { stroke: grey; stroke-width: 0.5px; }
-    </style>
-
-    <g class="odd-even">
-    <line x1="33" x2="33" y1="0" y2="51"></line>
-
-    <text y="9.5">
-        <tspan class="o">O</tspan> +
-        <tspan class="o">O</tspan> =
-        <tspan class="e">E</tspan>
-    </text>
-    <text x="35" y="6">
-        (<tspan class="o">O</tspan>,<tspan class="e">E</tspan>) +
-        (<tspan class="e">E</tspan>,<tspan class="o">O</tspan>) =
-        (<tspan class="o">O</tspan>,<tspan class="o">O</tspan>)
-    </text>
-    <text x="35" y="13">
-        (<tspan class="o">O</tspan>,<tspan class="e">E</tspan>) +
-        (<tspan class="o">O</tspan>,<tspan class="e">E</tspan>) =
-        (<tspan class="e">E</tspan>,<tspan class="e">E</tspan>)
-    </text>
-
-    <line x1="0" x2="105" y1="15.5" y2="15.5"></line>
-
-    <text y="24.5">
-        <tspan class="o">O</tspan> +
-        <tspan class="e">E</tspan> =
-        <tspan class="o">O</tspan>
-    </text>
-    <line x1="33" x2="33" y1="17" y2="29"></line>
-    <text x="35" y="21">
-        (<tspan class="o">O</tspan>,<tspan class="e">E</tspan>) +
-        (<tspan class="o">O</tspan>,<tspan class="o">O</tspan>) =
-        (<tspan class="e">E</tspan>,<tspan class="o">O</tspan>)
-    </text>
-    <text x="35" y="28">
-        (<tspan class="o">O</tspan>,<tspan class="e">E</tspan>) +
-        (<tspan class="e">E</tspan>,<tspan class="e">E</tspan>) =
-        (<tspan class="o">O</tspan>,<tspan class="e">E</tspan>)
-    </text>
-
-    <line x1="0" x2="105" y1="30.5" y2="30.5"></line>
-
-    <text y="43">
-        <tspan class="e">E</tspan> +
-        <tspan class="e">E</tspan> =
-        <tspan class="e">E</tspan>
-    </text>
-    <line x1="33" x2="33" y1="31" y2="50"></line>
-    <text x="35" y="36">
-        (<tspan class="o">O</tspan>,<tspan class="o">O</tspan>) +
-        (<tspan class="o">O</tspan>,<tspan class="o">O</tspan>) =
-        (<tspan class="e">E</tspan>,<tspan class="e">E</tspan>)
-    </text>
-    <text x="35" y="43">
-        (<tspan class="e">E</tspan>,<tspan class="e">E</tspan>) +
-        (<tspan class="e">E</tspan>,<tspan class="e">E</tspan>) =
-        (<tspan class="e">E</tspan>,<tspan class="e">E</tspan>)
-    </text>
-    <text x="35" y="50">
-        (<tspan class="o">O</tspan>,<tspan class="o">O</tspan>) +
-        (<tspan class="e">E</tspan>,<tspan class="e">E</tspan>) =
-        (<tspan class="o">O</tspan>,<tspan class="o">O</tspan>)
-    </text>
-    </g>
-</svg>
-<figcaption>Adding evens and odds, illustrated. For a pair to be even, both numbers in the pair must have the same color. The same rules apply to pairs as to single numbers when it comes to parity and addition.</figcaption>
-</figure>
-
 It turns out a lot of the same properties of single-number parities apply to parities of pairs as well. For example, when you add an even number to another number, the parity will stay the same. If you add an odd number, the parity will swap!
 
 <figure>
@@ -213,9 +138,11 @@ The animations are reminiscent of the [bouncing DVD logo](https://www.youtube.co
 ### Reaching every square
 
 Generalizing knights thus far has been unsuccessful. Because many of our generalized knights are unable to reach some of the squares, they have been rendered much less useful on the chessboard. Only *(a,b)*-knights that meet a very specific set of criteria can reach every square:
+
 - *a* and *b* must not share any factors
 - *a + b* must be odd
 - *a* and *b* can't be too big relative to the size of the board
+
 However, it turns out a small tweak to the board itself will allow any of the limited knights we've discussed to reach any square.
 
 #### When in doubt, take the modulus

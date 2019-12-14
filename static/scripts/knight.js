@@ -477,7 +477,7 @@ animateKnight(fix31Options);
 const fix52Options = {
     svgContainer: document.getElementById('fix-5-2'),
     w: 7, h: 7, r: 0, c: 0, a: 5, b: 2, mod: true,
-    colorFn: sequentialColor(0, 120, 6),
+    colorFn: sequentialColor(0, 120, 7),
 };
 const fix52Board = new Board(fix52Options);
 fix52Options.nextFn = fix52Board.next.bind(fix52Board);
