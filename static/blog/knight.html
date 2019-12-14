@@ -25,14 +25,14 @@
 </div>
 <div id="article-body">
 <br/>
-<p>Knights in chess are weird. If you look at every other piece, their movements are more-or-less straightforward.
+<p>Chess knights are weird. If you look at every chess other piece, their movements are more-or-less straightforward.
 Rooks and kings move up, down, left or right. Bishops move along the diagonals.
 Queens can do either. Pawns are a little weird, but in general they always have to move forward.</p>
 <p>Knights are&hellip; different. No piece besides the knight can jump over another piece in its path. Furthermore, all other
-pieces are restricted to moving up, down, left, right or diagonally. With their &ldquo;L&rdquo;-shaped movement, knights fall somewhere between the 8 compass points, moving in a direction no other piece can. It&rsquo;s because of these unique features that knights have such an interesting and important role in chess; knights are one of the
+pieces are restricted to moving up, down, left, right or diagonally. With their &ldquo;L&rdquo;-shaped movement, knights move in a direction that&rsquo;s somewhere between the 8 compass points in a way that no other piece can. It&rsquo;s because of these unique features that knights have such an interesting and important role in chess; knights are one of the
 first pieces that can be moved (since they can jump over the pieces in front of them), and their unique
 movement pattern makes it easy for them to attack multiple pieces at once.</p>
-<p>Still, the movement of knights feels somewhat arbitrary. Knights travel by taking two steps in one direction and then another step perpendicularly. But why shouldn&rsquo;t a knight take three steps, then another perpendicular one? Or four and two? There are a number of other possibilities that can be chosen while maintaining the &ldquo;L&rdquo;-shaped <em>spirit</em> of the knight. The knight is one of the oldest and most consistent pieces in history, but it also
+<p>Still, the movement of knights feels somewhat arbitrary. Knights travel by taking two steps in one direction and then another step perpendicularly. But why shouldn&rsquo;t a knight take three steps, then another perpendicular one? Or four and two? There are a number of other possibilities that can be chosen while maintaining the &ldquo;L&rdquo;-shaped spirit of the knight. The knight is one of the oldest and most consistent pieces in history, but it also
 feels like the one with which we can do the most experimentation. Let&rsquo;s see what happens to the knight if
 we change things up a bit.</p>
 <figure>
@@ -40,9 +40,10 @@ we change things up a bit.</p>
 <figcaption>A regular knight, randomly roaming.</figcaption>
 </figure>
 <h2>The Generalized Knight</h2>
-<p>The idea is this: we replace the normal two-then-one pattern knights have with an <em>a</em>-then-<em>b</em> pattern, where <em>a</em> and <em>b</em> can be any whole number. From now on, when we refer to an <strong>(a, b)</strong>-knight, we&rsquo;re referring to a knight that takes <strong>a</strong> steps
-in any direction and then <strong>b</strong> steps in a perpendicular direction.
+<p>The idea is this: we replace the normal two-then-one pattern knights have with an <em>a</em>-then-<em>b</em> pattern, where <em>a</em> and <em>b</em> can be any whole number. From now on, when we refer to an (<em>a</em>,<em>b</em>)-knight, we&rsquo;re referring to a knight that takes <em>a</em> steps
+in any direction and then <em>b</em> steps in a perpendicular direction.
 Using this definition, the original knight is a (2,1)-knight.</p>
+<p>It also turns out that an (<em>a</em>,<em>b</em>)-knight has the same movement as a (<em>b</em>,<em>a</em>)-knight. By convention, we&rsquo;ll list the bigger number first.</p>
 <p>The regular 8-by-8 board will be too small for most of these knights to move around in. We&rsquo;ll adjust the board size based on the knight we look at to account for this.</p>
 <h3>Limitations</h3>
 <figure>
@@ -57,8 +58,8 @@ Therefore, it&rsquo;s more interesting to look at what a knight <em>can&rsquo;t<
 <svg id='common-6-9-knight-bfs'></svg>
 <figcaption>For these knights, some rows and columns are entirely inaccessible.</figcaption>
 </figure>
-<p>Above, we have a (4,2)-knight (left) and a (6,9)-knight (right). Some of the rows and columns remain unvisited even after the knights have finished moving. The knights simply can&rsquo;t reach them from their starting positions. This happens because the numbers associated with the knights share a common factor: 4 and 2 are both multiples of 2, while 6 and 9 are multiples of 3.</p>
-<p>Why should this matter? Think of the knight&rsquo;s position as a coordinate on a grid. Each time the knight moves, we are adding or subtracting the knight&rsquo;s numbers with the old coordinates to get new ones. Since the knight&rsquo;s numbers have a factor in common, we are always changing our coordinates by some multiple of that factor.</p>
+<p>Above, we have a (4,2)-knight and a (9,6)-knight. Some of the rows and columns remain unvisited even after the knights have finished moving. The knights simply can&rsquo;t reach them from their starting positions. This happens because the numbers associated with the knights share a common factor: 4 and 2 are both multiples of 2, while 9 and 6 are both multiples of 3.</p>
+<p>Why should this matter? Think of the knight&rsquo;s position as a coordinate on a grid. When the knight moves, the coordinates have to change by an amount equal to the knight&rsquo;s numbers. If the knight&rsquo;s numbers have a factor in common, we are always changing our coordinates by some multiple of that factor.</p>
 <figure>
 <div class='stacked-knight-graphics'>
 <svg id='common-6-9-rw'></svg>
@@ -66,15 +67,15 @@ Therefore, it&rsquo;s more interesting to look at what a knight <em>can&rsquo;t<
 </div>
 <figcaption>Since 6 and 9 are both multiples of 3, we are always changing our coordinates by a multiple of 3.</figcaption>
 </figure>
-<p>Let&rsquo;s say we pick (4, 5) as our starting position. 4 is one above a multiple of 3, so we can write it as 1 + 3(1). Similarly, we can write 5 as 2 + 3(1). We&rsquo;re breaking 4 and 5 up into their quotient (1) and remainder (1 and 2, respectively) when they&rsquo;re divided by 3. If we want to add any multiple of 3 to these numbers, only the quotient will change. That&rsquo;s exactly what&rsquo;s happening when we move the knight since we are always changing each coordinate by either 6 or 9. Our x coordinate will always be one above a multiple of 3; never two above a multiple of 3, nor a multiple of 3 itself.</p>
-<p>Mathematicians have special terminology for being &ldquo;one above a multiple of 3&rdquo;. They would say that 4 is <em>congruent</em> to 1, <em>modulo</em> 3. Basically, this means that 1 and 4 have the same remainder when divided by 3. This is also true of 7, 10, and an infinite amount of other numbers. It&rsquo;s not very convenient list an infinite amount of numbers, so there&rsquo;s a catch-all term for when you want to talk about <em>all</em> the numbers with this property: the set of all numbers one greater than a multiple of 3 is the <em>congruence class</em> of 1, <em>modulo</em> 3. Because of the remainder property we saw above, our coordinates will always stay in the same congruence class (<em>modulo</em> 3) that they began in because we&rsquo;re always adding multiples of 3. This is why our knight can only reach every third row and column.</p>
+<p>Let&rsquo;s say we pick (4, 5) as our starting position. 4 is one above a multiple of 3, so we can write it as 1 + 3(1). Similarly, we can write 5 as 2 + 3(1). We&rsquo;re breaking 4 and 5 up into their quotient (1) and remainder (1 and 2, respectively) when they&rsquo;re divided by 3. If we want to add any multiple of 3 to these numbers, only the quotient will change. Because our knight&rsquo;s numbers are both multiples of 3, our x coordinate will always be one above a multiple of 3; never two above a multiple of 3, nor a multiple of 3 itself.</p>
+<p>Mathematicians have special terminology for being &ldquo;one above a multiple of 3&rdquo;. They would say that 4 is <em>congruent</em> to 1, <em>modulo</em> 3. Basically, this means that 1 and 4 have the same remainder when divided by 3. This is also true of 7, 10, and an infinite amount of other numbers. It&rsquo;s not very convenient write out an infinite amount of numbers, so there&rsquo;s a catch-all term for when you want to talk about <em>all</em> the numbers with this property: the set of all numbers one greater than a multiple of 3 is the <em>congruence class</em> of 1, <em>modulo</em> 3. Because of the remainder property we saw above, our coordinates will always stay in the same congruence class (<em>modulo</em> 3) that they started in. This is why our knight can only reach every third row and column.</p>
 <p>The same general idea happens when the knight&rsquo;s numbers share any factor other than 1. If a knight&rsquo;s numbers share a factor, then we will always be adding a multiple of that factor to our coordinates, trapping us in the same congruence class forever.</p>
 <h4>Parity problems</h4>
 <figure>
 <svg id='parity-3-1-knight-bfs'></svg>
 <figcaption>This knight can't reach certain diagonals.</figcaption>
 </figure>
-<p>Although the (2,1)-knight had no problems reaching every square, the (3,1)-knight can&rsquo;t reach half of them. Since 3 and 1 have no numbers in common, this is a different problem than we ran into earlier. If we look at some more examples, we might get more insight into why this is happening.</p>
+<p>Although the (2,1)-knight had no problems reaching every square, the (3,1)-knight can&rsquo;t reach half of them. Since 3 and 1 have no factors in common, this is a different problem than we ran into earlier. If we look at some more examples, we might get more insight into why this is happening.</p>
 <figure>
 <div id='parity-grid'>
     <span></span>
@@ -130,7 +131,7 @@ Therefore, it&rsquo;s more interesting to look at what a knight <em>can&rsquo;t<
 <p>I don&rsquo;t have any insight for explaining when patterns like these will occur. If you have any ideas, let me know!</p>
 <p>The animations are reminiscent of the <a href="https://www.youtube.com/watch?v=QOtuX0jL85Y">bouncing DVD logo</a>, though.</p>
 <h3>Reaching every square</h3>
-<p>Generalizing knights thus far has been unsuccessful. Because many of our generalized knights are unable to reach some of the squares, they have been rendered much less useful on the chessboard. Only <em>(a,b)</em>-knights that meet a very specific set of criteria can reach every square:</p>
+<p>Generalizing knights thus far has been unsuccessful. Because many of our generalized knights are unable to reach some of the squares, they have been rendered much less useful on the chessboard. Only (<em>a</em>,<em>b</em>)-knights that meet a very specific set of criteria can reach every square:</p>
 <ul>
 <li><em>a</em> and <em>b</em> must not share any factors</li>
 <li><em>a + b</em> must be odd</li>
@@ -138,8 +139,8 @@ Therefore, it&rsquo;s more interesting to look at what a knight <em>can&rsquo;t<
 </ul>
 <p>However, it turns out a small tweak to the board itself will allow any of the limited knights we&rsquo;ve discussed to reach any square.</p>
 <h4>When in doubt, take the modulus</h4>
-<p>The modulus operation is another name for the process of taking the remainder of one number divided by another. We&rsquo;ve already talked a little bit about the modulus when we looked at knights that shared common factors. In that context, we saw how knights with common factors would miss some rows and columns because they were restricted to the same congruence class: the coordinates always had the same remainder when divided by the common factor.</p>
-<p>The most common place to encounter the modulus outside of a math classroom is on a wall clock. If it&rsquo;s 10 o&rsquo;clock and you wait 3 hours, it&rsquo;ll be 1 o&rsquo;clock. We&rsquo;re taking the modulus with respect to 12 after we add 3 hours. After 12, the hours wrap back around to 1. Effectively, the modulus makes numbers wrap around to 0 in a cyclical manner.</p>
+<p>The modulus operation is another name for taking the remainder of one number divided by another. We&rsquo;ve already talked a little bit about the modulus when we looked at knights that shared common factors. In that context, we saw how knights with common factors would miss some rows and columns because they were restricted to the same congruence class; the coordinates always had the same remainder when divided by the common factor.</p>
+<p>The most common place you&rsquo;d find the modulus outside of a math classroom is on a wall clock. If it&rsquo;s 10 o&rsquo;clock and you wait 3 hours, it&rsquo;ll be 1 o&rsquo;clock. With clocks, we take the modulus with respect to 12. After 12, the hours wrap back around to 1. Effectively, the modulus makes numbers wrap around to 0 in a cyclical manner.</p>
 <p>We can also use the modulus in the context of the knight&rsquo;s coordinates. Instead of preventing the knight from moving past the board&rsquo;s boundary, what if we allowed the knight to wrap around to the other side of the board? To do so, we could first add the knight&rsquo;s coordinates, like before. To get the knight&rsquo;s final position, we can take the modulus of the resulting coordinates with respect to the board&rsquo;s size to ensure that the new coordinates are within the board&rsquo;s boundary. This has the effect of making the knight wrap around the board as it moves.</p>
 <p>It&rsquo;s not immediately clear how the modulus will help us solve the problems we had with the knight. First, let&rsquo;s answer a simpler question from the 1D case: what happens if we repeatedly add 3 hours on a regular wall clock? It turns out we&rsquo;ll only see 4 different times. On the other hand, if our wall clock had 11 hours instead of 12, we would eventually see all the hours.</p>
 <figure>
@@ -156,12 +157,11 @@ Therefore, it&rsquo;s more interesting to look at what a knight <em>can&rsquo;t<
 <svg id='fix-5-2'></svg>
 <figcaption>The same boards that gave us problems earlier, this time on a 7 by 7 grid using the modulus to compute coordinates. Since 7 is prime, we can reach every square with any knight we choose.</figcaption>
 </figure>
-<p>It turns out the secret to unlocking the potential of a generalized knight is to extend our idea of the board as well. What we&rsquo;re left with doesn&rsquo;t very closely resemble chess, but it does generate some pretty pictures.</p>
-<h3>Further reading</h3>
+<p>It turns out the secret to unlocking the potential of a generalized knight is to extend our idea of the board as well. What we&rsquo;re left with doesn&rsquo;t very closely resemble chess, but it does lead to some pretty pictures.</p>
+<h3>Related reading</h3>
 <ul>
-<li><a href="http://tom7.org/chess/">Tom7&rsquo;s chess</a>: some awesome chess-related explorations that inspired me to write this post</li>
+<li><a href="http://tom7.org/chess/">Tom7&rsquo;s chess</a>: some awesome chess-related explorations that initially inspired me to write this post</li>
 <li><a href="https://core.ac.uk/download/pdf/82621071.pdf">Generalized knight’s tours on rectangular chessboards</a>: more fun with generalized knights</li>
-<li><a href="https://en.wikipedia.org/wiki/Modular_arithmetic">Modular arithmetic</a>: some more detailed mathematical explanations of modular arithmetic</li>
 <li><a href="https://en.wikipedia.org/wiki/Cryptonomicon">Cryptonomicon, by Neal Stephenson</a>: excellent book that contains descriptions of modular arithmetic as it applies to cryptography</li>
 </ul>
 </div>
