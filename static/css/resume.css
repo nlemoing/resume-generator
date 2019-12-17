@@ -183,3 +183,10 @@ All screens:
 .item h3, .side-section-item h3 {
     color: rgb(0, 81, 212)
 }
+
+.resume-description-list > li {
+    margin-top: 5px;
+}
+.resume-description-list > li:first-child {
+    margin-top: 0;
+}
