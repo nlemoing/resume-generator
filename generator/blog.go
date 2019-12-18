@@ -55,6 +55,7 @@ func generateBlog() error {
 	var out string
 	for _, article := range blog.Articles {
 		article.Styles = append(article.Styles, "blog.css")
+		article.Scripts = append(article.Scripts, "/scripts/article.js")
 		out = filepath.Join("static/blog", article.OutputPath)
 		err = TemplateToFile(article, articleTemplate, "main.html", out)
 		if err != nil {

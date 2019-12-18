@@ -14,3 +14,32 @@
 .wt {
 	background-color: #FFDEAD;
 }
+
+#article-body > figure svg {
+	padding: 10px;
+	width: 200px;
+}
+
+#parity-grid {
+	display: grid;
+	width: 100%;
+	grid-template-columns: 20px repeat(4, auto) 20px;
+	grid-template-rows: 20px repeat(4, auto);
+	grid-gap: 10px;
+}
+
+#parity-grid > img {
+	width: 100%;
+}
+
+#parity-grid > span {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.stacked-knight-graphics {
+	display: inline-flex;
+	flex-wrap: wrap;
+	width: 200px;
+}

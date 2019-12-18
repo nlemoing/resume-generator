@@ -2,6 +2,19 @@
     "Title": "Blog",
     "Articles": [
         {
+            "Title": "Generalized Knights",
+            "Subtitle": "Knights in chess move in an L-shape: 2 squares in one direction and 1 square perpendicular. But what if it didn't have to be like that?",
+            "BodyPath": "articles/knight.md",
+            "OutputPath": "knight.html",
+            "Scripts": [
+                "https://d3js.org/d3.v5.min.js",
+                "/scripts/knight.js",
+                "/scripts/clock.js"
+            ],
+            "Styles": ["knight.css"],
+            "Date": "December 18, 2019"
+        },
+        {
             "Title": "Spotify vs. Apple: Why We Need To Stop Using Bad Analogies",
             "Subtitle": "Spotify and Apple have been fighting recently, and commentary from both sides has been shaped by potentially misleading analogies.",
             "BodyPath": "articles/spotify.md",

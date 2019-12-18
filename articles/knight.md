@@ -1,115 +1,183 @@
-Knights in chess are weird. If you look at every other piece, they're allowed to move according to 
-some reasonable set of restrictions. Rooks and kings move in cardinal directions. Bishops move along 
-the diagonals. Queens can do either. To a lesser extend, so can pawns, but they always have to move
-forward. If you can accept the fact that certain pieces move in certain ways, then these seem like 
-the first ones you would come up with.
+Chess knights are weird. If you look at every chess other piece, their movements are more-or-less straightforward.
+Rooks and kings move up, down, left or right. Bishops move along the diagonals.
+Queens can do either. Pawns are a little weird, but in general they always have to move forward. 
 
-Knights are... different. While some pieces, like rooks, bishops and the queen, are unlimited in the
-number of squares they can move, none of them can jump over a piece in their path. Furthermore, all other 
-pieces are restricted to either cardinal (North, South, East, West) or intercardinal (NW, NE, SW, SE)
-movements. Knights don't have either of these restrictions: they can jump over other pieces and they
-move in an "L" shape: two squares in a cardinal direction followed by one square in a perpendicular 
-direction. It's because of this that knights have such a unique role in chess; knights are one of the 
+Knights are... different. No piece besides the knight can jump over another piece in its path. Furthermore, all other 
+pieces are restricted to moving up, down, left, right or diagonally. With their "L"-shaped movement, knights move in a direction that's somewhere between the 8 compass points in a way that no other piece can. It's because of these unique features that knights have such an interesting and important role in chess; knights are one of the 
 first pieces that can be moved (since they can jump over the pieces in front of them), and their unique 
 movement pattern makes it easy for them to attack multiple pieces at once.
 
-Still, the movement of knights just feels arbitrary. If a knight can move 2 squares, then 1, why not 3 
-and 1? Or 4 and 2? The knight is one of the oldest and most consistent pieces in history, but it also 
+Still, the movement of knights feels somewhat arbitrary. Knights travel by taking two steps in one direction and then another step perpendicularly. But why shouldn't a knight take three steps, then another perpendicular one? Or four and two? There are a number of other possibilities that can be chosen while maintaining the "L"-shaped spirit of the knight. The knight is one of the oldest and most consistent pieces in history, but it also 
 feels like the one with which we can do the most experimentation. Let's see what happens to the knight if 
 we change things up a bit.
 
-## New and Improved: The Generalized Knight
+<figure>
+<svg id='knight-intro-animation'></svg>
+<figcaption>A regular knight, randomly roaming.</figcaption>
+</figure>
 
-We've seen how knights move normally: **2** steps in one direction followed by **1** perpendicular 
-step. 2 and 1 seem fairly arbitrary. We can replace these with pretty much any pair of whole numbers.
-Each of these new knights will still have the same "L"-shaped movement pattern, just with slightly 
-different distances.
+## The Generalized Knight
 
-An **(a, b)**-knight takes **a** steps in any cardinal direction and then **b** steps in a perpendicular 
-direction. Using this definition, our original knight was a **(2,1)**-knight. Try using it below to capture 
-the black knight. Valid moves are highlighted in green and you can reset the knight to its original 
-position by clicking on it.
+The idea is this: we replace the normal two-then-one pattern knights have with an *a*-then-*b* pattern, where *a* and *b* can be any whole number. From now on, when we refer to an (*a*,*b*)-knight, we're referring to a knight that takes *a* steps 
+in any direction and then *b* steps in a perpendicular direction. 
+Using this definition, the original knight is a (2,1)-knight.
 
-<div class="chessboard" id="game1"></div>
+It also turns out that an (*a*,*b*)-knight has the same movement as a (*b*,*a*)-knight. By convention, we'll list the bigger number first.
 
-Knights are tricky to move, at least compared with other pieces that move in a straight line.
-Even with the most optimal set of moves, a knight still takes **5** moves to capture the black knight from 
-its starting position. So what happens to the movement if we try some other knight varieties? 
+The regular 8-by-8 board will be too small for most of these knights to move around in. We'll adjust the board size based on the knight we look at to account for this.
 
-## The common factor problem
+### Limitations
 
-Our first experiment involves a "doubled" knight. Instead of a **(2,1)**-knight, we'll double its movements 
-and use a **(4, 2)**-knight.
+<figure>
+<svg id='2-1-knight-bfs'></svg>
+<figcaption>For a regular knight, every square is reachable.</figcaption>
+</figure>
 
-<div class="chessboard" id="game2"></div>
+A regular knight can eventually reach *any* square from *any* other square on *any* rectangular board, given enough steps.
+Therefore, it's more interesting to look at what a knight *can't* do than what it can. The knights we'll look at will explore every possible path they can take from their starting position. We'll take a look at the squares that they can't reach and try to understand why.
 
-Part of what makes this knight tricky to maneuver is its size relative to the board; each step takes the 
-knight halfway across the board in some direction. Even with an infinite board, though, we wouldn't be 
-able to capture the black knight. Because of this choice of knight, there's a whole swath of unreachable 
-squares.
+#### Commonality calamities
 
-Imagine the board was on a co-ordinate grid, with a number corresponding to each square's row and column. 
-Our knight starts at row 0, column 0. With the **(4,2)**-knight, each movement changes the knight's x 
-co-ordinate by either 2 or 4 squares in either direction. The same applies for the y co-ordinate. Because 
-of this, the knight will always stay on squares with even co-ordinates, so any odd rows or columns are 
-inaccessible. Capturing the black knight with the **(4,2)**-knight is impossible because it lives in the 
-7th column.
+<figure>
+<svg id='common-4-2-knight-bfs'></svg>
+<svg id='common-6-9-knight-bfs'></svg>
+<figcaption>For these knights, some rows and columns are entirely inaccessible.</figcaption>
+</figure>
 
-In fact, if **a** and **b** share _any_ factors (not including 1), there will be a number of squares that are impossible to reach. Even if we 
-have a chessboard that extends forever.
+Above, we have a (4,2)-knight and a (9,6)-knight. Some of the rows and columns remain unvisited even after the knights have finished moving. The knights simply can't reach them from their starting positions. This happens because the numbers associated with the knights share a common factor: 4 and 2 are both multiples of 2, while 9 and 6 are both multiples of 3. 
 
-So, if we want to be able to reach every square, we can't choose **a** and **b** if they share any factors that aren't 1.
+Why should this matter? Think of the knight's position as a coordinate on a grid. When the knight moves, the coordinates have to change by an amount equal to the knight's numbers. If the knight's numbers have a factor in common, we are always changing our coordinates by some multiple of that factor.
 
-## The parity problem
+<figure>
+<div class='stacked-knight-graphics'>
+<svg id='common-6-9-rw'></svg>
+<svg id='common-6-9-rw-text'></svg>
+</div>
+<figcaption>Since 6 and 9 are both multiples of 3, we are always changing our coordinates by a multiple of 3.</figcaption>
+</figure>
 
-The next experiment will be with a **(3, 1)**-knight. 3 and 1 don't have any common factors (excluding one),
-so we should be able to reach every row and column.
+Let's say we pick (4, 5) as our starting position. 4 is one above a multiple of 3, so we can write it as 1 + 3(1). Similarly, we can write 5 as 2 + 3(1). We're breaking 4 and 5 up into their quotient (1) and remainder (1 and 2, respectively) when they're divided by 3. If we want to add any multiple of 3 to these numbers, only the quotient will change. Because our knight's numbers are both multiples of 3, our x coordinate will always be one above a multiple of 3; never two above a multiple of 3, nor a multiple of 3 itself. 
 
-<div class="chessboard" id="game3"></div> 
+Mathematicians have special terminology for being "one above a multiple of 3". They would say that 4 is *congruent* to 1, *modulo* 3. Basically, this means that 1 and 4 have the same remainder when divided by 3. This is also true of 7, 10, and an infinite amount of other numbers. It's not very convenient write out an infinite amount of numbers, so there's a catch-all term for when you want to talk about *all* the numbers with this property: the set of all numbers one greater than a multiple of 3 is the *congruence class* of 1, *modulo* 3. Because of the remainder property we saw above, our coordinates will always stay in the same congruence class (*modulo* 3) that they started in. This is why our knight can only reach every third row and column.
 
-It turns out that this choice has its own set of problems. Even though we're able to get to every row and 
-every column somehow, we still can't capture the other piece. To see why, take a look at the color of the 
-squares that we're able to reach. We start on a dark square. Each new move leaves us on a dark square as 
-well. With the knight we chose, there's no way to get to any of the light squares.
+The same general idea happens when the knight's numbers share any factor other than 1. If a knight's numbers share a factor, then we will always be adding a multiple of that factor to our coordinates, trapping us in the same congruence class forever.
 
-It turns out there's quite a few knights that are similarly confined to one color of squares.
-A **(7, 5)** knight would have the same problem, as would a **(6, 4)** knight. These knights all share
-the same problem because they are all _even_. In the same way that individual numbers can be even or odd,
-so can pairs of numbers (or triplets, or quadruplets, or... you get the point). 
+#### Parity problems
 
-Before we go into how this is defined, there's some useful vocab we should know: the even-ness or odd-ness of a number is known as its _parity_. To find the parity of individual numbers, we check if they're divisible by two. If they are, they're even. Otherwise, they're odd. We can extend that definition to pairs of numbers: first, add the two numbers in the pair together, then check the parity of the result. The parity of the pair is the parity of whatever the result is. So, (7,3) and (6,4) are both even because their sums, 12 and 10, are even as well.
+<figure>
+<svg id='parity-3-1-knight-bfs'></svg>
+<figcaption>This knight can't reach certain diagonals.</figcaption>
+</figure>
 
-What does that have to do with the color of the squares? Recall that whenever you add an even number to another number, the parity stays the same. This is also true for two dimensions! When we move the knight, we can think of it as adding the knight pair to our current co-ordinate pair. If the knight is even, the parity of the co-ordinate will stay the same as well. This means that if our starting parity is odd, it will stay odd no matter which moves we can make, so we can never reach a square with even parity.
+Although the (2,1)-knight had no problems reaching every square, the (3,1)-knight can't reach half of them. Since 3 and 1 have no factors in common, this is a different problem than we ran into earlier. If we look at some more examples, we might get more insight into why this is happening. 
 
-This is easy to see visually because the chessboard is colored according to the parity of the squares!
+<figure>
+<div id='parity-grid'>
+    <span></span>
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+    <span></span>
+    <span>1</span>
+    <img src="/images/knight/1-1.png"></img>
+    <img src="/images/knight/1-2.png"></img>
+    <img src="/images/knight/1-3.png"></img>
+    <img src="/images/knight/1-4.png"></img>
+    <span></span>
+    <span>2</span>
+    <img src="/images/knight/1-2.png"></img>
+    <img src="/images/knight/2-2.png"></img>
+    <img src="/images/knight/2-3.png"></img>
+    <img src="/images/knight/2-4.png"></img>
+    <span></span>
+    <span>3</span>
+    <img src="/images/knight/1-3.png"></img>
+    <img src="/images/knight/2-3.png"></img>
+    <img src="/images/knight/3-3.png"></img>
+    <img src="/images/knight/3-4.png"></img>
+    <span></span>
+    <span>4</span>
+    <img src="/images/knight/1-4.png"></img>
+    <img src="/images/knight/2-4.png"></img>
+    <img src="/images/knight/3-4.png"></img>
+    <img src="/images/knight/4-4.png"></img>
+    <span></span>
+</div>
+<figcaption>Breadth-first-search with several knight configurations. Squares are colored by the number of steps it takes to reach. Black squares aren't reached by the knight.</figcaption>
+</figure>
 
-## Finally, a working example
+Take a look at the ones where the knight is able to reach every square. In this chart, they're organized in a checkerboard pattern not unlike the checkerboard pattern made by the (3,1)-knight. This all has to do with the *parity* of the knight.
 
-So far we've only looked at examples that haven't worked. Are there any that do?
-Well, **(2,1)**-knights can reach any square, so there is at least one example that works.
-It turns out that, for an **(a, b)**-knight, as long as **a** and **b**
- - have no common factors besides one, and
- - add up to an odd number,
-then we can reach any other square (if we have an unlimited amount of space). 
-Below is a **(4,1)**-knight. It feels a lot harder to control than the **(2,1)**-knight, but it can still capture the other piece in **6** moves.
+*Parity* is just another way of saying if something is even or odd. Normally, we deal with parity of numbers: 4 has even parity while 7 has odd parity. It turns out pairs of numbers have parity as well: you just take the parity of the two numbers added together. For example, (2,1) is odd since 3 is odd, while (3,1) is even since 4 is even.
 
-<div class="chessboard" id="game4"></div> 
+In the figure above, each knight that is able to reach every square has odd parity. Why would that be?
 
-## The small board problem
+It turns out a lot of the same properties of single-number parities apply to parities of pairs as well. For example, when you add an even number to another number, the parity will stay the same. If you add an odd number, the parity will swap!
 
-There's one last problem. I mentioned earlier that the conditions for reaching every square depend on 
-having a certain amount of space. What does the amount of space have to do with anything? Well, when we 
-have a larger chessboard, some moves would be possible that weren't before. First, imagine we have the same 
-8 by 8 chessboard with a **(9, 1)**-knight. Clearly, the knight won't be able to move, since each move will 
-take it outside the chessboard. With a 100 by 100 chessboard, on the other hand, the knight can move 
-around with relative ease.
+<figure>
+<svg id='parity-2-1-rw'></svg>
+<svg id='parity-3-1-rw'></svg>
+<figcaption>Odd squares are colored red while even squares are blue. A (2,1)-knight (left) can reach both even and odd squares, while the (3,1)-knight (right) is stuck with even ones.</figcaption>
+</figure>
 
-This was an extreme example, but interesting things happen by making small adjustments to knights we've 
-already seen. On the same chessboard, a **(5,2)**-knight will not be able to reach the inner four squares,
-even though 2 and 5 seem to satisfy our criteria above.
+This is a clue as to why knights with odd parity can reach more squares than even-parity knights. Odd parity knights swap the parity of their coordinate with each move, so we can reach both even and odd squares regardless of where we start. With even knights, on the other hand, we are stuck on the same parity as we started with. This is why the (3,1)-knight can only reach half the squares that the (2,1)-knight can.
 
-<div class="chessboard" id="game5"></div> 
+#### Claustrophobic concerns
 
-## Visualizations
+<figure>
+<svg id='5-2-knight-bfs'></svg>
+<svg id='8-17-knight-bfs'></svg>
+<figcaption>These knights have inaccessible squares in the middle.</figcaption>
+</figure>
 
+Everything we've talked about to this point would hold true regardless of the board size. But in some situations, we get interesting patterns if the knight is just a little too big for the board. In these cases, squares in the middle become impossible to reach because the knight can't maneuver tightly enough in the small spaces.
 
+Besides noting that these patterns remind me of the [bouncing DVD logo](https://www.youtube.com/watch?v=QOtuX0jL85Y), I don't have any insight for predicting when patterns like these will occur. If you have any ideas, let me know!
+
+### Reaching every square
+
+Generalizing knights thus far has been unsuccessful. Because many of our generalized knights are unable to reach some of the squares, they have been rendered much less useful on the chessboard. Only (*a*,*b*)-knights that meet a very specific set of criteria can reach every square:
+
+- *a* and *b* must not share any factors
+- *a + b* must be odd
+- *a* and *b* can't be too big relative to the size of the board
+
+However, it turns out a small tweak to the board itself will allow any of the limited knights we've discussed to reach any square.
+
+#### When in doubt, take the modulus
+
+The modulus operation is another name for taking the remainder of one number divided by another. We've already talked a little bit about the modulus when we looked at knights that shared common factors. In that context, we saw how knights with common factors would miss some rows and columns because they were restricted to the same congruence class; the coordinates always had the same remainder when divided by the common factor.
+
+The most common place you'd find the modulus outside of a math classroom is on a wall clock. If it's 10 o'clock and you wait 3 hours, it'll be 1 o'clock. With clocks, we take the modulus with respect to 12. After 12, the hours wrap back around to 1. Effectively, the modulus makes numbers wrap around to 0 in a cyclical manner.
+
+We can also use the modulus in the context of the knight's coordinates. Instead of preventing the knight from moving past the board's boundary, what if we allowed the knight to wrap around to the other side of the board? To do so, we could first add the knight's coordinates, like before. To get the knight's final position, we can take the modulus of the resulting coordinates with respect to the board's size to ensure that the new coordinates are within the board's boundary. This has the effect of making the knight wrap around the board as it moves.
+
+It's not immediately clear how the modulus will help us solve the problems we had with the knight. First, let's answer a simpler question from the 1D case: what happens if we repeatedly add 3 hours on a regular wall clock? It turns out we'll only see 4 different times. On the other hand, if our wall clock had 11 hours instead of 12, we would eventually see all the hours.
+
+<figure>
+<svg id='clock-12'></svg>
+<svg id='clock-11'></svg>
+<figcaption>Each step adds three hours to the time. On the left, the clock has 12 hours while the one on the right has 11. If the size of step we take shares factors with the modulus we use, we won't be able to reach some numbers.</figcaption>
+</figure>
+
+The difference between the two cases is that 12 and 3 share a common factor but 11 and 3 don't. This is similar to the common factor problem we saw earlier: sharing factors causes some numbers to be skipped. However, if we make sure that the number we take the modulus with doesn't share factors with our knight, we should be able to reach every square. By picking a prime number, like 11, we can guarantee that no knight will have a shared factor with it.
+
+So long as the prime we pick is odd, we'll also solve our parity problem. Adding two even numbers can result in an odd number if the numbers we add are large enough to cause a wrap-around. Suppose we pick 7 for our modulus. Normally, 4 + 4 = 8, which is even as expected. However, 8 is congruent to 1 *modulo* 7, and 1 is an odd number. If we add 4 and 4 modulo 7, we actually get an odd result by adding even numbers. Before, we saw issues with even knights because there was no way of changing parities by adding even numbers. With the modulus, we now have a way of getting an odd number by adding two evens.
+
+Finally, our spatial constraint problem should be solved as well, albeit for a less interesting reason: the modulus removes the boundaries at the edge of the board by allowing knights to wrap around to the other side. With no spatial constraints, the knight is able to reach every square on the board.
+
+<figure>
+<svg id='fix-4-2'></svg>
+<svg id='fix-3-1'></svg>
+<svg id='fix-5-2'></svg>
+<figcaption>The same boards that gave us problems earlier, this time on a 7 by 7 grid using the modulus to compute coordinates. Since 7 is prime, we can reach every square with any knight we choose.</figcaption>
+</figure>
+
+It turns out the secret to unlocking the potential of a generalized knight is to extend our idea of the board as well. What we're left with doesn't very closely resemble chess, but it does lead to some pretty pictures.
+
+### Related reading
+
+- [Tom7's chess](http://tom7.org/chess/): some awesome chess-related explorations that initially inspired me to write this post
+- [Generalized knight’s tours on rectangular chessboards](https://core.ac.uk/download/pdf/82621071.pdf): more fun with generalized knights
+- [Cryptonomicon, by Neal Stephenson](https://en.wikipedia.org/wiki/Cryptonomicon): excellent book that, among many other things, contains descriptions of modular arithmetic as it applies to cryptography
