@@ -1,7 +1,7 @@
 {{ if .Contents }}
 <div class="description">
 {{ if .Bulleted }}
-<ul>
+<ul class="resume-description-list">
     {{range .Contents}}<li>{{.}}</li>{{end}}
 </ul>
 {{ else }}

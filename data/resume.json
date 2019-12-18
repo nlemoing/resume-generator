@@ -14,9 +14,9 @@
                     "Description": {
                         "Bulleted": true, 
                         "Contents": [
-                            "Built and deployed a telemetry-enabled PDF viewer for medical documents",
-                            "Implemented role-based content scoping to ensure secure access to sensitive information",
-                            "Configured automatic deployment pipelines using Docker, Kubernetes"
+                            "Decreased search times by a factor of 10 in our hosted PDF viewer",
+                            "Developed custom visualization, navigation and annotation components for reviewing medical PDFs using PDF.js ",
+                            "Automated build-and-deploy processes for hosted services using CI/CD pipelines"
                         ]
                     }
                 },
@@ -28,9 +28,9 @@
                     "Description": {
                         "Bulleted": true,
                         "Contents": [
-                            "Researched and implemented a parallelized, clustering-based algorithm to reduce dimensionality in datasets with a large number of correlated features",
-                            "Developed an interactive tool to interpret black-box models using counterfactuals",
-                            "Designed a React web application to visualize feature importance for NLP models"
+                            "Researched and implemented a parallelized, clustering-based algorithm to reduce dimensionality in datasets with correlated features",
+                            "Developed black-box model interpretation and visualization tools in Python and React",
+                            "Evaluated alternative data sources using interpretable random forest models to reduce underwriting time"
                         ]
                     }
                 },
@@ -42,9 +42,9 @@
                     "Description": {
                         "Bulleted": true,
                         "Contents": [
-                            "Designed a RESTful API to be used across all Bonfire services",
-                            "Integrated an Object-Relational Mapping into the API to improve data representation",
-                            "Implemented integrated testing protocols to increase testing robustness"
+                            "Developed new features for the core procurement app with Angular and Node.js",
+                            "Kickstarted the consolidation of several backend services into a Node.js API",
+                            "Spearheaded the addition of an integration testing framework to ensure stability across Bonfire services"
                         ]
                     }
                 }
@@ -56,13 +56,13 @@
                 {
                     "Title": "PlanUW",
                     "Subtitle": "Schedule planner for uWaterloo courses",
-                    "Subheading": "Node.js, Postgres",
+                    "Subheading": "JavaScript, Node.js",
                     "Date": "11/2019",
                     "Link": "https://github.com/nlemoing/uwaterloo-course-scheduler",
                     "Description": {
                         "Bulleted": true,
                         "Contents": [
-                            "Features include course exploration, planning and degree requirement visualizations",
+                            "Features include course planning and automatic degree requirement parsing",
                             "Lightweight frontend for blazing fast load times (60KB for all assets)"
                         ]
                     }
@@ -70,14 +70,15 @@
                 {
                     "Title": "GNight",
                     "Subtitle": "Generalized knight simulator and visualizer",
-                    "Subheading": "C++, OpenCV",
+                    "Subheading": "C++, OpenCV, d3.js",
                     "Date": "7/2019",
                     "Link": "https://github.com/nlemoing/generalized-knight",
                     "Description": {
                         "Bulleted": true,
                         "Contents": [
                             "Analyzed movement of general chess knights using BFS and Random Walk algorithms",
-                            "Built a path visualization module using OpenCV"
+                            "Built a path visualization module using OpenCV",
+                            "Implemented animated visualizations in d3 for the explorative post on my blog"
                         ]
                     }
                 },
@@ -91,7 +92,8 @@
                         "Bulleted": true, 
                         "Contents": [
                             "Built a resume templator to generate multiple views from common JSON data",
-                            "Supports TeX, HTML output with potential to add other formats"
+                            "Supports TeX, HTML output with potential to add other formats",
+                            "Used as the basis for my personal site as well as this resume"
                         ]
                     }
                 }
@@ -120,8 +122,8 @@
                     "Description": {
                         "Bulleted": true,
                         "Contents": [
-                            "Hosted weekly office hours for first year courses",
                             "Organized and presented end-of-term review sessions for hundreds of students",
+                            "Prepared weekly review courses for first year courses",
                             "Specialties: Functional Programming, Linear Algebra, Statistics"
                         ]
                     }
@@ -237,6 +239,15 @@
                         "Contents": [
                             "I write articles about sports and business topics that interest me.",
                             "I'm also a hobbyist short story writer."
+                        ]
+                    }
+                },
+                {
+                    "Title": "Bike Rides",
+                    "Description": {
+                        "Bulleted": false,
+                        "Contents": [
+                            "While in New York I biked to work every day, as well as to all five boroughs."
                         ]
                     }
                 }
