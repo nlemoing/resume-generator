@@ -133,9 +133,7 @@ This is a clue as to why knights with odd parity can reach more squares than eve
 
 Everything we've talked about to this point would hold true regardless of the board size. But in some situations, we get interesting patterns if the knight is just a little too big for the board. In these cases, squares in the middle become impossible to reach because the knight can't maneuver tightly enough in the small spaces.
 
-I don't have any insight for explaining when patterns like these will occur. If you have any ideas, let me know!
-
-The animations are reminiscent of the [bouncing DVD logo](https://www.youtube.com/watch?v=QOtuX0jL85Y), though.
+Besides noting that these patterns remind me of the [bouncing DVD logo](https://www.youtube.com/watch?v=QOtuX0jL85Y), I don't have any insight for predicting when patterns like these will occur. If you have any ideas, let me know!
 
 ### Reaching every square
 
@@ -182,4 +180,4 @@ It turns out the secret to unlocking the potential of a generalized knight is to
 
 - [Tom7's chess](http://tom7.org/chess/): some awesome chess-related explorations that initially inspired me to write this post
 - [Generalized knight’s tours on rectangular chessboards](https://core.ac.uk/download/pdf/82621071.pdf): more fun with generalized knights
-- [Cryptonomicon, by Neal Stephenson](https://en.wikipedia.org/wiki/Cryptonomicon): excellent book that contains descriptions of modular arithmetic as it applies to cryptography
+- [Cryptonomicon, by Neal Stephenson](https://en.wikipedia.org/wiki/Cryptonomicon): excellent book that, among many other things, contains descriptions of modular arithmetic as it applies to cryptography
