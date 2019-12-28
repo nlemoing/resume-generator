@@ -6,6 +6,12 @@
             "Subtitle": "For four months, I biked everywhere in NYC. Here's what I learned.",
             "BodyPath": "articles/nyc-biking.md",
             "OutputPath": "nyc-biking.html",
+            "Scripts": [
+                "/scripts/bike.js"
+            ],
+            "Styles": [
+                "bike.css"
+            ],
             "Date": "December 24, 2019"
         },
         {

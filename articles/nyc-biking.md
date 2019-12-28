@@ -20,6 +20,11 @@ In early September, I was ready to take on the road.
 
 ### The Commute To Work, via 1st Avenue
 
+<figure>
+<div class="bike-route" id="bike-route-to-work"></div>
+<figcaption>Bike to work</figcaption>
+</figure>
+
 My apartment this term was in the East Village, a few blocks away from the Union Square subway station that I would have otherwise used to get uptown. 
 My commuting choices were either to brave the bike-lane-less 3rd Avenue or take a 5 minute detour to 1st Avenue's separated green lane for cyclists and anything else with wheels.
 Not brave enough to risk my life just yet, I chose the latter.
@@ -44,6 +49,11 @@ The adrenaline from keeping track of everyone else on the road replaced any morn
 
 ### The Commute From Work, via 2nd Avenue
 
+<figure>
+<div class="bike-route" id="bike-route-from-work"></div>
+<figcaption>Bike from work</figcaption>
+</figure>
+
 Most New York streets are one way, which meant I had to take the southbound 2nd Avenue route when returning downtown after work.
 2nd Avenue has a separated bike line as well, although this one inexplicably cuts out between 34th and 46th.
 The 12-block stretch *sans-bike-lane* was consistently the most stressful and unpleasant part of my day.
@@ -67,6 +77,11 @@ We weaved in and out of traffic not out of sheer anarchic spirit but instead out
 
 ### McCarren Park, via the Williamsburg Bridge
 
+<figure>
+<div class="bike-route" id="bike-route-mccarren"></div>
+<figcaption>McCarren Park</figcaption>
+</figure>
+
 On Monday nights, my schedule featured a four-hour ultimate frisbee extravaganza: NYU practice from 6 to 8 followed by pickup games from 8 until no one wanted to play anymore. Field space is notoriously hard to find in New York, especially for relatively niche sports like ultimate.
 Typical fields that were available were either in far-flung corners of Manhattan (Riverside Park, East 12th Street, East River Park) or even further into other boroughs (McCarren, Sternberg, and Prospect parks, Randall's island).
 Getting any field space at all was a miracle and people were willing to go to incredible lengths to make it worthwhile.
@@ -82,6 +97,11 @@ From there, it's a quick shot up a quiet Brooklyn street to get to McCarren.
 
 ### FiDi and DUMBO, via 2nd Avenue and the Manhattan Bridge
 
+<figure>
+<div class="bike-route" id="bike-route-manhattan-bridge"></div>
+<figcaption>South Manhattan/Brooklyn Routes</figcaption>
+</figure>
+
 While the weeks featured regular, familiar bike rides, the weekends were for exploring. Having lived in New York for one internship before this one, I was eager to explore neighbourhoods outside Manhattan and regularly biked across the Williamsburg and Manhattan bridges to get to Brooklyn.
 
 Battery park, on the south end of Manhattan, was my girlfriend's favourite place to visit.
@@ -92,6 +112,11 @@ I can't stress enough how much better the Manhattan bridge is for biking; althou
 All of these routes are easily accessible by following marked bike lanes and are reasonable even for those inexperienced biking in the city.
 
 ### Columbia University, via the Hudson River Greenway
+
+<figure>
+<div class="bike-route" id="bike-route-columbia"></div>
+<figcaption>Columbia</figcaption>
+</figure>
 
 One Sunday morning early in the term, I rode up Manhattan's west coast to Columbia University in uptown.
 Getting the bike to the river can be harrowing if you're not used to biking on city streets, but the bike up the river follows a path fully separated from the neighboring highway.
@@ -104,7 +129,12 @@ I stopped at 129th street but my route could have taken me all the way up to the
 If I get the chance to come back, my goal is to follow the same route and do a full lap of the island.
 This time, I capped it off with a walk through the Columbia University campus at 116th street that was well worth the incredibly steep hill I had to climb to get there.
 
-### Returning from Randall's Island, multiple routes 
+### Returning from Randall's Island, multiple routes
+
+<figure>
+<div class="bike-route" id="bike-route-randalls"></div>
+<figcaption>Randall's routes</figcaption>
+</figure>
 
 Saturday mornings featured more NYU ultimate practices, this time on Randall's island.
 Randall's is notoriously difficult to get to because many NYU students live south of 14th street, like I do.
