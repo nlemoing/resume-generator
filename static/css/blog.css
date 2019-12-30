@@ -44,3 +44,16 @@
 #article-body > figure > figcaption {
     margin: 5px 0;
 }
+
+#article-body .image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#article-body .image-gallery > img {
+    max-width: 250px;
+    max-height: 250px;
+    margin: 5px;
+}

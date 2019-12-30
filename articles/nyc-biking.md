@@ -33,6 +33,12 @@ While not a particularly scenic route, the bike transformed my commute from some
 The 1st Avenue route took me along the East Revier past the UN Headquarters that would host Greta Thunberg and the rest of the UN General Assembly during my stay there.
 Once past the headquarters, a turn onto 49th took me the rest of the way to my building on Madison Avenue.
 
+<figure>
+<div class='image-gallery'>
+<img src='/images/biking/un.jpg' title='UN Headquarters as seen from 1st Avenue'></img>
+</div>
+</figure>
+
 The 1st Avenue commute was great for dipping my toes into biking in Manhattan.
 When I started in September, the --TODO-word for ubiquitous-- delivery drivers were far outnumbered by other inexperienced commuters like myself.
 Many ride CitiBikes, a New York bike sharing program that my girlfriend used extensively.
@@ -88,12 +94,25 @@ Getting any field space at all was a miracle and people were willing to go to in
 On the Sunday after Thanksgiving, I played in a one-day tournament that was highlighted by constant sleet, hail, and near-freezing temperatures on an outdoor turf field.
 Nearly 80 people showed up. 
 
+<figure>
+<div class='image-gallery'>
+<img src='/images/biking/thanksgiving-hat.jpg' title='Pier 40 field'></img>
+</div>
+<figcaption>Pier 40, the venue for the tournament, is covered by hail and ultimate frisbee players.</figcaption>
+</figure>
+
 All that to say that I was dedicated to going to as many Mondays as possible. 
 McCarren park is in Brooklyn but was actually reasonably close to my apartment, taking just under half an hour to get there by bike.
 And what a bike it was.
 It starts by going Downtown until Delancey street and turning left onto the bridge. The bridge has two fairly steep sections but getting to the top was normally fairly quick work.
 I was motivated not only by ultimate but also by what I think might be one of the best views of the city; from the Williamsburg bridge, the entire Manhattan skyline is visible and looks absolutely incredible at nighttime.
 From there, it's a quick shot up a quiet Brooklyn street to get to McCarren.
+
+<figure>
+<div class='image-gallery'>
+<img src='/images/biking/williamsburg-skyline.jpg' title='Manhattan Skyline from the Williamsburg Bridge'></img>
+</div>
+</figure>
 
 ### FiDi and DUMBO, via 2nd Avenue and the Manhattan Bridge
 
@@ -107,6 +126,14 @@ While the weeks featured regular, familiar bike rides, the weekends were for exp
 Battery park, on the south end of Manhattan, was my girlfriend's favourite place to visit.
 From the southernmost point in Manhattan, you can get a clear view of the Statue of Liberty, the New Jersey and Brooklyn skylines and a pretty incredible sunset that is tough to beat while staying in the city.
 On the other side of the river is DUMBO and Brooklyn Bridge Park, one of the best green spaces in the city.
+
+<figure>
+<div class='image-gallery'>
+<img src='/images/biking/universal-soldier.jpg' title='The Universal Soldier Monument in Battery Park'></img>
+<img src='/images/biking/fidi-from-brooklyn.jpg' title='South Manhattan Skyline as seen from Brooklyn Bridge Park'></img>
+<img src='/images/biking/below-manhattan-bridge.jpg' title='Photo of the Manhattan Bridge from below'></img>
+</div>
+</figure>
 
 I can't stress enough how much better the Manhattan bridge is for biking; although it doesn't have the iconic views the Brooklyn Bridge offers, the Manhattan bridge has a bike lane that's separated from pedestrians, which is a tradeoff I'll make every time.
 All of these routes are easily accessible by following marked bike lanes and are reasonable even for those inexperienced biking in the city.
@@ -149,6 +176,13 @@ Although the scenery on the bike up there wasn't too spectacular, it was interes
 Laundromats and bagel shops in the east village are replaced by large glass office and condo buildings in midtown.
 These are followed the higher-brow restaurants and apartments before finally fading into the housing projects that are so common along the east river.
 
+<figure>
+<div class='image-gallery'>
+<img src='/images/biking/randalls.jpg'></img>
+<img src='/images/biking/east-river.jpg'></img>
+</div>
+</figure>
+
 On the way home from Randall's island, I often experimented with the paths I took.
 Practice was usually over by 1 o'clock and I took advantage of the long afternoon by taking roundabout routes home.
 The simplest way home was back the way I came, this time mirroring my weekday commute on 2nd Avenue.
@@ -160,12 +194,26 @@ The view of Randall's island from the bridge is great, made even better by the c
 The only barrier is roughly torso high and leaves bikers feeling fairly exposed.
 There's also several staircases that put a temporary and sometimes unexpected pause on the ride: some of them aren't well marked!
 
+<figure>
+<div class='image-gallery'>
+<img src='/images/biking/randalls-above.jpg'></img>
+<img src='/images/biking/queens-houses.jpg'></img>
+</div>
+</figure>
+
 It has its flaws, but the bridge isn't too bad. It spits you out in the middle of Astoria, a neighborhood at the northwest corner of Queens. The most direct route back to Manhattan from here is back along the Queens side of the East River. 
 This takes you through Long Island City and eventually Williamsburg if you choose to go into Brooklyn like I did. 
 A more roundabout path took me along the treelined 34th Avenue before I ended up in Flushing. Extending my route could have taken me to Citi Field and the site of the US Open.
 Instead, I opted to check out the old grounds of the [1964 World's Fair](https://en.wikipedia.org/wiki/1964_New_York_World%27s_Fair).
 From here, the Manhattan skyline is just a bump on the horizon. 
 The trip back from Flushing takes you through some of the more industrial neighborhoods of Queens and Brooklyn before eventually coming back to the Williamsburg bridge.
+
+<figure>
+<div class='image-gallery'>
+<img src='/images/biking/unisphere.jpg'></img>
+<img src='/images/biking/industrial-skyline.jpg'></img>
+</div>
+</figure>
 
 ## Conclusion
 
