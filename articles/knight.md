@@ -1,6 +1,6 @@
 Chess knights are weird. If you look at every chess other piece, their movements are more-or-less straightforward.
-Rooks and kings move up, down, left or right. Bishops move along the diagonals.
-Queens can do either. Pawns are a little weird, but in general they always have to move forward. 
+Rooks can move up, down, left or right. Bishops move along the diagonals.
+Queens and kings can do either. Pawns are a little weird, but in general they always have to move forward. 
 
 Knights are... different. No piece besides the knight can jump over another piece in its path. Furthermore, all other 
 pieces are restricted to moving up, down, left, right or diagonally. With their "L"-shaped movement, knights move in a direction that's somewhere between the 8 compass points in a way that no other piece can. It's because of these unique features that knights have such an interesting and important role in chess; knights are one of the 
