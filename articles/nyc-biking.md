@@ -3,10 +3,10 @@ This past weekend, I said an unceremonious farewell to my bike.
 I asked a lot from it over the course of the four months I owned it and, as fall turned into winter, it held up remarkably well.
 It wasn't the best, but I did feel oddly sentimental about letting it go.
 
-This weekend marked the end of my second four-month stint in New York.
-I really enjoyed the first term there but there were a few things I knew I didn't want to repeat.
+I had to sell my bike because I was coming to the end of my second four-month stint in New York and had to move back to Canada.
+I really enjoyed my first term there, but going into my second term, there were a few things I knew I didn't want to repeat.
 Among them was my commute to work; although the 30 minute subway is by no means the worst I've heard of, it left me feeling drained and unfocused by the time I got into the office.
-To temper my --TODO--t word for depression/disappointment/melancholy-- I turned to two-wheeled transportation.
+To temper my distaste for transit, I turned to two-wheeled transportation.
 I was going to buy a bike.
 
 About a week after moving in, I turned to Marketplace to try my luck at finding something usable.
@@ -26,11 +26,11 @@ In early September, I was ready to take on the road.
 </figure>
 
 My apartment this term was in the East Village, a few blocks away from the Union Square subway station that I would have otherwise used to get uptown. 
-My commuting choices were either to brave the bike-lane-less 3rd Avenue or take a 5 minute detour to 1st Avenue's separated green lane for cyclists and anything else with wheels.
+My commuting choices were either to brave the bike-lane-less 3rd Avenue or take a 5 minute detour to 1st Avenue's separated green lane for cyclists.
 Not brave enough to risk my life just yet, I chose the latter.
 
 While not a particularly scenic route, the bike transformed my commute from something that I used to dread to something I would cherish.
-The 1st Avenue route took me along the East Revier past the UN Headquarters that would host Greta Thunberg and the rest of the UN General Assembly during my stay there.
+The 1st Avenue route took me along the East River past the UN Headquarters that would host Greta Thunberg and the UN Climate Action Summit during my stay there.
 Once past the headquarters, a turn onto 49th took me the rest of the way to my building on Madison Avenue.
 
 <figure>
@@ -40,14 +40,14 @@ Once past the headquarters, a turn onto 49th took me the rest of the way to my b
 </figure>
 
 The 1st Avenue commute was great for dipping my toes into biking in Manhattan.
-When I started in September, the --TODO-word for ubiquitous-- delivery drivers were far outnumbered by other inexperienced commuters like myself.
+When I started in September, the omnipresent delivery drivers were far outnumbered by other inexperienced commuters like myself.
 Many ride CitiBikes, a New York bike sharing program that my girlfriend used extensively.
 CitBikes are great for casual commuters but are notorious for their slow speeds and impossible turning radius.
 I was grateful that my bike was able to gain enough steam along the greenway to blow past the rush hour crowds.
 I was able to get door-to-door consistently in under 20 minutes, a feat unparalleled by any other method of transportation available.
 
 The 1st Avenue commute also introduced me to the daily jockeying for space that NYC cyclists do with the cars, cabs, scooters and pedestrians they share the road with.
-Although the bike lane on 1st Avenue has an empty lane separating it from traffic, it's often blocked by parked cars, delivery trucks and naive pedestrians that wander accidentally into the road.
+Although the bike lane on 1st Avenue has an empty lane separating it from traffic, it's often blocked by parked cars, delivery trucks and naive pedestrians who wander accidentally into the road.
 The bike lane runs along the left side of the road and cars will often make left turns without first checking for oncoming bikes.
 To bike safely, it was essential to adopt the "defensive driving" mindset that my parents talked about while living in Doha; don't predict what others will do on the road, because others on the road are often unpredictable.
 Instead, put yourself in a position to react quickly to any unexpected (or downright illegal) maneuvers.
@@ -64,7 +64,7 @@ Most New York streets are one way, which meant I had to take the southbound 2nd 
 2nd Avenue has a separated bike line as well, although this one inexplicably cuts out between 34th and 46th.
 The 12-block stretch *sans-bike-lane* was consistently the most stressful and unpleasant part of my day.
 The road is uneven and pockmarked by potholes; both flat tires I got while in the city were a direct consequence of this stretch of road.
-The disappearance of the bike lane is sudden and unexpected, throwing unwitting cyclists in the middle of a --TODO-word for clusterfuck-- of lane-changing vehicles trying desperately to make a left turn onto the Queensboro bridge and willing to go through anyone in their path in order to make it happen. 
+The disappearance of the bike lane is sudden and unexpected, throwing unwitting cyclists into a sea of lane-changing vehicles trying desperately to make a left turn onto the Queensboro bridge and willing to go through anyone in their path in order to make it happen. 
 Surprisingly, my girlfriend's route was more pleasant despite it taking her directly through Times Square.
 2nd Avenue's only redeeming quality was that its lawlessness allowed for some absolutely blistering times; normally I could count on being home less than 15 minutes after leaving the office.
 
@@ -240,3 +240,16 @@ Overall, I'm proud of how much I was able to see and do during the time I've bee
 I'm also thankful that biking gave me some much-needed calm in a very busy city.
 
 I don't know when (or if) I'll be back, but I know if I do return, the first thing I'll do is buy a bike.
+
+*Maps are built using [OpenStreetMap](https://www.openstreetmap.org/) with [Stamen](http://maps.stamen.com/) stylizations. The GPX files for the routes in this article can be downloaded below.*
+
+<a href="/files/bike-rides/to-work.gpx" download>To Work</a><br>
+<a href="/files/bike-rides/from-work.gpx" download>From Work</a><br>
+<a href="/files/bike-rides/mccarren.gpx" download>McCarren</a><br>
+<a href="/files/bike-rides/battery-park.gpx" download>Battery Park</a><br>
+<a href="/files/bike-rides/brooklyn-bridge-park.gpx" download>Brooklyn Bridge Park</a><br>
+<a href="/files/bike-rides/columbia.gpx" download>Columbia University</a><br>
+<a href="/files/bike-rides/to-randalls.gpx" download>To Randall's</a><br>
+<a href="/files/bike-rides/from-randalls-2nd.gpx" download>From Randall's - East River/Manhattan</a><br>
+<a href="/files/bike-rides/from-randalls-east-river.gpx" download>From Randall's - East River/Queens</a><br>
+<a href="/files/bike-rides/from-randalls-corona.gpx" download>From Randall's - Corona Park</a><br>
