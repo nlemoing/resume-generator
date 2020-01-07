@@ -241,15 +241,4 @@ I'm also thankful that biking gave me some much-needed calm in a very busy city.
 
 I don't know when (or if) I'll be back, but I know if I do return, the first thing I'll do is buy a bike.
 
-*Maps are built using [OpenStreetMap](https://www.openstreetmap.org/) with [Stamen](http://maps.stamen.com/) stylizations. The GPX files for the routes in this article can be downloaded below.*
-
-<a href="/files/bike-rides/to-work.gpx" download>To Work</a><br>
-<a href="/files/bike-rides/from-work.gpx" download>From Work</a><br>
-<a href="/files/bike-rides/mccarren.gpx" download>McCarren</a><br>
-<a href="/files/bike-rides/battery-park.gpx" download>Battery Park</a><br>
-<a href="/files/bike-rides/brooklyn-bridge-park.gpx" download>Brooklyn Bridge Park</a><br>
-<a href="/files/bike-rides/columbia.gpx" download>Columbia University</a><br>
-<a href="/files/bike-rides/to-randalls.gpx" download>To Randall's</a><br>
-<a href="/files/bike-rides/from-randalls-2nd.gpx" download>From Randall's - East River/Manhattan</a><br>
-<a href="/files/bike-rides/from-randalls-east-river.gpx" download>From Randall's - East River/Queens</a><br>
-<a href="/files/bike-rides/from-randalls-corona.gpx" download>From Randall's - Corona Park</a><br>
+*Maps are built using [OpenStreetMap](https://www.openstreetmap.org/) with [Stamen](http://maps.stamen.com/) stylizations. The GPX files for the routes in this article can be downloaded <a href="/files/bike-rides/routes.zip" download>here</a>.*
