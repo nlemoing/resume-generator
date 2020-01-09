@@ -181,3 +181,5 @@ It turns out the secret to unlocking the potential of a generalized knight is to
 - [Tom7's chess](http://tom7.org/chess/): some awesome chess-related explorations that initially inspired me to write this post
 - [Generalized knight’s tours on rectangular chessboards](https://core.ac.uk/download/pdf/82621071.pdf): more fun with generalized knights
 - [Cryptonomicon, by Neal Stephenson](https://en.wikipedia.org/wiki/Cryptonomicon): excellent book that, among many other things, contains descriptions of modular arithmetic as it applies to cryptography
+
+[Discuss on Hacker News](https://news.ycombinator.com/item?id=21914566)
