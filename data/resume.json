@@ -228,7 +228,7 @@
                         "Bulleted": false,
                         "Contents": [
                             "I've played for my university's school team for three seasons.",
-                            "I also took on a leadership role on NYU's team while living in New York."
+                            "I also played on NYU's team while living in New York."
                         ]
                     }
                 },
@@ -247,7 +247,8 @@
                     "Description": {
                         "Bulleted": false,
                         "Contents": [
-                            "While in New York I biked to work every day, as well as to all five boroughs."
+                            "While in New York I biked to work every day, as well as to all five boroughs.",
+                            "My blog has an article about the experience."
                         ]
                     }
                 }
