@@ -16,6 +16,13 @@ Adding a helmet and a lock tacked on an extra $40 and repairing the flat tire wa
 All told, the bike and added accessories set me back less than a one-month transit pass would have.
 Off to a good start.
 
+<figure>
+<div class='image-gallery'>
+<img src='/images/biking/nick-bike.jpg' title='Me and my bike'></img>
+</div>
+<figcaption>Me and the bike.</figcaption>
+</figure>
+
 In early September, I was ready to take on the road.
 
 ### The Commute To Work, via 1st Avenue
@@ -50,7 +57,7 @@ I was able to get door-to-door consistently in under 20 minutes, a feat unparall
 The 1st Avenue commute also introduced me to the daily jockeying for space that NYC cyclists do with the cars, cabs, scooters and pedestrians they share the road with.
 Although the bike lane on 1st Avenue has an empty lane separating it from traffic, it's often blocked by parked cars, delivery trucks and naive pedestrians who wander accidentally into the road.
 The bike lane runs along the left side of the road and cars will often make left turns without first checking for oncoming bikes.
-To bike safely, it was essential to adopt the "defensive driving" mindset that my parents talked about while living in Doha; don't predict what others will do on the road, because others on the road are often unpredictable.
+To bike safely, it was essential to adopt the "defensive driving" mindset that my parents talked about while living in Doha; don't predict what others will do on the road because they're often unpredictable.
 Instead, put yourself in a position to react quickly to any unexpected (or downright illegal) maneuvers.
 The adrenaline from keeping track of everyone else on the road replaced any morning caffeine I might have otherwise needed.
 
@@ -65,16 +72,12 @@ Most New York streets are one way, which meant I had to take the southbound 2nd 
 2nd Avenue has a separated bike line as well, although this one inexplicably cuts out between 34th and 46th.
 The 12-block stretch *sans-bike-lane* was consistently the most stressful and unpleasant part of my day.
 The road is uneven and pockmarked by potholes; both flat tires I got while in the city were a direct consequence of this stretch of road.
-The disappearance of the bike lane is sudden and unexpected, throwing unwitting cyclists into a sea of lane-changing vehicles trying desperately to make a left turn onto the Queensboro bridge and willing to go through anyone in their path in order to make it happen. 
-Surprisingly, my girlfriend's route was more pleasant despite it taking her directly through Times Square (she worked on 6th Avenue).
+The disappearance of the bike lane is sudden and unexpected, throwing unwitting cyclists into a sea of lane-changing vehicles trying desperately to make a left turn onto the Queensboro bridge and willing to go through anyone in their path in order to make it happen.
 2nd Avenue's only redeeming quality was that its lawlessness allowed for some absolutely blistering times; normally I could count on being home less than 15 minutes after leaving the office.
 
 In addition to fighting for space with cars, there's also the other cyclists to worry about.
-The disappearance of the bike lane brings with it an abandonment of any laws, rules or common courtesies one would expect from a civilized society.
+The disappearance of the bike lane brings with it an abandonment of any laws, rules or common courtesies one would expect from a citizens of a "world-class" city.
 Without a lane to restrict them, cyclists began changing lanes with even more fervor (and less signaling) than was common from the cars we share the road with.
-On my first day biking along this route, I got into a heated discussion with a fellow cyclist around the proper etiquette for phone use while biking on a crowded, rush-hour road.
-With one hand on his handlebars and no eyes on the road, he swerved sinusoidally across lane boundaries as if they were a mere suggestion, cutting off several cars and other cyclists in the process.
-Unfortunately, we did not come to a resolution.
 
 I'm not absolving myself from poor driving habits by any means, and I suspect many of the 2nd Avenue bikers would have been quite reasonable and pleasant people had I met them in any other context.
 We were victims of circumstance, our bike lane replaced by haphazard painted bike icons put down in random lanes and promptly ignored by everyone involved.
@@ -105,7 +108,7 @@ Nearly 80 people showed up.
 All that to say that I was dedicated to going to as many Mondays as possible. 
 McCarren park is in Brooklyn but was actually reasonably close to my apartment, taking just under half an hour to get there by bike.
 And what a bike it was.
-It starts by going Downtown until Delancey street and turning left onto the bridge. The bridge has two fairly steep sections but getting to the top was normally fairly quick work.
+It starts by going Downtown until Delancey street and turning left onto the bridge. The bridge has two fairly steep sections but getting to the top is normally fairly quick.
 I was motivated not only by ultimate but also by what I think might be one of the best views of the city; from the Williamsburg bridge, the entire Manhattan skyline is visible and looks absolutely incredible at nighttime.
 From there, it's a quick shot up a quiet Brooklyn street to get to McCarren.
 
@@ -160,7 +163,7 @@ All of these routes are easily accessible by following marked bike lanes and are
 
 One Sunday morning early in the term, I rode up Manhattan's west coast to Columbia University in uptown.
 First, a quick bike west to the Hudson river, then up the river along a path that is fully separated from the neighboring highway.
-Although I don't know if we'll ever be free from <a href="https://en.wikipedia.org/wiki/Robert_Moses">Robert Moses</a> and his shoreline expressways, the Hudson River bike path offers as pleasant of a ride as you'll get in Manhattan.
+Although I don't know if we'll ever be free from [Robert Moses](https://en.wikipedia.org/wiki/Robert_Moses) and his shoreline expressways, the Hudson River bike path offers as pleasant of a ride as you'll get in Manhattan.
 The river is dotted with piers that double as businesses and community spaces; parks, restaurants, and even a [floating museum](https://en.wikipedia.org/wiki/Intrepid_Sea,_Air_%26_Space_Museum) make for interesting scenery next to the midtown skyscrapers on the right. 
 North of 70th street, the buildings fade away to the green fields and playgrounds of Riverside park.
 
@@ -183,11 +186,11 @@ Those who opted to take a taxi part of the way were no better off; on more than 
 
 It turned out that bike rides to Randall's were the lesser of these evils.
 I was able to take the same 1st Avenue route as I did for my commute to work, this time continuing all the way up to 101st street before biking across the river on a footbridge.
-In total, the bike took me under 40 minutes.
+In total, the bike took me less than 40 minutes.
 
 Although the scenery on the bike up there wasn't too spectacular, it was interesting seeing the transition between neighborhoods moving north.
-Laundromats and bagel shops in the east village are replaced by large glass office and condo buildings in midtown.
-These are followed the higher-brow restaurants and apartments before finally fading into the housing projects that are so common along the east river.
+Laundromats and bagel shops in the East Village are replaced by large glass office and condo buildings in midtown.
+These are followed by higher-brow restaurants and apartments before finally fading into the housing projects that are so common along the East River.
 
 <figure>
 <div class='image-gallery'>
@@ -209,8 +212,8 @@ Still, the first section follows the riverside and almost makes up for having to
 <figcaption>The Queensboro Bridge on the East River, taken from the Manhattan side.</figcaption>
 </figure>
 
-On days where I had more time, I would take the Triborough bridge into Astoria and make my way from there.
-The view of Randall's island from the bridge is great, made even better by the complete lack of protective fences that are characterisitc of Manhattan bridges.
+On days where I had more time, I would take the Triborough Bridge into Astoria and make my way from there.
+The view of Randall's Island from the bridge is great, made even better by the complete lack of protective fences that are characterisitc of Manhattan bridges.
 The only barrier is roughly torso high and leaves bikers feeling fairly exposed.
 There's also several staircases that put a temporary and sometimes unexpected pause on the ride: some of them aren't well marked!
 

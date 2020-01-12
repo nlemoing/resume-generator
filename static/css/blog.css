@@ -53,6 +53,7 @@
 }
 
 #article-body .image-gallery > img {
-    width: 100%;
+    max-width: 100%;
+    max-height: 80vh;
     margin: 5px;
 }
