@@ -3,3 +3,4 @@ generator/generator
 server/server
 data/contact.json
 data/config.json
+node_modules

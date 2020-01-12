@@ -2,6 +2,19 @@
     "Title": "Blog",
     "Articles": [
         {
+            "Title": "Biking in New York City",
+            "Subtitle": "For four months, I biked everywhere in NYC. Here's what I learned.",
+            "BodyPath": "articles/nyc-biking.md",
+            "OutputPath": "nyc-biking.html",
+            "Scripts": [
+                "/scripts/bike.js"
+            ],
+            "Styles": [
+                "bike.css"
+            ],
+            "Date": "January 12, 2020"
+        },
+        {
             "Title": "Generalized Knights",
             "Subtitle": "Knights in chess move in an L-shape: 2 squares in one direction and 1 square perpendicular. But what if it didn't have to be like that?",
             "BodyPath": "articles/knight.md",
