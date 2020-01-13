@@ -54,20 +54,6 @@
             "Title": "Projects",
             "Items": [
                 {
-                    "Title": "PlanUW",
-                    "Subtitle": "Schedule planner for uWaterloo courses",
-                    "Subheading": "JavaScript, Node.js",
-                    "Date": "11/2019",
-                    "Link": "https://github.com/nlemoing/uwaterloo-course-scheduler",
-                    "Description": {
-                        "Bulleted": true,
-                        "Contents": [
-                            "Features include course planning and automatic degree requirement parsing",
-                            "Lightweight frontend for blazing fast load times (60KB for all assets)"
-                        ]
-                    }
-                },
-                {
                     "Title": "GNight",
                     "Subtitle": "Generalized knight simulator and visualizer",
                     "Subheading": "C++, OpenCV, d3.js",
@@ -96,6 +82,20 @@
                             "Used as the basis for my personal site as well as this resume"
                         ]
                     }
+                },
+                {
+                    "Title": "Fantasy Baseball Predictive Model",
+                    "Subheading": "Python",
+                    "Date": "1/2018",
+                    "Link": "https://github.com/nlemoing/fantasy-baseball",
+                    "Description": {
+                        "Bulleted": true,
+                        "Contents": [
+                            "Built a web scraper in Python to aggregate baseball box score data",
+                            "Constructed a neural net from the ground up using linear algebra primitives",
+                            "Analyzed the relationship between past seasons and future success"
+                        ]
+                    }
                 }
             ]
         },
@@ -104,14 +104,13 @@
             "Items": [
                 {
                     "Title": "Research Assistant",
-                    "Subheading": "3D Images",
+                    "Subheading": "3D Images (Supervisor: Lesley Istead)",
                     "Date": "5/2019 - 8/2019",
                     "Description": {
                         "Bulleted": true,
                         "Contents": [
                             "Researched algorithms for consistent 3D line drawings",
-                            "Implemented a 3D image stylization algorithm in OpenCV",
-                            "Supervisor: Lesley Istead"
+                            "Implemented a 3D image stylization algorithm in OpenCV"
                         ]
                     }
                 },
@@ -247,8 +246,7 @@
                     "Description": {
                         "Bulleted": false,
                         "Contents": [
-                            "While in New York I biked to work every day, as well as to all five boroughs.",
-                            "My blog has an article about the experience."
+                            "While in New York I biked to work every day, as well as to all five boroughs."
                         ]
                     }
                 }
