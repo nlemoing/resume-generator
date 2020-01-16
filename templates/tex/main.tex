@@ -1,18 +1,25 @@
 \documentclass[letterpaper]{article}
 \usepackage[utf8]{inputenc}
-\usepackage{lmodern}
+\usepackage{fontspec}
+\setmainfont{Lato}
 \usepackage{fontawesome}
 \usepackage[hmargin=1.25cm, vmargin=0.75cm]{geometry} 
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage{hyperref}
+\usepackage{xcolor}
+
+\definecolor{mylowlight}{RGB}{80, 80, 80} % gray
+\definecolor{myhighlight}{RGB}{0, 81, 212} % blue
+\newcommand{\highlight}[1]{\textcolor{myhighlight}{#1}}
+\newcommand{\lowlight}[1]{\textcolor{mylowlight}{#1}}
 
 \titlespacing{\section}{0pt}{0pt}{0pt}
 \titlespacing{\subsection}{0pt}{0pt}{0pt}
-\titleformat{\section}{\scshape\fontsize{20pt}{24pt}\selectfont \raggedright \bfseries}{}{0em}{}
+\titleformat{\section}{\scshape\fontsize{18pt}{22pt}\selectfont \raggedright \bfseries}{}{0em}{}
 \titleformat{\subsection}{\fontsize{12pt}{12pt}\selectfont}{}{0em}{}
 \newcommand{\subheading}[1]{\raggedright\fontsize{10pt}{12pt}\selectfont {#1\\} \normalfont}
-\newcommand{\mydate}[1]{\fontsize{10pt}{10pt}\selectfont {\faCalendar \ #1} \normalfont}
+\newcommand{\mydate}[1]{\fontsize{10pt}{10pt}\selectfont \lowlight{\faCalendar \ #1} \normalfont}
 \newenvironment{tightitemize}
 {\setlist{nolistsep}\begin{itemize}[leftmargin=0.4cm,noitemsep]}
 {\end{itemize}\vspace{0.3cm}}

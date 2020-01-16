@@ -1,7 +1,8 @@
 package main
 
 type Contact struct {
-	Name string
+	FirstName string
+	LastName string
 	Email string
 	Phone string
 	GitHub string

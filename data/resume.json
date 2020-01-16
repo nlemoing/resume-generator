@@ -156,7 +156,7 @@
                         "Bulleted": false,
                         "Contents": [
                             "Python",
-                            "JavaScript",
+                            "JavaScript/Node",
                             "C/C++",
                             "Golang",
                             "Scheme"
@@ -180,19 +180,18 @@
                         "Contents": [
                             "NumPy",
                             "Pandas",
-                            "Scikit-learn",
-                            "Jupyter"
+                            "Scikit-learn"
                         ]
                     }
                 },
                 {
-                    "Title": "DevOps",
+                    "Title": "Graphics and Visualization",
                     "Description": {
                         "Bulleted": false,
                         "Contents": [
-                            "Docker",
-                            "Kubernetes",
-                            "Vagrant"
+                            "OpenCV",
+                            "OpenGL",
+                            "d3.js"
                         ]
                     }
                 },
