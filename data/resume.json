@@ -14,9 +14,9 @@
                     "Description": {
                         "Bulleted": true, 
                         "Contents": [
-                            "Decreased search times by a factor of 10 in our hosted PDF viewer",
-                            "Developed custom visualization, navigation and annotation components for reviewing medical PDFs using PDF.js ",
-                            "Automated build-and-deploy processes for hosted services using CI/CD pipelines"
+                            "Developed custom visualization, navigation and annotation components for reviewing medical PDFs in the browser",
+                            "Automated build-and-deploy processes for hosted services using Docker and CI/CD pipelines",
+                            "Orchestrated machine learning pipelines with Airflow"
                         ]
                     }
                 },
@@ -29,8 +29,8 @@
                         "Bulleted": true,
                         "Contents": [
                             "Researched and implemented a parallelized, clustering-based algorithm to reduce dimensionality in datasets with correlated features",
-                            "Developed black-box model interpretation and visualization tools in Python and React",
-                            "Evaluated alternative data sources using interpretable random forest models to reduce underwriting time"
+                            "Developed black-box model interpretation tools in Python and React",
+                            "Evaluated alternative data sources using interpretable random forest models"
                         ]
                     }
                 },
@@ -42,8 +42,8 @@
                     "Description": {
                         "Bulleted": true,
                         "Contents": [
-                            "Developed new features for the core procurement app with Angular and Node.js",
-                            "Kickstarted the consolidation of several backend services into a Node.js API",
+                            "Developed new features for the core procurement app with Angular and Node",
+                            "Kickstarted the consolidation of several backend services into a Node API",
                             "Spearheaded the addition of an integration testing framework to ensure stability across Bonfire services"
                         ]
                     }
@@ -63,7 +63,7 @@
                         "Bulleted": true,
                         "Contents": [
                             "Analyzed movement of general chess knights using BFS and Random Walk algorithms",
-                            "Built a path visualization module using OpenCV",
+                            "Built a path visualization module using C++, OpenCV",
                             "Implemented animated visualizations in d3 for the explorative post on my blog"
                         ]
                     }
@@ -77,7 +77,7 @@
                     "Description": {
                         "Bulleted": true, 
                         "Contents": [
-                            "Built a resume templator to generate multiple views from common JSON data",
+                            "Built a resume template engine to generate resumes from JSON data",
                             "Supports TeX, HTML output with potential to add other formats",
                             "Used as the basis for my personal site as well as this resume"
                         ]
@@ -116,7 +116,7 @@
                 },
                 {
                     "Title": "Teaching Assistant",
-                    "Subheading": "Math and CS",
+                    "Subheading": "Math and Computer Science",
                     "Date": "9/2017 - Present",
                     "Description": {
                         "Bulleted": true,
@@ -141,7 +141,7 @@
                        "Bulleted": false,
                         "Contents": [
                             "91 Average, Dean's List in 5 of 6 terms",
-                            "Favourite Courses: Game Theory, Theory of Computation"
+                            "Favourite Courses: Theory of Computation, Science Fiction, Game Theory"
                         ]
                     }
                 }
@@ -158,8 +158,7 @@
                             "Python",
                             "JavaScript/Node",
                             "C/C++",
-                            "Golang",
-                            "Scheme"
+                            "Golang"
                         ]
                     }
                 },
@@ -206,12 +205,13 @@
                     }
                 },
                 {
-                    "Title": "Communication",
+                    "Title": "Everything else",
                     "Description": {
                         "Bulleted": false,
                         "Contents": [
-                            "Client pitches and presentations",
-                            "Strong technical and informal writer"
+                            "MySQL",
+                            "Docker",
+                            "Git"
                         ]
                     }
                 }
@@ -235,7 +235,7 @@
                     "Description": {
                         "Bulleted": false,
                         "Contents": [
-                            "I write articles about sports and business topics that interest me.",
+                            "I write articles about various math, sports and business topics on my blog.",
                             "I'm also a hobbyist short story writer."
                         ]
                     }
