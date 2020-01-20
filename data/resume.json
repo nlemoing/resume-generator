@@ -15,7 +15,7 @@
                         "Bulleted": true, 
                         "Contents": [
                             "Developed custom visualization, navigation and annotation components for reviewing medical PDFs in the browser",
-                            "Automated build-and-deploy processes for hosted services using Docker and CI/CD pipelines",
+                            "Managed the production deployment of a hosted PDF viewer using Docker and CI/CD pipelines",
                             "Orchestrated machine learning pipelines with Airflow"
                         ]
                     }
@@ -104,12 +104,12 @@
             "Items": [
                 {
                     "Title": "Research Assistant",
-                    "Subheading": "3D Images (Supervisor: Lesley Istead)",
+                    "Subheading": "Stereo 3D Images (Supervisor: Lesley Istead)",
                     "Date": "5/2019 - 8/2019",
                     "Description": {
                         "Bulleted": true,
                         "Contents": [
-                            "Researched algorithms for consistent 3D line drawings",
+                            "Researched algorithms for consistent stereo 3D line drawings",
                             "Implemented a 3D image stylization algorithm in OpenCV"
                         ]
                     }
@@ -158,7 +158,8 @@
                             "Python",
                             "JavaScript/Node",
                             "C/C++",
-                            "Golang"
+                            "Golang",
+                            "Matlab"
                         ]
                     }
                 },
