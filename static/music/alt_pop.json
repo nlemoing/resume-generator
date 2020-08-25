@@ -1,0 +1,562 @@
+[
+  {
+    "song": "Superposition",
+    "artist": "Young the Giant",
+    "album": "Mirror Master",
+    "genre": "Alternative/Indie",
+    "year": 2018,
+    "plays": 35
+  },
+  {
+    "song": "Fail!",
+    "artist": "Rainbow Kitten Surprise",
+    "album": "Seven + Mary",
+    "genre": "Alternative/Indie",
+    "year": 2013,
+    "plays": 69
+  },
+  {
+    "song": "Season 2 Episode 3",
+    "artist": "Glass Animals",
+    "album": "How To Be A Human Being",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 62
+  },
+  {
+    "song": "So Young",
+    "artist": "Portugal. The Man",
+    "album": "Woodstock",
+    "genre": "Alternative/Indie",
+    "year": 2017,
+    "plays": 26
+  },
+  {
+    "song": "Repeat",
+    "artist": "Young the Giant",
+    "album": "Home of the Strange",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 30
+  },
+  {
+    "song": "Guru",
+    "artist": "Coast Modern",
+    "album": "Coast Modern",
+    "genre": "Alternative/Indie",
+    "year": 2017,
+    "plays": 27
+  },
+  {
+    "song": "You're Somebody Else",
+    "artist": "flora cash",
+    "album": "You're Somebody Else",
+    "genre": "Alternative/Indie",
+    "year": 2017,
+    "plays": 62
+  },
+  {
+    "song": "Fever Pitch",
+    "artist": "Rainbow Kitten Surprise",
+    "album": "How to: Friend, Love, Freefall",
+    "genre": "Alternative/Indie",
+    "year": 2018,
+    "plays": 44
+  },
+  {
+    "song": "Vagabond",
+    "artist": "Caamp",
+    "album": "Caamp",
+    "genre": "Folk",
+    "year": 2016,
+    "plays": 28
+  },
+  {
+    "song": "Cold Blue Rain",
+    "artist": "Milky Chance",
+    "album": "Blossom",
+    "genre": "Alternative/Indie",
+    "year": 2017,
+    "plays": 26
+  },
+  {
+    "song": "Cardinal",
+    "artist": "Mt. Joy",
+    "album": "Cardinal",
+    "genre": "Alternative/Indie",
+    "year": 2017,
+    "plays": 23
+  },
+  {
+    "song": "For Elise",
+    "artist": "Saint Motel",
+    "album": "saintmotelevision",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 26
+  },
+  {
+    "song": "Lady Lie (Audiotree Live Version)",
+    "artist": "Rainbow Kitten Surprise",
+    "album": "Rainbow Kitten Surprise on Audiotree Live (Audiotree Live Version)",
+    "genre": "Alternative/Indie",
+    "year": 2017,
+    "plays": 42
+  },
+  {
+    "song": "Miramare",
+    "artist": "Sons Of The East",
+    "album": "Sons Of The East",
+    "genre": "Alternative/Indie",
+    "year": 2013,
+    "plays": 19
+  },
+  {
+    "song": "Cringe",
+    "artist": "Matt Maeson",
+    "album": "Who Killed Matt Maeson",
+    "genre": "Alternative/Indie",
+    "year": 2017,
+    "plays": 18
+  },
+  {
+    "song": "Suit And Jacket",
+    "artist": "Judah & the Lion",
+    "album": "Folk Hop N' Roll (Deluxe)",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 19
+  },
+  {
+    "song": "Suicide Saturday",
+    "artist": "Hippo Campus",
+    "album": "Bashful Creatures",
+    "genre": "Indie",
+    "year": 2015,
+    "plays": 38
+  },
+  {
+    "song": "Black and White",
+    "artist": "Rainbow Kitten Surprise",
+    "album": "Seven + Mary",
+    "genre": "Alternative/Indie",
+    "year": 2013,
+    "plays": 32
+  },
+  {
+    "song": "Train (Remastered)",
+    "artist": "Brick + Mortar",
+    "album": "Dropped Again",
+    "genre": "Alternative/Indie",
+    "year": 2015,
+    "plays": 12
+  },
+  {
+    "song": "Walla Walla",
+    "artist": "Glass Animals",
+    "album": "ZABA (Deluxe)",
+    "genre": "Dance/Electronic",
+    "year": 2014,
+    "plays": 18
+  },
+  {
+    "song": "Peripeteia",
+    "artist": "Milky Chance",
+    "album": "Blossom (Deluxe)",
+    "genre": "Alternative/Indie",
+    "year": 2017,
+    "plays": 14
+  },
+  {
+    "song": "Buttercup",
+    "artist": "Hippo Campus",
+    "album": "Landmark",
+    "genre": "Alternative/Indie",
+    "year": 2017,
+    "plays": 50
+  },
+  {
+    "song": "Beige",
+    "artist": "Yoke Lore",
+    "album": "Goodpain",
+    "genre": "Alternative/Indie",
+    "year": 2017,
+    "plays": 25
+  },
+  {
+    "song": "Cane Shuga",
+    "artist": "Glass Animals",
+    "album": "How To Be A Human Being",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 57
+  },
+  {
+    "song": "Adderall",
+    "artist": "Max Frost",
+    "album": "Adderall",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 20
+  },
+  {
+    "song": "It's Called: Freefall",
+    "artist": "Rainbow Kitten Surprise",
+    "album": "How to: Friend, Love, Freefall",
+    "genre": "Alternative/Indie",
+    "year": 2018,
+    "plays": 41
+  },
+  {
+    "song": "Mr. Know-It-All",
+    "artist": "Young the Giant",
+    "album": "Home of the Strange",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 25
+  },
+  {
+    "song": "Overnight Sensation",
+    "artist": "B\u00d8RNS",
+    "album": "Dopamine",
+    "genre": "Alternative/Indie",
+    "year": 2015,
+    "plays": 19
+  },
+  {
+    "song": "Slow Motion",
+    "artist": "Saint Motel",
+    "album": "saintmotelevision",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 18
+  },
+  {
+    "song": "Dirty Love",
+    "artist": "Mt. Joy",
+    "album": "Dirty Love",
+    "genre": "Alternative/Indie",
+    "year": 2018,
+    "plays": 31
+  },
+  {
+    "song": "Animals",
+    "artist": "Coast Modern",
+    "album": "Coast Modern",
+    "genre": "Alternative/Indie",
+    "year": 2017,
+    "plays": 22
+  },
+  {
+    "song": "Sadness Is Taking Over",
+    "artist": "Flora Cash",
+    "album": "Sadness Is Taking Over",
+    "genre": "Pop",
+    "year": 2016,
+    "plays": 16
+  },
+  {
+    "song": "Just This",
+    "artist": "Birdtalker",
+    "album": "Just This",
+    "genre": "Folk",
+    "year": 2016,
+    "plays": 50
+  },
+  {
+    "song": "Darlin'",
+    "artist": "Houndmouth",
+    "album": "Little Neon Limelight",
+    "genre": "Alt Country",
+    "year": 2015,
+    "plays": 18
+  },
+  {
+    "song": "Gooey (Stripped)",
+    "artist": "Glass Animals",
+    "album": "ZABA (Deluxe)",
+    "genre": "Dance/Electronic",
+    "year": 2014,
+    "plays": 20
+  },
+  {
+    "song": "Seven",
+    "artist": "Rainbow Kitten Surprise",
+    "album": "Seven + Mary",
+    "genre": "Alternative/Indie",
+    "year": 2013,
+    "plays": 38
+  },
+  {
+    "song": "Firebird",
+    "artist": "Milky Chance",
+    "album": "Blossom",
+    "genre": "Alternative/Indie",
+    "year": 2017,
+    "plays": 27
+  },
+  {
+    "song": "DRUGS",
+    "artist": "DREAMERS",
+    "album": "This Album Does Not Exist",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 20
+  },
+  {
+    "song": "Only You",
+    "artist": "Yoke Lore",
+    "album": "Goodpain",
+    "genre": "Alternative/Indie",
+    "year": 2017,
+    "plays": 15
+  },
+  {
+    "song": "Glory",
+    "artist": "Young the Giant",
+    "album": "Mirror Master",
+    "genre": "Alternative/Indie",
+    "year": 2018,
+    "plays": 17
+  },
+  {
+    "song": "Clouds",
+    "artist": "B\u00d8RNS",
+    "album": "Dopamine",
+    "genre": "Alternative/Indie",
+    "year": 2015,
+    "plays": 23
+  },
+  {
+    "song": "All the Debts I Owe",
+    "artist": "Caamp",
+    "album": "Caamp",
+    "genre": "Folk",
+    "year": 2016,
+    "plays": 63
+  },
+  {
+    "song": "Cocaine Jesus (Audiotree Live Version)",
+    "artist": "Rainbow Kitten Surprise",
+    "album": "Rainbow Kitten Surprise on Audiotree Live (Audiotree Live Version)",
+    "genre": "Alternative/Indie",
+    "year": 2017,
+    "plays": 43
+  },
+  {
+    "song": "Silver Lining",
+    "artist": "Mt. Joy",
+    "album": "Silver Lining",
+    "genre": "Alternative/Indie",
+    "year": 2017,
+    "plays": 28
+  },
+  {
+    "song": "In the Shadows",
+    "artist": "Foreign Air",
+    "album": "For the Light",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 13
+  },
+  {
+    "song": "Youth",
+    "artist": "Glass Animals",
+    "album": "How To Be A Human Being",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 75
+  },
+  {
+    "song": "Western Kids",
+    "artist": "Hippo Campus",
+    "album": "Landmark",
+    "genre": "Alternative/Indie",
+    "year": 2017,
+    "plays": 26
+  },
+  {
+    "song": "Silvertongue",
+    "artist": "Young the Giant",
+    "album": "Home of the Strange",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 32
+  },
+  {
+    "song": "Pansy Waltz",
+    "artist": "Shakey Graves",
+    "album": "And the War Came",
+    "genre": "Blues",
+    "year": 2014,
+    "plays": 19
+  },
+  {
+    "song": "Getaway",
+    "artist": "Saint Motel",
+    "album": "saintmotelevision",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 25
+  },
+  {
+    "song": "Fire",
+    "artist": "Barns Courtney",
+    "album": "The Attractions Of Youth",
+    "genre": "Alternative/Indie",
+    "year": 2017,
+    "plays": 15
+  },
+  {
+    "song": "Hide",
+    "artist": "Rainbow Kitten Surprise",
+    "album": "How to: Friend, Love, Freefall",
+    "genre": "Alternative/Indie",
+    "year": 2018,
+    "plays": 41
+  },
+  {
+    "song": "River Wider",
+    "artist": "Tall Heights",
+    "album": "Neptune",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 62
+  },
+  {
+    "song": "Withdrawal",
+    "artist": "Max Frost",
+    "album": "Withdrawal",
+    "genre": "Alternative/Indie",
+    "year": 2015,
+    "plays": 30
+  },
+  {
+    "song": "Caffeine",
+    "artist": "Foreign Air",
+    "album": "Caffeine",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 20
+  },
+  {
+    "song": "See the World",
+    "artist": "Caamp",
+    "album": "Caamp",
+    "genre": "Folk",
+    "year": 2016,
+    "plays": 17
+  },
+  {
+    "song": "The Maze",
+    "artist": "Manchester Orchestra",
+    "album": "A Black Mile To The Surface",
+    "genre": "Progressive/Art Rock",
+    "year": 2017,
+    "plays": 25
+  },
+  {
+    "song": "Memories",
+    "artist": "Lewis Del Mar",
+    "album": "EP",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 21
+  },
+  {
+    "song": "Freak Like Me",
+    "artist": "NoMBe",
+    "album": "They Might've Even Loved Me",
+    "genre": "Alternative/Indie",
+    "year": 2018,
+    "plays": 15
+  },
+  {
+    "song": "First Class",
+    "artist": "Rainbow Kitten Surprise",
+    "album": "Seven + Mary",
+    "genre": "Alternative/Indie",
+    "year": 2013,
+    "plays": 34
+  },
+  {
+    "song": "California",
+    "artist": "Flora Cash",
+    "album": "California",
+    "genre": "Rock",
+    "year": 2017,
+    "plays": 8
+  },
+  {
+    "song": "I Don't Wanna Dance",
+    "artist": "COIN",
+    "album": "How Will You Know If You Never Try",
+    "genre": "Alternative/Indie",
+    "year": 2017,
+    "plays": 14
+  },
+  {
+    "song": "Meadows",
+    "artist": "Wild Child",
+    "album": "Fools",
+    "genre": "Singer-Songwriter",
+    "year": 2015,
+    "plays": 13
+  },
+  {
+    "song": "Black Mambo (Stripped)",
+    "artist": "Glass Animals",
+    "album": "ZABA (Deluxe)",
+    "genre": "Dance/Electronic",
+    "year": 2014,
+    "plays": 7
+  },
+  {
+    "song": "Morning Light",
+    "artist": "Wilderado",
+    "album": "Latigo EP",
+    "genre": "Alternative/Indie",
+    "year": 2017,
+    "plays": 19
+  },
+  {
+    "song": "South",
+    "artist": "Hippo Campus",
+    "album": "South",
+    "genre": "Alternative/Indie",
+    "year": 2015,
+    "plays": 19
+  },
+  {
+    "song": "Free Animal",
+    "artist": "Foreign Air",
+    "album": "For the Light",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 13
+  },
+  {
+    "song": "All That and More (Sailboat)",
+    "artist": "Rainbow Kitten Surprise",
+    "album": "Seven + Mary",
+    "genre": "Alternative/Indie",
+    "year": 2013,
+    "plays": 31
+  },
+  {
+    "song": "Pristine",
+    "artist": "Mantaraybryn",
+    "album": "Dark Shapes in the Water",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 15
+  },
+  {
+    "song": "Dug My Heart",
+    "artist": "B\u00d8RNS",
+    "album": "Dopamine",
+    "genre": "Alternative/Indie",
+    "year": 2015,
+    "plays": 18
+  }
+]

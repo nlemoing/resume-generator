@@ -1,0 +1,370 @@
+[
+  {
+    "song": "LOVE. FT. ZACARI.",
+    "artist": "Kendrick Lamar",
+    "album": "DAMN.",
+    "genre": "West Coast Hip-Hop",
+    "year": 2017,
+    "plays": 54
+  },
+  {
+    "song": "Pothole (feat. Jaden Smith)",
+    "artist": "Tyler, The Creator",
+    "album": "Flower Boy",
+    "genre": "Hip-Hop/Rap",
+    "year": 2017,
+    "plays": 38
+  },
+  {
+    "song": "One Dance (feat. WizKid & Kyla)",
+    "artist": "Drake",
+    "album": "Views",
+    "genre": "Hip-Hop/Rap",
+    "year": 2016,
+    "plays": 24
+  },
+  {
+    "song": "Nikes",
+    "artist": "Frank Ocean",
+    "album": "Blonde",
+    "genre": "Pop",
+    "year": 2016,
+    "plays": 49
+  },
+  {
+    "song": "Canal St. (feat. Bones)",
+    "artist": "A$AP Rocky",
+    "album": "AT.LONG.LAST.A$AP",
+    "genre": "Hip-Hop/Rap",
+    "year": 2015,
+    "plays": 22
+  },
+  {
+    "song": "FEEL.",
+    "artist": "Kendrick Lamar",
+    "album": "DAMN.",
+    "genre": "West Coast Hip-Hop",
+    "year": 2017,
+    "plays": 49
+  },
+  {
+    "song": "Foreword (feat. Rex Orange County)",
+    "artist": "Tyler, The Creator",
+    "album": "Flower Boy",
+    "genre": "Hip-Hop/Rap",
+    "year": 2017,
+    "plays": 29
+  },
+  {
+    "song": "4r Da Squaw",
+    "artist": "Isaiah Rashad",
+    "album": "The Sun's Tirade",
+    "genre": "Hip-Hop/Rap",
+    "year": 2016,
+    "plays": 22
+  },
+  {
+    "song": "Pt. 2",
+    "artist": "Kanye West",
+    "album": "The Life Of Pablo",
+    "genre": "Hip-Hop/Rap",
+    "year": 2016,
+    "plays": 23
+  },
+  {
+    "song": "Nothings Into Somethings",
+    "artist": "Drake",
+    "album": "More Life",
+    "genre": "Hip-Hop/Rap",
+    "year": 2017,
+    "plays": 21
+  },
+  {
+    "song": "Drug Dealers Anonymous (feat. JAY Z)",
+    "artist": "Pusha T",
+    "album": "Drug Dealers Anonymous",
+    "genre": "Hip-Hop/Rap",
+    "year": 2016,
+    "plays": 19
+  },
+  {
+    "song": "Chanel",
+    "artist": "Frank Ocean",
+    "album": "Chanel",
+    "genre": "Pop",
+    "year": 2017,
+    "plays": 38
+  },
+  {
+    "song": "Hype",
+    "artist": "Drake",
+    "album": "Views",
+    "genre": "Hip-Hop/Rap",
+    "year": 2016,
+    "plays": 19
+  },
+  {
+    "song": "Who Dat Boy (feat. A$AP Rocky)",
+    "artist": "Tyler, The Creator",
+    "album": "Flower Boy",
+    "genre": "Hip-Hop/Rap",
+    "year": 2017,
+    "plays": 32
+  },
+  {
+    "song": "Madiba Riddim",
+    "artist": "Drake",
+    "album": "More Life",
+    "genre": "Hip-Hop/Rap",
+    "year": 2017,
+    "plays": 15
+  },
+  {
+    "song": "The Blacker The Berry",
+    "artist": "Kendrick Lamar",
+    "album": "To Pimp A Butterfly",
+    "genre": "Hip-Hop/Rap",
+    "year": 2015,
+    "plays": 12
+  },
+  {
+    "song": "Lord Have Mercy",
+    "artist": "ScHoolboy Q",
+    "album": "Blank Face LP",
+    "genre": "Hip-Hop/Rap",
+    "year": 2016,
+    "plays": 10
+  },
+  {
+    "song": "Pink + White",
+    "artist": "Frank Ocean",
+    "album": "Blonde",
+    "genre": "Pop",
+    "year": 2016,
+    "plays": 55
+  },
+  {
+    "song": "Neighbors",
+    "artist": "J. Cole",
+    "album": "4 Your Eyez Only",
+    "genre": "Hip-Hop/Rap",
+    "year": 2016,
+    "plays": 15
+  },
+  {
+    "song": "See You Again (feat. Kali Uchis)",
+    "artist": "Tyler, The Creator",
+    "album": "Flower Boy",
+    "genre": "Hip-Hop/Rap",
+    "year": 2017,
+    "plays": 32
+  },
+  {
+    "song": "Blem",
+    "artist": "Drake",
+    "album": "More Life",
+    "genre": "Hip-Hop/Rap",
+    "year": 2017,
+    "plays": 13
+  },
+  {
+    "song": "November",
+    "artist": "Tyler, The Creator",
+    "album": "Flower Boy",
+    "genre": "Hip-Hop/Rap",
+    "year": 2017,
+    "plays": 25
+  },
+  {
+    "song": "Father Stretch My Hands Pt. 1",
+    "artist": "Kanye West",
+    "album": "The Life Of Pablo",
+    "genre": "Hip-Hop/Rap",
+    "year": 2016,
+    "plays": 19
+  },
+  {
+    "song": "Weekend (feat. Miguel)",
+    "artist": "Mac Miller",
+    "album": "GO:OD AM",
+    "genre": "Hip-Hop/Rap",
+    "year": 2015,
+    "plays": 40
+  },
+  {
+    "song": "LOYALTY. FT. RIHANNA.",
+    "artist": "Kendrick Lamar",
+    "album": "DAMN.",
+    "genre": "West Coast Hip-Hop",
+    "year": 2017,
+    "plays": 44
+  },
+  {
+    "song": "Solo",
+    "artist": "Frank Ocean",
+    "album": "Blonde",
+    "genre": "Pop",
+    "year": 2016,
+    "plays": 63
+  },
+  {
+    "song": "With You (feat. PARTYNEXTDOOR)",
+    "artist": "Drake",
+    "album": "Views",
+    "genre": "Hip-Hop/Rap",
+    "year": 2016,
+    "plays": 17
+  },
+  {
+    "song": "King Kunta",
+    "artist": "Kendrick Lamar",
+    "album": "To Pimp A Butterfly",
+    "genre": "Hip-Hop/Rap",
+    "year": 2015,
+    "plays": 18
+  },
+  {
+    "song": "goosebumps",
+    "artist": "Travis Scott",
+    "album": "Birds In The Trap Sing McKnight",
+    "genre": "Hip-Hop/Rap",
+    "year": 2016,
+    "plays": 17
+  },
+  {
+    "song": "Congratulations (feat. Quavo)",
+    "artist": "Post Malone",
+    "album": "Stoney (Deluxe)",
+    "genre": "Hip-Hop/Rap",
+    "year": 2016,
+    "plays": 13
+  },
+  {
+    "song": "Where This Flower Blooms (feat. Frank Ocean)",
+    "artist": "Tyler, The Creator",
+    "album": "Flower Boy",
+    "genre": "Hip-Hop/Rap",
+    "year": 2017,
+    "plays": 26
+  },
+  {
+    "song": "Self Control",
+    "artist": "Frank Ocean",
+    "album": "Blonde",
+    "genre": "Pop",
+    "year": 2016,
+    "plays": 34
+  },
+  {
+    "song": "JD",
+    "artist": "A$AP Rocky",
+    "album": "AT.LONG.LAST.A$AP",
+    "genre": "Hip-Hop/Rap",
+    "year": 2015,
+    "plays": 15
+  },
+  {
+    "song": "HUMBLE.",
+    "artist": "Kendrick Lamar",
+    "album": "DAMN.",
+    "genre": "West Coast Hip-Hop",
+    "year": 2017,
+    "plays": 46
+  },
+  {
+    "song": "Celebrate",
+    "artist": "Anderson .Paak",
+    "album": "Malibu",
+    "genre": "R&B/Soul",
+    "year": 2016,
+    "plays": 24
+  },
+  {
+    "song": "44 Bars",
+    "artist": "Logic",
+    "album": "Bobby Tarantino",
+    "genre": "Hip-Hop/Rap",
+    "year": 2016,
+    "plays": 18
+  },
+  {
+    "song": "Glitter",
+    "artist": "Tyler, The Creator",
+    "album": "Flower Boy",
+    "genre": "Hip-Hop/Rap",
+    "year": 2017,
+    "plays": 28
+  },
+  {
+    "song": "Free Lunch",
+    "artist": "Isaiah Rashad",
+    "album": "The Sun's Tirade",
+    "genre": "Hip-Hop/Rap",
+    "year": 2016,
+    "plays": 21
+  },
+  {
+    "song": "Make It Better (feat. Smokey Robinson)",
+    "artist": "Anderson .Paak",
+    "album": "Ventura",
+    "genre": "R&B/Soul",
+    "year": 2019,
+    "plays": 49
+  },
+  {
+    "song": "Dang! (feat. Anderson .Paak)",
+    "artist": "Mac Miller",
+    "album": "The Divine Feminine",
+    "genre": "Hip-Hop/Rap",
+    "year": 2016,
+    "plays": 55
+  },
+  {
+    "song": "Come Down",
+    "artist": "Anderson .Paak",
+    "album": "Malibu",
+    "genre": "R&B/Soul",
+    "year": 2016,
+    "plays": 33
+  },
+  {
+    "song": "Put Me Thru",
+    "artist": "Anderson .Paak",
+    "album": "Malibu",
+    "genre": "R&B/Soul",
+    "year": 2016,
+    "plays": 29
+  },
+  {
+    "song": "Jump Off The Roof (feat. Snoh Aalegra)",
+    "artist": "Vince Staples",
+    "album": "Summertime '06",
+    "genre": "Hip-Hop/Rap",
+    "year": 2015,
+    "plays": 7
+  },
+  {
+    "song": "Norf Norf",
+    "artist": "Vince Staples",
+    "album": "Norf Norf",
+    "genre": "Hip-Hop/Rap",
+    "year": 2015,
+    "plays": 10
+  },
+  {
+    "song": "Might Be",
+    "artist": "Anderson .Paak",
+    "album": "Venice",
+    "genre": "Contemporary R&B",
+    "year": 2014,
+    "plays": 11
+  },
+  {
+    "song": "Donald Trump",
+    "artist": "Mac Miller",
+    "album": "Donald Trump",
+    "genre": "Hip-Hop/Rap",
+    "year": 2011,
+    "plays": 21
+  }
+]

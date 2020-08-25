@@ -1,0 +1,570 @@
+[
+  {
+    "song": "My Number",
+    "artist": "Foals",
+    "album": "Holy Fire",
+    "genre": "Indie",
+    "year": 2013,
+    "plays": 18
+  },
+  {
+    "song": "Golden",
+    "artist": "Parade Of Lights",
+    "album": "Feeling Electric",
+    "genre": "Alternative/Indie",
+    "year": 2015,
+    "plays": 20
+  },
+  {
+    "song": "Cough Syrup",
+    "artist": "Young the Giant",
+    "album": "Young The Giant",
+    "genre": "Alternative/Indie",
+    "year": 2010,
+    "plays": 16
+  },
+  {
+    "song": "Houdini",
+    "artist": "Foster The People",
+    "album": "Torches",
+    "genre": "Indie",
+    "year": 2011,
+    "plays": 22
+  },
+  {
+    "song": "You & I",
+    "artist": "Colony House",
+    "album": "You & I",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 14
+  },
+  {
+    "song": "T-Shirt Weather",
+    "artist": "Circa Waves",
+    "album": "Young Chasers",
+    "genre": "Alternative/Indie",
+    "year": 2014,
+    "plays": 15
+  },
+  {
+    "song": "Good Help (Is So Hard to Find)",
+    "artist": "Death Cab for Cutie",
+    "album": "Kintsugi",
+    "genre": "Indie",
+    "year": 2015,
+    "plays": 13
+  },
+  {
+    "song": "Mountain Sound",
+    "artist": "Of Monsters And Men",
+    "album": "My Head Is An Animal",
+    "genre": "Indie",
+    "year": 2012,
+    "plays": 17
+  },
+  {
+    "song": "Bullets",
+    "artist": "Wild Child",
+    "album": "Fools",
+    "genre": "Singer-Songwriter",
+    "year": 2015,
+    "plays": 18
+  },
+  {
+    "song": "All Day All Night",
+    "artist": "Moon Taxi",
+    "album": "Daybreaker",
+    "genre": "Alternative/Indie",
+    "year": 2015,
+    "plays": 23
+  },
+  {
+    "song": "Color",
+    "artist": "Finish Ticket",
+    "album": "When Night Becomes Day",
+    "genre": "Rock",
+    "year": 2015,
+    "plays": 12
+  },
+  {
+    "song": "From Nowhere",
+    "artist": "Dan Croll",
+    "album": "Sweet Disarray",
+    "genre": "'10s Alternative",
+    "year": 2014,
+    "plays": 15
+  },
+  {
+    "song": "The Ghosts of Beverly Drive",
+    "artist": "Death Cab for Cutie",
+    "album": "Kintsugi",
+    "genre": "Indie",
+    "year": 2015,
+    "plays": 16
+  },
+  {
+    "song": "No Room in Frame",
+    "artist": "Death Cab for Cutie",
+    "album": "Kintsugi",
+    "genre": "Indie",
+    "year": 2015,
+    "plays": 28
+  },
+  {
+    "song": "Habits of My Heart (EP Version)",
+    "artist": "Jaymes Young",
+    "album": "Habits Of My Heart EP",
+    "genre": "Alternative/Indie",
+    "year": 2014,
+    "plays": 11
+  },
+  {
+    "song": "The Less I Know The Better",
+    "artist": "Tame Impala",
+    "album": "Currents",
+    "genre": "Alternative/Indie",
+    "year": 2015,
+    "plays": 16
+  },
+  {
+    "song": "Trouble",
+    "artist": "Cage The Elephant",
+    "album": "Tell Me I'm Pretty",
+    "genre": "Alternative/Indie",
+    "year": 2015,
+    "plays": 21
+  },
+  {
+    "song": "Big Ideas",
+    "artist": "The Boxer Rebellion",
+    "album": "Ocean by Ocean",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 12
+  },
+  {
+    "song": "Bad Decisions",
+    "artist": "Two Door Cinema Club",
+    "album": "Bad Decisions",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 11
+  },
+  {
+    "song": "10,000 Weight in Gold",
+    "artist": "The Head And The Heart",
+    "album": "Let's Be Still",
+    "genre": "Neo-Folk",
+    "year": 2013,
+    "plays": 18
+  },
+  {
+    "song": "New Person, Same Old Mistakes",
+    "artist": "Tame Impala",
+    "album": "Currents",
+    "genre": "Alternative/Indie",
+    "year": 2015,
+    "plays": 10
+  },
+  {
+    "song": "First",
+    "artist": "Cold War Kids",
+    "album": "Hold My Home",
+    "genre": "'10s Alternative",
+    "year": 2014,
+    "plays": 33
+  },
+  {
+    "song": "Lucifer's Eyes",
+    "artist": "T.O.L.D.",
+    "album": "Heaven EP",
+    "genre": "Rock",
+    "year": 2014,
+    "plays": 14
+  },
+  {
+    "song": "Trojans",
+    "artist": "Atlas Genius",
+    "album": "When It Was Now (Deluxe Version)",
+    "genre": "Indie",
+    "year": 2013,
+    "plays": 16
+  },
+  {
+    "song": "Paracetamol (Single Version)",
+    "artist": "Declan McKenna",
+    "album": "Liar",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 20
+  },
+  {
+    "song": "Drag",
+    "artist": "Day Wave",
+    "album": "Drag",
+    "genre": "Alternative/Indie",
+    "year": 2015,
+    "plays": 14
+  },
+  {
+    "song": "Gone",
+    "artist": "JR JR",
+    "album": "JR JR",
+    "genre": "Alternative/Indie",
+    "year": 2015,
+    "plays": 13
+  },
+  {
+    "song": "Joy Rides",
+    "artist": "MUTEMATH",
+    "album": "Vitals",
+    "genre": "Alternative/Indie",
+    "year": 2015,
+    "plays": 14
+  },
+  {
+    "song": "Not Going Home",
+    "artist": "Great Good Fine OK",
+    "album": "Not Going Home",
+    "genre": "Dance/Electronic",
+    "year": 2014,
+    "plays": 14
+  },
+  {
+    "song": "All This Wandering Around",
+    "artist": "Ivan & Alyosha",
+    "album": "It's All Just Pretend",
+    "genre": "Indie",
+    "year": 2014,
+    "plays": 13
+  },
+  {
+    "song": "Stuck In My Teeth",
+    "artist": "Circa Waves",
+    "album": "Young Chasers",
+    "genre": "Alternative/Indie",
+    "year": 2014,
+    "plays": 9
+  },
+  {
+    "song": "Kintsukuroi",
+    "artist": "Hey Rosetta!",
+    "album": "Second Sight",
+    "genre": "Folk",
+    "year": 2014,
+    "plays": 51
+  },
+  {
+    "song": "LA Calling",
+    "artist": "Crystal Fighters",
+    "album": "Cave Rave",
+    "genre": "'10s Alternative",
+    "year": 2013,
+    "plays": 15
+  },
+  {
+    "song": "All We Ever Knew",
+    "artist": "The Head and the Heart",
+    "album": "Signs of Light",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 31
+  },
+  {
+    "song": "Little Games",
+    "artist": "The Colourist",
+    "album": "The Colourist",
+    "genre": "'10s Rock",
+    "year": 2014,
+    "plays": 8
+  },
+  {
+    "song": "Seventeen",
+    "artist": "Sjowgren",
+    "album": "Seventeen",
+    "genre": "Alternative/Indie",
+    "year": 2015,
+    "plays": 33
+  },
+  {
+    "song": "Never Going Back",
+    "artist": "Caveman",
+    "album": "Otero War",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 23
+  },
+  {
+    "song": "Runaway",
+    "artist": "Ziggy Alberts",
+    "album": "Four Feet in the Forest",
+    "genre": "Folk",
+    "year": 2016,
+    "plays": 11
+  },
+  {
+    "song": "Little Numbers",
+    "artist": "BOY",
+    "album": "Mutual Friends",
+    "genre": "Pop",
+    "year": 2011,
+    "plays": 12
+  },
+  {
+    "song": "Youth",
+    "artist": "Glass Animals",
+    "album": "How To Be A Human Being",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 75
+  },
+  {
+    "song": "Hold On",
+    "artist": "RIVVRS",
+    "album": "Hold On",
+    "genre": "Folk",
+    "year": 2014,
+    "plays": 14
+  },
+  {
+    "song": "Reverend",
+    "artist": "Kings Of Leon",
+    "album": "WALLS",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 16
+  },
+  {
+    "song": "Lost in My Mind",
+    "artist": "The Head and the Heart",
+    "album": "The Head and the Heart",
+    "genre": "Folk-Rock",
+    "year": 2011,
+    "plays": 16
+  },
+  {
+    "song": "Sedona",
+    "artist": "Houndmouth",
+    "album": "Little Neon Limelight",
+    "genre": "Alt Country",
+    "year": 2015,
+    "plays": 32
+  },
+  {
+    "song": "Katie Queen of Tennessee",
+    "artist": "The Apache Relay",
+    "album": "The Apache Relay",
+    "genre": "Alternative/Indie",
+    "year": 2014,
+    "plays": 13
+  },
+  {
+    "song": "Two Weeks",
+    "artist": "Grizzly Bear",
+    "album": "Veckatimest",
+    "genre": "Indie",
+    "year": 2009,
+    "plays": 49
+  },
+  {
+    "song": "Kid Who Stays in the Picture",
+    "artist": "Hot Hot Heat",
+    "album": "Hot Hot Heat",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 48
+  },
+  {
+    "song": "Cry Baby",
+    "artist": "The Neighbourhood",
+    "album": "Wiped Out!",
+    "genre": "Alternative/Indie",
+    "year": 2015,
+    "plays": 7
+  },
+  {
+    "song": "Send Them Off!",
+    "artist": "Bastille",
+    "album": "Wild World (Complete Edition)",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 13
+  },
+  {
+    "song": "Rhythm & Blues",
+    "artist": "The Head and the Heart",
+    "album": "Signs of Light",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 10
+  },
+  {
+    "song": "Fall Together",
+    "artist": "The Temper Trap",
+    "album": "Thick as Thieves (Deluxe Version)",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 8
+  },
+  {
+    "song": "My Heart's Always Yours",
+    "artist": "Arkells",
+    "album": "Morning Report",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 14
+  },
+  {
+    "song": "There Will Come A Time",
+    "artist": "Noah And The Whale",
+    "album": "Heart Of Nowhere",
+    "genre": "'10s Alternative",
+    "year": 2013,
+    "plays": 15
+  },
+  {
+    "song": "To Just Grow Away",
+    "artist": "The Tallest Man On Earth",
+    "album": "There's No Leaving Now",
+    "genre": "Neo-Folk",
+    "year": 2012,
+    "plays": 13
+  },
+  {
+    "song": "I Will Be Back One Day",
+    "artist": "Lord Huron",
+    "album": "Lonesome Dreams",
+    "genre": "Alternative/Indie",
+    "year": 2012,
+    "plays": 13
+  },
+  {
+    "song": "The Mall & Misery",
+    "artist": "Broken Bells",
+    "album": "Broken Bells",
+    "genre": "'10s Alternative",
+    "year": 2010,
+    "plays": 45
+  },
+  {
+    "song": "Oviedo",
+    "artist": "Blind Pilot",
+    "album": "3 Rounds and a Sound",
+    "genre": "Alternative/Indie",
+    "year": 2008,
+    "plays": 12
+  },
+  {
+    "song": "Here In Spirit",
+    "artist": "Jim James",
+    "album": "Eternally Even",
+    "genre": "Psychedelic Rock",
+    "year": 2016,
+    "plays": 28
+  },
+  {
+    "song": "June, After Dark",
+    "artist": "Elliot Root",
+    "album": "Thoughts From Yesterday",
+    "genre": "Alternative/Indie",
+    "year": 2015,
+    "plays": 10
+  },
+  {
+    "song": "Brazil",
+    "artist": "Declan McKenna",
+    "album": "Liar",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 18
+  },
+  {
+    "song": "Come Down Slow",
+    "artist": "DREAMERS",
+    "album": "This Album Does Not Exist",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 12
+  },
+  {
+    "song": "You're A Wolf",
+    "artist": "Sea Wolf",
+    "album": "Leaves In The River",
+    "genre": "Alternative/Indie",
+    "year": 2007,
+    "plays": 17
+  },
+  {
+    "song": "Freida on the Mountain",
+    "artist": "The Zolas",
+    "album": "Swooner",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 12
+  },
+  {
+    "song": "Stubborn Beast",
+    "artist": "Bear's Den",
+    "album": "Islands",
+    "genre": "Alternative/Indie",
+    "year": 2014,
+    "plays": 15
+  },
+  {
+    "song": "Miracle Mile",
+    "artist": "Cold War Kids",
+    "album": "Dear Miss Lonelyhearts",
+    "genre": "'10s Alternative",
+    "year": 2013,
+    "plays": 23
+  },
+  {
+    "song": "Homesick",
+    "artist": "Catfish and the Bottlemen",
+    "album": "The Balcony",
+    "genre": "Alternative/Indie",
+    "year": 2014,
+    "plays": 11
+  },
+  {
+    "song": "Around The World",
+    "artist": "Kings Of Leon",
+    "album": "WALLS",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 14
+  },
+  {
+    "song": "Flame",
+    "artist": "Sundara Karma",
+    "album": "Flame",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 15
+  },
+  {
+    "song": "Vivienne",
+    "artist": "Sundara Karma",
+    "album": "EP II",
+    "genre": "Alternative/Indie",
+    "year": 2015,
+    "plays": 12
+  },
+  {
+    "song": "Dull Knife",
+    "artist": "Matt Mays",
+    "album": "Coyote",
+    "genre": "'10s Rock",
+    "year": 2012,
+    "plays": 12
+  },
+  {
+    "song": "Harriet",
+    "artist": "Hey Rosetta!",
+    "album": "Second Sight",
+    "genre": "Folk",
+    "year": 2014,
+    "plays": 26
+  }
+]

@@ -1,0 +1,786 @@
+[
+  {
+    "song": "Inside Out",
+    "artist": "Spoon",
+    "album": "They Want My Soul",
+    "genre": "'10s Alternative",
+    "year": 2014,
+    "plays": 78
+  },
+  {
+    "song": "Thunder Clatter",
+    "artist": "Wild Cub",
+    "album": "Youth",
+    "genre": "Indie",
+    "year": 2013,
+    "plays": 17
+  },
+  {
+    "song": "Gloria",
+    "artist": "JR JR",
+    "album": "The Speed of Things",
+    "genre": "Alternative/Indie",
+    "year": 2013,
+    "plays": 19
+  },
+  {
+    "song": "Seventeen",
+    "artist": "Sjowgren",
+    "album": "Seventeen",
+    "genre": "Alternative/Indie",
+    "year": 2015,
+    "plays": 33
+  },
+  {
+    "song": "All This Could Be Yours",
+    "artist": "Cold War Kids",
+    "album": "Hold My Home",
+    "genre": "'10s Alternative",
+    "year": 2014,
+    "plays": 23
+  },
+  {
+    "song": "Two Weeks",
+    "artist": "Grizzly Bear",
+    "album": "Veckatimest",
+    "genre": "Indie",
+    "year": 2009,
+    "plays": 49
+  },
+  {
+    "song": "Baby Missiles",
+    "artist": "The War On Drugs",
+    "album": "Slave Ambient",
+    "genre": "Indie",
+    "year": 2011,
+    "plays": 25
+  },
+  {
+    "song": "Happy Idiot",
+    "artist": "TV On The Radio",
+    "album": "Seeds",
+    "genre": "Indie",
+    "year": 2014,
+    "plays": 21
+  },
+  {
+    "song": "Needle",
+    "artist": "Born Ruffians",
+    "album": "Birthmarks",
+    "genre": "Alternative/Indie",
+    "year": 2013,
+    "plays": 17
+  },
+  {
+    "song": "The Mall & Misery",
+    "artist": "Broken Bells",
+    "album": "Broken Bells",
+    "genre": "'10s Alternative",
+    "year": 2010,
+    "plays": 45
+  },
+  {
+    "song": "The Wild Life",
+    "artist": "Vacationer",
+    "album": "Relief",
+    "genre": "Alternative/Indie",
+    "year": 2014,
+    "plays": 37
+  },
+  {
+    "song": "Never Going Back",
+    "artist": "Caveman",
+    "album": "Otero War",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 23
+  },
+  {
+    "song": "Hot Thoughts",
+    "artist": "Spoon",
+    "album": "Hot Thoughts",
+    "genre": "Alternative/Indie",
+    "year": 2017,
+    "plays": 49
+  },
+  {
+    "song": "Here In Spirit",
+    "artist": "Jim James",
+    "album": "Eternally Even",
+    "genre": "Psychedelic Rock",
+    "year": 2016,
+    "plays": 28
+  },
+  {
+    "song": "Cayucos",
+    "artist": "Cayucas",
+    "album": "Cayucos b/w Swimsuit",
+    "genre": "Alternative/Indie",
+    "year": 2012,
+    "plays": 16
+  },
+  {
+    "song": "West Coast",
+    "artist": "Coconut Records",
+    "album": "Nighttiming",
+    "genre": "Alternative/Indie",
+    "year": 2007,
+    "plays": 14
+  },
+  {
+    "song": "When They Fight, They Fight",
+    "artist": "Generationals",
+    "album": "Con Law",
+    "genre": "Rock",
+    "year": 2009,
+    "plays": 18
+  },
+  {
+    "song": "Gibraltar",
+    "artist": "Beirut",
+    "album": "No No No",
+    "genre": "Neo-Folk",
+    "year": 2015,
+    "plays": 22
+  },
+  {
+    "song": "Tape Machine",
+    "artist": "STRFKR",
+    "album": "Being No One, Going Nowhere",
+    "genre": "Electropop",
+    "year": 2016,
+    "plays": 15
+  },
+  {
+    "song": "Don't You Evah",
+    "artist": "Spoon",
+    "album": "Don't You Evah",
+    "genre": "Alternative/Indie",
+    "year": 2008,
+    "plays": 43
+  },
+  {
+    "song": "Ran",
+    "artist": "Future Islands",
+    "album": "The Far Field",
+    "genre": "New Wave/Post-Punk",
+    "year": 2017,
+    "plays": 18
+  },
+  {
+    "song": "Unbelievers",
+    "artist": "Vampire Weekend",
+    "album": "Modern Vampires of the City",
+    "genre": "Indie",
+    "year": 2013,
+    "plays": 24
+  },
+  {
+    "song": "Dark Days",
+    "artist": "Local Natives",
+    "album": "Sunlit Youth",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 15
+  },
+  {
+    "song": "No Room in Frame",
+    "artist": "Death Cab for Cutie",
+    "album": "Kintsugi",
+    "genre": "Indie",
+    "year": 2015,
+    "plays": 28
+  },
+  {
+    "song": "Good As New",
+    "artist": "Vacationer",
+    "album": "Gone",
+    "genre": "Alternative/Indie",
+    "year": 2012,
+    "plays": 40
+  },
+  {
+    "song": "Yet Again",
+    "artist": "Grizzly Bear",
+    "album": "Shields",
+    "genre": "Indie",
+    "year": 2012,
+    "plays": 21
+  },
+  {
+    "song": "No No No",
+    "artist": "Beirut",
+    "album": "No No No",
+    "genre": "Neo-Folk",
+    "year": 2015,
+    "plays": 21
+  },
+  {
+    "song": "Seasons (Waiting On You)",
+    "artist": "Future Islands",
+    "album": "Singles",
+    "genre": "Electropop",
+    "year": 2014,
+    "plays": 14
+  },
+  {
+    "song": "Angela Surf City",
+    "artist": "The Walkmen",
+    "album": "Lisbon",
+    "genre": "Indie",
+    "year": 2010,
+    "plays": 41
+  },
+  {
+    "song": "One Big Holiday",
+    "artist": "My Morning Jacket",
+    "album": "It Still Moves",
+    "genre": "'00s Alternative",
+    "year": 2003,
+    "plays": 8
+  },
+  {
+    "song": "The Way We Get By",
+    "artist": "Spoon",
+    "album": "Kill the Moonlight",
+    "genre": "'00s Alternative",
+    "year": 2002,
+    "plays": 38
+  },
+  {
+    "song": "First",
+    "artist": "Cold War Kids",
+    "album": "Hold My Home",
+    "genre": "'10s Alternative",
+    "year": 2014,
+    "plays": 33
+  },
+  {
+    "song": "Sedona",
+    "artist": "Houndmouth",
+    "album": "Little Neon Limelight",
+    "genre": "Alt Country",
+    "year": 2015,
+    "plays": 32
+  },
+  {
+    "song": "Disciples",
+    "artist": "Tame Impala",
+    "album": "Currents",
+    "genre": "Alternative/Indie",
+    "year": 2015,
+    "plays": 14
+  },
+  {
+    "song": "Red Eyes",
+    "artist": "The War on Drugs",
+    "album": "Lost In The Dream",
+    "genre": "'10s Alternative",
+    "year": 2014,
+    "plays": 24
+  },
+  {
+    "song": "Atlantis",
+    "artist": "STRFKR",
+    "album": "Miracle Mile",
+    "genre": "Indie",
+    "year": 2013,
+    "plays": 10
+  },
+  {
+    "song": "Put a Light On",
+    "artist": "Generationals",
+    "album": "Heza",
+    "genre": "Rock",
+    "year": 2013,
+    "plays": 11
+  },
+  {
+    "song": "Had To Hear",
+    "artist": "Real Estate",
+    "album": "Atlas",
+    "genre": "Indie",
+    "year": 2014,
+    "plays": 10
+  },
+  {
+    "song": "Hard To Find",
+    "artist": "The National",
+    "album": "Trouble Will Find Me",
+    "genre": "Alternative/Indie",
+    "year": 2013,
+    "plays": 29
+  },
+  {
+    "song": "I Turn My Camera On",
+    "artist": "Spoon",
+    "album": "Gimme Fiction (Deluxe Edition)",
+    "genre": "Alternative/Indie",
+    "year": 2005,
+    "plays": 42
+  },
+  {
+    "song": "Come Home",
+    "artist": "CHAPPO",
+    "album": "Moonwater",
+    "genre": "Alternative/Indie",
+    "year": 2012,
+    "plays": 12
+  },
+  {
+    "song": "Do You",
+    "artist": "Spoon",
+    "album": "They Want My Soul",
+    "genre": "'10s Alternative",
+    "year": 2014,
+    "plays": 42
+  },
+  {
+    "song": "Carl Sagan",
+    "artist": "Night Moves",
+    "album": "Pennied Days",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 17
+  },
+  {
+    "song": "California",
+    "artist": "Delta Spirit",
+    "album": "Delta Spirit",
+    "genre": "Alternative/Indie",
+    "year": 2012,
+    "plays": 13
+  },
+  {
+    "song": "Hiding",
+    "artist": "JR JR",
+    "album": "The Speed of Things",
+    "genre": "Alternative/Indie",
+    "year": 2013,
+    "plays": 10
+  },
+  {
+    "song": "Paddling Out",
+    "artist": "Miike Snow",
+    "album": "Happy To You",
+    "genre": "Electropop",
+    "year": 2012,
+    "plays": 11
+  },
+  {
+    "song": "Kid Who Stays in the Picture",
+    "artist": "Hot Hot Heat",
+    "album": "Hot Hot Heat",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 48
+  },
+  {
+    "song": "Tangled",
+    "artist": "Gay Nineties",
+    "album": "Liberal Guilt",
+    "genre": "Rock",
+    "year": 2015,
+    "plays": 12
+  },
+  {
+    "song": "Santa Fe",
+    "artist": "Wintersleep",
+    "album": "The Great Detachment",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 14
+  },
+  {
+    "song": "Love the Way You Are",
+    "artist": "Yukon Blonde",
+    "album": "Critical Hit",
+    "genre": "Alternative/Indie",
+    "year": 2018,
+    "plays": 15
+  },
+  {
+    "song": "Willow",
+    "artist": "Said The Whale",
+    "album": "Hawaiii",
+    "genre": "Indie",
+    "year": 2013,
+    "plays": 14
+  },
+  {
+    "song": "Dance With Me",
+    "artist": "Ra Ra Riot",
+    "album": "Beta Love",
+    "genre": "Alternative/Indie",
+    "year": 2013,
+    "plays": 13
+  },
+  {
+    "song": "If You Want It",
+    "artist": "Sam Roberts Band",
+    "album": "TerraForm",
+    "genre": "Rock",
+    "year": 2016,
+    "plays": 44
+  },
+  {
+    "song": "Kid Gloves",
+    "artist": "Hey Rosetta!",
+    "album": "Second Sight",
+    "genre": "Folk",
+    "year": 2014,
+    "plays": 28
+  },
+  {
+    "song": "Dancing Underwater",
+    "artist": "Brave Shores",
+    "album": "Brave Shores",
+    "genre": "Alternative/Indie",
+    "year": 2014,
+    "plays": 8
+  },
+  {
+    "song": "Spin Our Wheels",
+    "artist": "Sloan",
+    "album": "12",
+    "genre": "Alternative/Indie",
+    "year": 2018,
+    "plays": 10
+  },
+  {
+    "song": "Pick Me Up",
+    "artist": "Hollerado",
+    "album": "White Paint",
+    "genre": "Alternative/Indie",
+    "year": 2013,
+    "plays": 13
+  },
+  {
+    "song": "Breakin' Point",
+    "artist": "Peter Bjorn And John",
+    "album": "Breakin' Point",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 10
+  },
+  {
+    "song": "Running out of Time",
+    "artist": "Hot Hot Heat",
+    "album": "Elevator",
+    "genre": "Alternative/Indie",
+    "year": 2005,
+    "plays": 11
+  },
+  {
+    "song": "Chip Off The Heart",
+    "artist": "Rah Rah",
+    "album": "Vessels",
+    "genre": "Alternative/Indie",
+    "year": 2015,
+    "plays": 13
+  },
+  {
+    "song": "Fell In Love With New York",
+    "artist": "The Zolas",
+    "album": "Swooner",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 12
+  },
+  {
+    "song": "My Friend",
+    "artist": "Paper Lions",
+    "album": "My Friend",
+    "genre": "Rock",
+    "year": 2015,
+    "plays": 12
+  },
+  {
+    "song": "Turn Me On",
+    "artist": "Gay Nineties",
+    "album": "Liberal Guilt",
+    "genre": "Rock",
+    "year": 2015,
+    "plays": 10
+  },
+  {
+    "song": "Permanent Hesitation",
+    "artist": "Born Ruffians",
+    "album": "Birthmarks",
+    "genre": "Alternative/Indie",
+    "year": 2013,
+    "plays": 16
+  },
+  {
+    "song": "Headphones",
+    "artist": "Mounties",
+    "album": "Thrash Rock Legacy",
+    "genre": "Rock",
+    "year": 2014,
+    "plays": 11
+  },
+  {
+    "song": "Saturday Night",
+    "artist": "Yukon Blonde",
+    "album": "On Blonde",
+    "genre": "Alternative/Indie",
+    "year": 2015,
+    "plays": 13
+  },
+  {
+    "song": "Radio Waves",
+    "artist": "Fast Romantics",
+    "album": "American Love",
+    "genre": "Alternative/Indie",
+    "year": 2017,
+    "plays": 36
+  },
+  {
+    "song": "Invisible",
+    "artist": "The Zolas",
+    "album": "Swooner",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 27
+  },
+  {
+    "song": "Make U Mine",
+    "artist": "Yukon Blonde",
+    "album": "On Blonde",
+    "genre": "Alternative/Indie",
+    "year": 2015,
+    "plays": 11
+  },
+  {
+    "song": "Savannah",
+    "artist": "Arkells",
+    "album": "Morning Report (Deluxe)",
+    "genre": "Alternative/Indie",
+    "year": 2017,
+    "plays": 13
+  },
+  {
+    "song": "Tourist Trap",
+    "artist": "Sam Roberts Band",
+    "album": "TerraForm",
+    "genre": "Rock",
+    "year": 2016,
+    "plays": 36
+  },
+  {
+    "song": "Gold Teeth",
+    "artist": "Hey Rosetta!",
+    "album": "Second Sight",
+    "genre": "Folk",
+    "year": 2014,
+    "plays": 31
+  },
+  {
+    "song": "I Wanna Be Your Man",
+    "artist": "Yukon Blonde",
+    "album": "On Blonde",
+    "genre": "Alternative/Indie",
+    "year": 2015,
+    "plays": 14
+  },
+  {
+    "song": "Human Heat",
+    "artist": "Sam Roberts Band",
+    "album": "Lo-Fantasy (Deluxe Version)",
+    "genre": "Rock",
+    "year": 2013,
+    "plays": 6
+  },
+  {
+    "song": "Kintsukuroi",
+    "artist": "Hey Rosetta!",
+    "album": "Second Sight",
+    "genre": "Folk",
+    "year": 2014,
+    "plays": 51
+  },
+  {
+    "song": "You Broke the Law",
+    "artist": "Yukon Blonde",
+    "album": "On Blonde",
+    "genre": "Alternative/Indie",
+    "year": 2015,
+    "plays": 41
+  },
+  {
+    "song": "Hot Tonight",
+    "artist": "Tokyo Police Club",
+    "album": "Forcefield",
+    "genre": "Indie",
+    "year": 2014,
+    "plays": 7
+  },
+  {
+    "song": "Tokyo Summer",
+    "artist": "Mounties",
+    "album": "Thrash Rock Legacy",
+    "genre": "Rock",
+    "year": 2014,
+    "plays": 22
+  },
+  {
+    "song": "Dirty Mouth",
+    "artist": "Hot Hot Heat",
+    "album": "Elevator",
+    "genre": "Alternative/Indie",
+    "year": 2005,
+    "plays": 7
+  },
+  {
+    "song": "Swooner",
+    "artist": "The Zolas",
+    "album": "Swooner",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 18
+  },
+  {
+    "song": "Never Come Down",
+    "artist": "Brave Shores",
+    "album": "Brave Shores",
+    "genre": "Alternative/Indie",
+    "year": 2014,
+    "plays": 10
+  },
+  {
+    "song": "Freak Out",
+    "artist": "Wintersleep",
+    "album": "The Great Detachment",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 8
+  },
+  {
+    "song": "Them Kids",
+    "artist": "Sam Roberts",
+    "album": "Love At The End Of The World",
+    "genre": "Rock",
+    "year": 2008,
+    "plays": 10
+  },
+  {
+    "song": "Miss You",
+    "artist": "Born Ruffians",
+    "album": "Miss You",
+    "genre": "Rock",
+    "year": 2018,
+    "plays": 36
+  },
+  {
+    "song": "My Heart's Always Yours",
+    "artist": "Arkells",
+    "album": "Morning Report (Deluxe)",
+    "genre": "Alternative/Indie",
+    "year": 2017,
+    "plays": 12
+  },
+  {
+    "song": "Island of the Honest Man",
+    "artist": "Hot Hot Heat",
+    "album": "Elevator",
+    "genre": "Alternative/Indie",
+    "year": 2005,
+    "plays": 5
+  },
+  {
+    "song": "Good Times",
+    "artist": "Gay Nineties",
+    "album": "Liberal Guilt",
+    "genre": "Rock",
+    "year": 2015,
+    "plays": 8
+  },
+  {
+    "song": "Faint of Heart",
+    "artist": "Matt Mays",
+    "album": "Once Upon a Hell of a Time...",
+    "genre": "Rock",
+    "year": 2017,
+    "plays": 8
+  },
+  {
+    "song": "Love Keeps",
+    "artist": "Scenic Route to Alaska",
+    "album": "Long Walk Home",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 11
+  },
+  {
+    "song": "Promise",
+    "artist": "Hey Rosetta!",
+    "album": "Second Sight",
+    "genre": "Folk",
+    "year": 2014,
+    "plays": 28
+  },
+  {
+    "song": "Off the Wall",
+    "artist": "The Elwins",
+    "album": "Play for Keeps",
+    "genre": "Alternative/Indie",
+    "year": 2015,
+    "plays": 12
+  },
+  {
+    "song": "Race To The Bottom",
+    "artist": "Dan Mangan",
+    "album": "Unmake",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 18
+  },
+  {
+    "song": "Hannah",
+    "artist": "Yukon Blonde",
+    "album": "On Blonde",
+    "genre": "Alternative/Indie",
+    "year": 2015,
+    "plays": 17
+  },
+  {
+    "song": "Let Me In",
+    "artist": "Hot Hot Heat",
+    "album": "Happiness LTD.",
+    "genre": "Alternative/Indie",
+    "year": 2007,
+    "plays": 11
+  },
+  {
+    "song": "& On & On & On",
+    "artist": "Born Ruffians",
+    "album": "RUFF",
+    "genre": "Alternative/Indie",
+    "year": 2015,
+    "plays": 9
+  },
+  {
+    "song": "Water",
+    "artist": "Ra Ra Riot",
+    "album": "Need Your Light",
+    "genre": "Alternative/Indie",
+    "year": 2016,
+    "plays": 10
+  },
+  {
+    "song": "Let Her Know",
+    "artist": "July Talk",
+    "album": "July Talk",
+    "genre": "Alternative/Indie",
+    "year": 2012,
+    "plays": 7
+  },
+  {
+    "song": "Never Thought That This Would Happen",
+    "artist": "Arkells",
+    "album": "High Noon",
+    "genre": "Alternative/Indie",
+    "year": 2014,
+    "plays": 17
+  }
+]
