@@ -99,11 +99,11 @@ function animations(value, mobile) {
     function animation2() {
         const hundreds = [];
         for (let j = 0; j < digits[0]; j++) {
-            const start = 0.3 + j * 0.04;
+            const start = j * 0.02;
             const end = start + 0.3;
             for (let i = 0; i < 100; i++) {
                 const color = i === 99 ?
-                    clamp(t => hsl(0, t * 100, 50), j * 0.02, j * 0.02 + 0.28) :
+                    t => hsl(0, bezier(t, 0, 100), 50) :
                     () => hsl(0, 0, 50);
                 const x = 70 + (j % 3) * 140 + ((i % 10) - 4.5) * 12.5;
                 const y = 250 + Math.floor(j / 3) * 140 + (Math.floor(i / 10) - 4.5) * 12.5;
@@ -127,11 +127,11 @@ function animations(value, mobile) {
 
         const tens = [];
         for (let j = 0; j < digits[1]; j++) {
-            const start = 0.34 + j * 0.04;
+            const start = 0.02 + j * 0.02;
             const end = start + 0.3;
             for (let i = 0; i < 10; i++) {
                 const color = i === 9 ?
-                    clamp(t => hsl(120, t * 100, 50), (j + 1) * 0.02, (j + 1) * 0.02 + 0.28) :
+                    t => hsl(120, bezier(t, 0, 100), 50) :
                     () => hsl(0, 0, 50);
                 const x = 500 + (j % 3) * 140 + (i - 4.5) * 12.5;
                 const y = 250 + Math.floor(j / 3) * 140;
@@ -155,11 +155,11 @@ function animations(value, mobile) {
 
         const ones = [];
         for (let i = 0; i < digits[2]; i++) {
-            const start = 0.38 + i * 0.04;
+            const start = 0.04 + i * 0.02;
             const end = start + 0.3;
             ones.push(clamp(t => ({
                 type: 'rect',
-                color: clamp(t => hsl(240, t * 100, 50), (i + 2) * 0.02, (i + 2) * 0.02 + 0.28)(t),
+                color: hsl(240, bezier(t, 0, 100), 50),
                 position: clamp(t => ({
                     x: bezier(t, 930 + (i % 3) * 140, 1145 + 40 * (i % 3)),
                     y: bezier(t, 250 + Math.floor(i / 3) * 140, 630 + 40 * Math.floor(i / 3)),
@@ -186,7 +186,7 @@ function animations(value, mobile) {
                     position: { x: bezier(t, 210, 945), y: bezier(t, 100, 585) },
                     font: font(bezier(t, 100, 50)),
                     text: digits[0]
-                }), 0.6, 0.8),
+                }), 0.5, 0.8),
                 clamp(t => ({
                     type: 'text',
                     color: hsl(0, 0, bezier(t, 100, 0)),
@@ -207,7 +207,7 @@ function animations(value, mobile) {
                     position: { x: bezier(t, 640, 1065), y: bezier(t, 100, 585) },
                     font: font(bezier(t, 100, 50)),
                     text: digits[1]
-                }), 0.6, 0.8),
+                }), 0.5, 0.8),
                 clamp(t => ({
                     type: 'text',
                     color: hsl(0, 0, bezier(t, 100, 0)),
@@ -228,12 +228,12 @@ function animations(value, mobile) {
                     position: { x: bezier(t, 1070, 1185), y: bezier(t, 100, 585) },
                     font: font(bezier(t, 100, 50)),
                     text: digits[2]
-                }), 0.6, 0.8),
+                }), 0.5, 0.8),
                 ...hundreds,
                 ...tens,
                 ...ones,
             ],
-            animationLength: 4000,
+            animationLength: 5000,
             mobile,
         });
     }
