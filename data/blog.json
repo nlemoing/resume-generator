@@ -2,6 +2,20 @@
     "Title": "Blog",
     "Articles": [
         {
+            "Title": "Divisibility by 3",
+            "Subtitle": "If a number is divisible by 3, then the sum of its digits is divisible by 3 as well.",
+            "BodyPath": "articles/division.md",
+            "OutputPath": "division-by-3.html",
+            "Scripts": [
+                "/scripts/animation.js",
+                "/scripts/divisibility.js"
+            ],
+            "Styles": [
+                "bike.css"
+            ],
+            "Date": "August 25, 2020"
+        },
+        {
             "Title": "Biking in New York City",
             "Subtitle": "For four months, I biked everywhere in NYC. Here's what I learned.",
             "BodyPath": "articles/nyc-biking.md",

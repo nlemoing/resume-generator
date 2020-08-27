@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8"/>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="/css/common.css" rel="stylesheet">
+  <link href="/css/bike.css" rel="stylesheet"><link href="/css/blog.css" rel="stylesheet">
+  <script src='https://kit.fontawesome.com/2a2ea5f2a1.js' crossorigin="anonymous"></script>
+  <title>Divisibility by 3</title>
+</head>
+<body>
+<div class="site-wrapper">
+<nav class="top-navbar">
+    <div id="nav-link-home" class="header-item"><strong><a href="/">Nick Lemoing</a></strong></div>
+    <div class='header-item'><a href="/blog">Blog</a></div>
+    <div class='header-item'><a href="/resume">Resume</a></div>
+</nav>
+<div id="content-wrapper">
+<div id="blog-container">
+<div class="article-title-container">
+    <p class="article-date"><i class="far fa-clock"></i> August 25, 2020</p>
+    <h1 class="article-title"><a href='/blog/division-by-3.html'>Divisibility by 3</a></h1>
+    <p class="article-subtitle"><i>If a number is divisible by 3, then the sum of its digits is divisible by 3 as well.</i></p>
+</div>
+<div id="article-body">
+<br/>
+<p>There&rsquo;s a simple trick for figuring out if a number is divisible by 3: if the number you get when you add up all of the digits is divisible by 3, then the original number was as well. For example, take the number 171. Its digits are 1, 7, and 1; add them up and you get 9, which is divisible by 3. According to this rule, that means 171 should also be divisible by 3, and you can easily verify that that is true using a calculator or long division. On the other hand, there&rsquo;s 136, whose digits add up to 10, meaning it isn&rsquo;t divisible by 3. But why does this happen?</p>
+<p>Step 1: Split the number up by its digits.</p>
+<p><div id="animation-1"></div>
+Since the trick has to do with a number&rsquo;s digits, we&rsquo;ll probably want to work with them in some way. We can think of 3 digit numbers as having blocks of consisting of hundreds, tens, and ones. {abc} is a 3 digit number, so we can write it as {a} * 100 + {b} * 10 + {c}. {a} is in the hundreds place, so {abc} has {a} blocks of size 100. Similarly, it has {b} blocks of size 10 and {c} blocks of size 1.</p>
+<p>Step 2: Set aside 1 square from each block.</p>
+<p><div id="animation-2"></div>
+The trick involves adding up the digits of the number, and since each block of hundreds, tens, and ones represents ___, counting the blocks will allow us to do that. Instead of counting the blocks directly, we&rsquo;ll take one individual square from each block as a &ldquo;representative&rdquo;. By counting the number of representatives, we&rsquo;re adding up the digits. This leaves the hundreds blocks with 99 squares, the tens blocks with 9, and the ones blocks with none.</p>
+<p>Step 3: Divide the remaining squares into groups of 3</p>
+<p>After removing the representative squares, any ones blocks are eliminated, and we&rsquo;re left with blocks of size 99 and 9. We can divide these squares evenly since each block is divisible by 3.</p>
+<p>Step 4: Divide the representative squares into groups of 3</p>
+<p>Unlike the previous step, we&rsquo;re not guaranteed to be able to divide the representative squares evenly. Remember that the number of representative squares is equal to the sum of the digits of the number, so if we can evenly divide them into groups of 3, that means the sum is also divisible by 3. The opposite is also true: if we can&rsquo;t divide these squares into groups of 3, the sum is not divisible by 3.</p>
+<p>Step 5: Do some thinking</p>
+<p>Recall what we&rsquo;re trying to show: if the sum of the digits of a number is divisible by 3, then so is the number itself. We&rsquo;ve split the number into two groups: the first group represents the sum of the digits of the number, and the second is the rest of the number. We&rsquo;ve shown that the second group is always divisible by 3. If we can divide the first group by 3 as well, then the whole number will be divisible by 3 as well. On the other hand, if we can&rsquo;t divide the first group by 3, then the number can&rsquo;t be divided by 3 either.</p>
+<p>Are we done? Well, we have shown that it&rsquo;s true for {abc}, and if you refresh the page, we&rsquo;ll show it for a new 3-digit number. But we haven&rsquo;t shown that it&rsquo;s always true, especially not for numbers that don&rsquo;t have 3 digits.</p>
+<h2>What is a digit?</h2>
+<p>Our strategy last time was to take 1 square from each block (where a block represented a digit). After removing those squares, the squares that were left over could always be divided into three equal groups. Why is that?</p>
+<p>When we talk about numbers in terms of their digits, we&rsquo;re considering them base 10. That means that going from right to left, each digit rep</p>
+<p>This trick also works for numbers in base 16, and any other base whose remainder is 1 when divided by 3.
+If a base is already divisible by 3, then all we need to do is look at the last digit.
+If a base has remainder 2 when divided by 3, look at the alternating sum (since the base is congruent to -1 and so the powers will flip)</p>
+</div>
+</div>
+</div>
+</div>
+<footer>
+    Get in touch
+    <div class="contact-links">
+    <div class='footer-item'>
+      <a href='mailto:nlemoing@uwaterloo.ca'><i class="fas fa-envelope"></i></a>
+    </div>
+    <div class='footer-item'>
+      <a href='https://github.com/nlemoing'><i class="fab fa-github"></i></a>
+    </div>
+    <div class='footer-item'>
+      <a href='https://linkedin.com/in/nick-lemoing'><i class="fab fa-linkedin"></i></a>
+    </div>
+    </div>
+</footer>
+</body>
+<script src="/scripts/animation.js"></script><script src="/scripts/divisibility.js"></script><script src="/scripts/article.js"></script>
+</html>
