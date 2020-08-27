@@ -1,4 +1,4 @@
-function animations(value) {
+function animations(value, mobile) {
     digits = [
         Math.floor(value / 100) % 10,
         Math.floor(value / 10) % 10,
@@ -92,6 +92,7 @@ function animations(value) {
                 ...ones,
             ],
             animationLength: 3000,
+            mobile,
         });
     }
 
@@ -233,6 +234,7 @@ function animations(value) {
                 ...ones,
             ],
             animationLength: 4000,
+            mobile,
         });
     }
 
@@ -248,5 +250,6 @@ animations(
         Math.floor(1 + Math.random() * 9) * 100 +
         Math.floor(1 + Math.random() * 9) * 10 +
         Math.floor(1 + Math.random() * 9)
-    )
+    ),
+    false,
 );

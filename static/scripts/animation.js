@@ -10,6 +10,7 @@ function Canvas({
     width = 1280,
     height = 720,
     animationLength = 1000,
+    mobile = false,
 }) {
     const canvasContainer = document.getElementById(id);
     if (!canvasContainer) {
@@ -19,8 +20,8 @@ function Canvas({
 
     // Add the canvas element
     const canvas = document.createElement("canvas");
-    canvas.width = width;
-    canvas.height = height;
+    canvas.width = mobile ? height : width;
+    canvas.height = mobile ? width : height;
     canvas.setAttribute("style", "max-width: 100%;");
     canvasContainer.appendChild(canvas);
 
@@ -37,20 +38,24 @@ function Canvas({
     
     function draw(t) {
         // Clear the canvas from the previous frame
-        context.clearRect(0, 0, width, height);
+        context.clearRect(0, 0, canvas.width, canvas.height);
 
         // Draw all the objects
         for (const drawObject of objects) {
             const { 
                 type, 
                 color, 
-                position: { x, y },
+                position,
                 ...options
             } = drawObject(t);
+            const x = mobile ? position.y : position.x
+            const y = mobile ? position.x : position.y
             context.fillStyle = color;
             switch (type) {
                 case 'rect':
-                    const { size: { w, h} } = options;
+                    const { size } = options;
+                    const w = mobile ? size.h : size.w;
+                    const h = mobile ? size.w : size.h;
                     context.fillRect(x - (w / 2), y - (h / 2), w, h);
                     break;
                 case 'text':
