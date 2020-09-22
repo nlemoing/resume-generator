@@ -33,7 +33,8 @@ Since the trick has to do with a number&rsquo;s digits, we&rsquo;ll probably wan
 <p><div id="animation-2"></div>
 The trick involves adding up the digits of the number, and since each block of hundreds, tens, and ones represents ___, counting the blocks will allow us to do that. Instead of counting the blocks directly, we&rsquo;ll take one individual square from each block as a &ldquo;representative&rdquo;. By counting the number of representatives, we&rsquo;re adding up the digits. This leaves the hundreds blocks with 99 squares, the tens blocks with 9, and the ones blocks with none.</p>
 <p>Step 3: Divide the remaining squares into groups of 3</p>
-<p>After removing the representative squares, any ones blocks are eliminated, and we&rsquo;re left with blocks of size 99 and 9. We can divide these squares evenly since each block is divisible by 3.</p>
+<p><div id="animation-3"></div>
+After removing the representative squares, any ones blocks are eliminated, and we&rsquo;re left with blocks of size 99 and 9. We can divide these squares evenly since each block is divisible by 3.</p>
 <p>Step 4: Divide the representative squares into groups of 3</p>
 <p>Unlike the previous step, we&rsquo;re not guaranteed to be able to divide the representative squares evenly. Remember that the number of representative squares is equal to the sum of the digits of the number, so if we can evenly divide them into groups of 3, that means the sum is also divisible by 3. The opposite is also true: if we can&rsquo;t divide these squares into groups of 3, the sum is not divisible by 3.</p>
 <p>Step 5: Do some thinking</p>

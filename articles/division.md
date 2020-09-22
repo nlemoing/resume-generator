@@ -12,6 +12,7 @@ The trick involves adding up the digits of the number, and since each block of h
 
 Step 3: Divide the remaining squares into groups of 3
 
+<div id="animation-3"></div>
 After removing the representative squares, any ones blocks are eliminated, and we're left with blocks of size 99 and 9. We can divide these squares evenly since each block is divisible by 3.
 
 Step 4: Divide the representative squares into groups of 3
