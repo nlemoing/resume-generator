@@ -1,21 +1,25 @@
 {
     "Title": "Resume",
     "Styles": ["resume.css"],
-    "Tagline": "4th-year Computer Science major at the University of Waterloo. Tech enthusiast who loves working with data and writing code across the stack.<br><br><i>Seeking internships for Spring 2020 and Fall 2020.</i>",
+    "Tagline": [
+        "I'm a 4th year computer science student from Canada seeking new grad opportunities for 2021.",
+        "I have experience all over the stack, from designing A/B tests on the front-end to backend and data engineering."
+    ],
     "Sections": [
         {
             "Title": "Experience",
             "Items": [
                 {
-                    "Title": "Software Engineer",
+                    "Title": "Software Engineer (Growth)",
                     "Subtitle": "Noom",
                     "Location": "New York",
                     "Date": "5/2020 - Present",
                     "Description": {
                         "Bulleted": true, 
                         "Contents": [
-                            "Implemented a parser for programatically visualizing connections between front-end components",
-                            "Launched targeted experiments on the landing page and measured their effectiveness at driving conversions"
+                            "Designed and implemented several experiments that improved conversion rates by over 5 percent and were integrated into the baseline experience",
+                            "Developed and launched the second iteration of Noom's experiment framework which now serves all traffic on noom.com",
+                            "Created a code-free copy editing tool to enable Product Managers to launch simple experiments, saving an average of 5 hours of engineering work per week"
                         ]
                     }
                 },
@@ -64,7 +68,7 @@
             ]
         },
         {
-            "Title": "Projects",
+            "Title": "Selected Projects",
             "Items": [
                 {
                     "Title": "GNight",
@@ -90,22 +94,8 @@
                     "Description": {
                         "Bulleted": true, 
                         "Contents": [
-                            "Built a resume template engine to generate resumes from JSON data",
-                            "Supports TeX, HTML output with potential to add other formats"
-                        ]
-                    }
-                },
-                {
-                    "Title": "Fantasy Baseball Predictive Model",
-                    "Subheading": "Python",
-                    "Date": "1/2018",
-                    "Link": "https://github.com/nlemoing/fantasy-baseball",
-                    "Description": {
-                        "Bulleted": true,
-                        "Contents": [
-                            "Built a web scraper in Python to aggregate baseball box score data",
-                            "Constructed a neural net from the ground up using linear algebra primitives",
-                            "Analyzed the relationship between past seasons and future success"
+                            "Built a resume template engine to generate this resume from JSON data",
+                            "Supports LaTex and HTML formats"
                         ]
                     }
                 }
@@ -152,8 +142,8 @@
                     "Description": {
                        "Bulleted": false,
                         "Contents": [
-                            "91 Average, Dean's List in 5 of 6 terms",
-                            "Favourite Courses: Theory of Computation, Science Fiction, Game Theory"
+                            "91 Average, Dean's List in 5 of 7 terms",
+                            "Favourite Courses: Computer Graphics, Science Fiction, Game Theory"
                         ]
                     }
                 }
@@ -170,8 +160,7 @@
                             "Python",
                             "JavaScript/Node",
                             "C/C++",
-                            "Golang",
-                            "Matlab"
+                            "Golang"
                         ]
                     }
                 },
@@ -186,17 +175,6 @@
                     }
                 },
                 {
-                    "Title": "Data Science",
-                    "Description": {
-                        "Bulleted": false,
-                        "Contents": [
-                            "NumPy",
-                            "Pandas",
-                            "Scikit-learn"
-                        ]
-                    }
-                },
-                {
                     "Title": "Graphics and Visualization",
                     "Description": {
                         "Bulleted": false,
@@ -204,27 +182,6 @@
                             "OpenCV",
                             "OpenGL",
                             "d3.js"
-                        ]
-                    }
-                },
-                {
-                    "Title": "Cloud environments",
-                    "Description": {
-                        "Bulleted": false,
-                        "Contents": [
-                            "AWS",
-                            "Azure"
-                        ]
-                    }
-                },
-                {
-                    "Title": "Everything else",
-                    "Description": {
-                        "Bulleted": false,
-                        "Contents": [
-                            "MySQL",
-                            "Docker",
-                            "Git"
                         ]
                     }
                 }
@@ -244,21 +201,22 @@
                     }
                 },
                 {
+                    "Title": "Cycling",
+                    "Description": {
+                        "Bulleted": false,
+                        "Contents": [
+                            "Nearly 2000 kilometers (and counting!) logged on Strava in 2020",
+                            "While in New York I biked to work every day, as well as to all five boroughs."
+                        ]
+                    }
+                },
+                {
                     "Title": "Creative Writing",
                     "Description": {
                         "Bulleted": false,
                         "Contents": [
                             "I write articles about various math, sports and business topics on my blog.",
                             "I'm also a hobbyist short story writer."
-                        ]
-                    }
-                },
-                {
-                    "Title": "Bike Rides",
-                    "Description": {
-                        "Bulleted": false,
-                        "Contents": [
-                            "While in New York I biked to work every day, as well as to all five boroughs."
                         ]
                     }
                 }

@@ -1,7 +1,7 @@
 {{ block "content" . }}
 <div id="resume-sidebar">
 <img src="/images/nick.jpg" id="resume-headshot"></img>
-{{ with .Tagline }}<p>{{.}}</p>{{ end }}
+{{ range .Tagline }}<p>{{.}}</p>{{ end }}
 <div id="resume-contact">
 <h3>Get in touch</h3>
 {{ with .Details }}

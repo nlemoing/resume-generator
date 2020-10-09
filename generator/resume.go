@@ -29,7 +29,7 @@ type Section struct {
 }
 
 type Resume struct {
-	Tagline string
+	Tagline []string
 	Sections []Section
 	SideSections []Section
 	Page
