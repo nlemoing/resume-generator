@@ -43,5 +43,5 @@
 </footer>
 {{ end }}
 </body>
-{{ with .Scripts}}{{ range . }}<script src="{{.}}"></script>{{ end }}{{ end }}
+{{ with .Scripts}}{{ range . }}<script src="{{.}}" async></script>{{ end }}{{ end }}
 </html>
