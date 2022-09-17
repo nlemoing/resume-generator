@@ -2,7 +2,7 @@
     "Title": "Resume",
     "Styles": ["resume.css"],
     "Tagline": [
-        "I'm a 4th year computer science student from Canada seeking new grad opportunities for 2021.",
+        "I'm a full stack engineer from Canada currently working in New York.",
         "I have experience all over the stack, from designing A/B tests on the front-end to backend and data engineering."
     ],
     "Sections": [
@@ -10,10 +10,10 @@
             "Title": "Experience",
             "Items": [
                 {
-                    "Title": "Software Engineer (Growth)",
+                    "Title": "Software Engineer",
                     "Subtitle": "Noom",
                     "Location": "New York",
-                    "Date": "5/2020 - Present",
+                    "Date": "5/20 - 12/20, 9/21 - Present",
                     "Description": {
                         "Bulleted": true, 
                         "Contents": [
@@ -142,7 +142,7 @@
                     "Description": {
                        "Bulleted": false,
                         "Contents": [
-                            "91 Average, Dean's List in 5 of 7 terms",
+                            "Dean's Honour List, 91 Average",
                             "Favourite Courses: Computer Graphics, Science Fiction, Game Theory"
                         ]
                     }
@@ -159,8 +159,8 @@
                         "Contents": [
                             "Python",
                             "JavaScript/Node",
-                            "C/C++",
-                            "Golang"
+                            "Java/Kotlin",
+                            "C/C++"
                         ]
                     }
                 },
@@ -205,7 +205,7 @@
                     "Description": {
                         "Bulleted": false,
                         "Contents": [
-                            "Nearly 2000 kilometers (and counting!) logged on Strava in 2020",
+                            "Logged 2000 kilometers in 2020 and 2021",
                             "While in New York I biked to work every day, as well as to all five boroughs."
                         ]
                     }
@@ -215,8 +215,7 @@
                     "Description": {
                         "Bulleted": false,
                         "Contents": [
-                            "I write articles about various math, sports and business topics on my blog.",
-                            "I'm also a hobbyist short story writer."
+                            "I write articles about various math, sports and business topics on my blog."
                         ]
                     }
                 }

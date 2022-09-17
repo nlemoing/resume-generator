@@ -4,7 +4,7 @@ import (
 	"text/template"
 	"io/ioutil"
 	"path/filepath"
-	"gopkg.in/russross/blackfriday.v2"
+	"github.com/russross/blackfriday/v2"
 )
 
 type Blog struct {
