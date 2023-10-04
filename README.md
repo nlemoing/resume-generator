@@ -20,3 +20,24 @@ Netlify listens for commits on master and automatically publishes a new version 
 The code needed to generate the templates from JSON isn't very complex. 
 Most of the complexity in this project is in the actual template files which describe what to do with the data once loaded.
 Once the workflow was set up, it's been easy to make incremental changes to my resume, my blog articles and my homepage!
+
+## Running
+
+To run, first install [MacTex](https://tug.org/mactex/mactex-download.html).
+
+To build the generator:
+```
+cd generator
+go build
+``` 
+
+Then, run the generator from the home directory:
+```
+./generator/generator
+```
+
+Finally, make the PDF (this will install non-default TEX packages if they aren't already installed):
+```
+./make_pdf.sh
+```
+

@@ -2,7 +2,9 @@
 <div class="description">
 {{ if .Bulleted }}
 <ul class="resume-description-list">
-    {{range .Contents}}<li>{{.}}</li>{{end}}
+    {{range .Contents}}
+    <li>{{.}}</li>
+    {{end}}
 </ul>
 {{ else }}
 {{ range .Contents }}<p class="description-item">{{.}}</p>{{end}}

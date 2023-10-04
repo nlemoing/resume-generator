@@ -13,13 +13,13 @@
                     "Title": "Software Engineer",
                     "Subtitle": "Noom",
                     "Location": "New York",
-                    "Date": "5/20 - 12/20, 9/21 - Present",
+                    "Date": "9/2021 - Present",
                     "Description": {
                         "Bulleted": true, 
                         "Contents": [
-                            "Designed and implemented several experiments that improved conversion rates by over 5 percent and were integrated into the baseline experience",
-                            "Developed and launched the second iteration of Noom's experiment framework which now serves all traffic on noom.com",
-                            "Created a code-free copy editing tool to enable Product Managers to launch simple experiments, saving an average of 5 hours of engineering work per week"
+                            "Pioneered a new system for client-server communication that reduced DB costs by 3x",
+                            "Introduced the ability to deploy developer instances of services on-demand to speed up dev velocity",
+                            "Developed and launched the second iteration of Noom's experiment framework which serves all traffic on noom.com"
                         ]
                     }
                 },
