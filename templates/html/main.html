@@ -29,6 +29,11 @@
       <a href='mailto:{{.}}'><i class="fas fa-envelope"></i></a>
     </div>
     {{ end }}
+    {{ with .Phone }}
+    <div class='footer-item'>
+      <a href='tel:{{.}}'><i class="fas fa-phone"></i></a>
+    </div>
+    {{ end }}
     {{ with .GitHub }}
     <div class='footer-item'>
       <a href='https://github.com/{{.}}'><i class="fab fa-github"></i></a>
