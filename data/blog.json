@@ -2,6 +2,15 @@
     "Title": "Blog",
     "Articles": [
         {
+            "Title": "Bicyclopedia",
+            "Subtitle": "I worked in a bike shop in Australia for 4 months, drew everything I learned, and made it into a website.",
+            "BodyPath": "articles/bicyclopedia.md",
+            "OutputPath": "bicyclopedia.html",
+            "Scripts": [],
+            "Styles": [],
+            "Date": "August 24, 2025"
+        },
+        {
             "Title": "Biking in New York City",
             "Subtitle": "For four months, I biked everywhere in NYC. Here's what I learned.",
             "BodyPath": "articles/nyc-biking.md",

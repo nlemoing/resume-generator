@@ -29,10 +29,6 @@
     margin: 5px 0 0 0;
 }
 
-#article-body > p {
-    text-indent: 20px;
-}
-
 #article-body > figure {
     margin: 10px;
     width: calc(100% - 20px);
@@ -52,7 +48,7 @@
     justify-content: center;
 }
 
-#article-body .image-gallery > img {
+#article-body .image-gallery > img, video {
     max-width: 100%;
     max-height: 80vh;
     margin: 5px;
