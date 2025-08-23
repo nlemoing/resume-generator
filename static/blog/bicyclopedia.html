@@ -37,28 +37,15 @@
 <p>Each bicycle part was hand-drawn, photographed, and processed in GIMP so that it can be drawn on the canvas. I don&rsquo;t have a tablet or any digital art skills (or analog art skills, for that matter) and I thought the amateur drawings were a good complement to my amateur bike skills. Processing the photos was straightforward: since they were just pencil on paper, you could take a photo, desaturate it, and apply a threshold filter to clamp the page to white and any pencil marks to black.</p>
 <figure>
 <div class='image-gallery'>
-<img src='/images/bicyclopedia/plain_drawing.jpeg' title='Original drawings from my notebook'></img>
-<img src='/images/bicyclopedia/grayscale.jpeg' title='Cropped and coverted to a grayscale image'></img>
-<img src='/images/bicyclopedia/threshold.jpeg' title='Converted to a line drawing with a simple threshold.'></img>
+<img src='/images/bicyclopedia/plain_drawing.png' title='Original drawings from my notebook'></img>
+<img src='/images/bicyclopedia/grayscale.png' title='Cropped and coverted to a grayscale image'></img>
+<img src='/images/bicyclopedia/threshold.png' title='Converted to a line drawing with a simple threshold.'></img>
 </div>
 <figcaption>
 The image processing workflow was simple: convert it to grayscale and then use a simple threshold function to clamp colours that are white-ish to white and colours that are black-ish to black.
 </figcaption>
 </figure>
-<p>I wanted to show how the different parts fit together and got more complex as you pulled things apart. I decided to use HTML canvas to position and animate everything since it gave me the most control and also had a straightforward API for drawing images. Animating everything was a matter of defining a bunch of different states, assigning each part a position for each state, and then interpolating between states during transitions.</p>
-<figure>
-<div class='image-gallery'>
-<video controls>
-    <source src="/images/bicyclopedia/linear.mp4" type="video/mp4">
-</video>
-<video controls>
-    <source src="/images/bicyclopedia/sqrt.mp4" type="video/mp4">
-</video>
-</div>
-<figcaption>
-When animating between two states, I tracked progress with a number between 0 and 1 and used interpolation to average between the states depending on how far along the animation had progressed. If you raise the progress number to a power less than 1, you end up with an explosive effect at the start and an easing effect at the end. I thought this was the perfect complement to the Big Red Button™.
-</figcaption>
-</figure>
+<p>I wanted to show how the different parts fit together and got more complex as you pulled things apart. I decided to use HTML canvas to position and animate everything since it gave me the most control and also had a straightforward API for drawing images. Animating everything was a matter of defining a bunch of different states, assigning each part a position for each state, and then interpolating between states during transitions. When animating between two states, I tracked progress with a number between 0 and 1 and used interpolation to average between the states depending on how far along the animation had progressed. If you raise the progress number to a power less than 1, you end up with an explosive effect at the start and an easing effect at the end. I thought this was the perfect complement to the Big Red Button™.</p>
 <p>One thing about canvas is that once you draw something on the screen, it gets lost in the mass of pixels; you lose any reference to the original image. I needed a way to map pixels back to the parts they represented so that I could show labels and transition between states on click. You could probably make something proper that searches all parts to see if they were drawn in a given pixel, but doing intersections on an arbitrary, mostly-transparent PNG sounded much less fun than what I ended up doing instead: assigning each image two unique colours, one close to white and one close to black. That way, you just have to look up the RGB value of a pixel to know what was drawn there. As a bonus, it handles precedence automatically when there are multiple parts drawn on top of each other and it was easy to write a script to assign those colours with OpenCV.</p>
 <figure>
 <div class='image-gallery'>
