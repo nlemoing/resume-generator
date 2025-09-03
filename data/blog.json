@@ -2,6 +2,14 @@
     "Title": "Blog",
     "Articles": [
         {
+            "Title": "I connected Bluesky to a receipt printer to keep in touch with my friend",
+            "BodyPath": "articles/printer.md",
+            "OutputPath": "printer.html",
+            "Scripts": [],
+            "Styles": [],
+            "Date": "September 2, 2025"
+        },
+        {
             "Title": "Bicyclopedia",
             "Subtitle": "I worked in a bike shop in Australia for 4 months, drew everything I learned, and made it into a website.",
             "BodyPath": "articles/bicyclopedia.md",
