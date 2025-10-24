@@ -29,23 +29,7 @@
 
 \begin{document}
 <template "header.tex" .Details>
-%% LEFT COLUMN
-\begin{minipage}[t]{0.33\textwidth}
-\section{\highlight{About Me}}
-\begin{tightdescription}
-<range .Tagline>
-\item <.>
-<end> 
-\end{tightdescription}
-<range .SideSections>
-<template "section.tex" .>
-<end>
-\end{minipage}
-\hspace{.02\textwidth}
-%% Right COLUMN
-\begin{minipage}[t]{0.65\textwidth}
 <range .Sections>
 <template "section.tex" .>
 <end>
-\end{minipage}
 \end{document}

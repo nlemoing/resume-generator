@@ -10,58 +10,84 @@
             "Title": "Experience",
             "Items": [
                 {
-                    "Title": "Software Engineer",
+                    "Title": "Lead Software Engineer",
                     "Subtitle": "Noom",
                     "Location": "New York",
-                    "Date": "9/2021 - Present",
+                    "Date": "8/2024 - 4/2025",
                     "Description": {
                         "Bulleted": true, 
                         "Contents": [
-                            "Pioneered a new system for client-server communication that reduced DB costs by 3x",
-                            "Introduced the ability to deploy developer instances of services on-demand to speed up dev velocity",
-                            "Developed and launched the second iteration of Noom's experiment framework which serves all traffic on noom.com"
+                            "Grew GraphQL adoption from non-existent to 100s of RPS across dozens of types by hosting org-wide presentations, workshops, and info sessions",
+                            "Planned and oversaw load tests for our GraphQL backend-for-frontend service to handle spikes of 10x normal peak load",
+                            "Enabled end-to-end, multi-service testing across all Spring and Django services with HTTP header routing"
                         ]
                     }
                 },
                 {
-                    "Title": "Data Engineer",
+                    "Title": "Senior Software Engineer",
+                    "Subtitle": "Noom",
+                    "Location": "New York",
+                    "Date": "8/2023 - 8/2024",
+                    "Description": {
+                        "Bulleted": true, 
+                        "Contents": [
+                            "Prototyped and implemented a Kotlin-based GraphQL service to handle all of Noom's client-server communication",
+                            "Launched a system for ingesting, routing and processing events asynchronously using AWS SNS and SQS",
+                            "Contributed to a company-wide template and shared library ecosystem for creating new Kotlin-based backend services"
+                        ]
+                    }
+                },
+                {
+                    "Title": "Software Engineer",
+                    "Subtitle": "Noom",
+                    "Location": "New York",
+                    "Date": "9/2021 - 8/2023",
+                    "Description": {
+                        "Bulleted": true, 
+                        "Contents": [
+                            "Introduced on-demand beta deployments of services with CloudFormation, allowing engineers to test independently; in three years this system was extended to 20+ services and 1000+ instances were created",
+                            "Reduced iteration times by 3x and eliminated contention for shared AWS resources with a Docker-based local alternative",
+                            "Migrated backend CI/CD pipelines to GitHub Actions and reduced deployment times by 43 percent",
+                            "Implemented a developer friendly early-warning system for breaking changes made to Protobuf types using GitHub Actions"
+                        ]
+                    }
+                },
+                {
+                    "Title": "Growth and Data Engineer Intern",
+                    "Subtitle": "Noom",
+                    "Location": "New York",
+                    "Date": "5/2020 - 12/2020",
+                    "Description": {
+                        "Bulleted": true, 
+                        "Contents": [
+                            "Cut data pipeline execution times in half for JSON-based data using Redshift Python UDFs",
+                            "Implemented Noom's landing page experiment engine in Node.js, powering all traffic to noom.com",
+                            "Designed experimental front-end experiences with React"
+                        ]
+                    }
+                },
+                {
+                    "Title": "Data Engineer Intern",
                     "Subtitle": "Munich Re",
                     "Location": "New York",
-                    "Date": "9/2019 - 12/2019",
+                    "Date": "1/2019 - 12/2019",
                     "Description": {
                         "Bulleted": true, 
                         "Contents": [
                             "Developed custom visualization, navigation and annotation components for reviewing medical PDFs in the browser",
-                            "Managed the production deployment of a hosted PDF viewer using Docker and CI/CD pipelines",
-                            "Orchestrated machine learning pipelines with Airflow"
+                            "Researched and implemented a parallelized clustering algorithm in Python to reduce dimensionality in large datasets"
                         ]
                     }
                 },
                 {
-                    "Title": "Data Scientist",
-                    "Subtitle": "Munich Re",
-                    "Location": "New York",
-                    "Date": "1/2019 - 4/2019",
-                    "Description": {
-                        "Bulleted": true,
-                        "Contents": [
-                            "Researched and implemented a parallelized, clustering-based algorithm to reduce dimensionality in datasets with correlated features",
-                            "Developed black-box model interpretation tools in Python and React",
-                            "Evaluated alternative data sources using interpretable random forest models"
-                        ]
-                    }
-                },
-                {
-                    "Title": "Software Developer",
+                    "Title": "Software Developer Intern",
                     "Subtitle": "Bonfire Interactive",
                     "Location": "Kitchener",
                     "Date": "5/2018 - 8/2018",
                     "Description": {
                         "Bulleted": true,
                         "Contents": [
-                            "Developed new features for the core procurement app with Angular and Node",
-                            "Kickstarted the consolidation of several backend services into a Node API",
-                            "Spearheaded the addition of an integration testing framework"
+                            "Developed new features for the core procurement app with Angular.js and Node"
                         ]
                     }
                 }
@@ -71,31 +97,38 @@
             "Title": "Selected Projects",
             "Items": [
                 {
-                    "Title": "GNight",
-                    "Subtitle": "Generalized knight simulator and visualizer",
-                    "Subheading": "C++, OpenCV, d3.js",
-                    "Date": "7/2019",
-                    "Link": "https://github.com/nlemoing/generalized-knight",
+                    "Title": "Bicyclopedia: Interactive Bicycle Part Explorer",
+                    "Date": "8/2025",
+                    "Link": "https://bicyclopedia.lemoing.ca",
                     "Description": {
                         "Bulleted": true,
                         "Contents": [
-                            "Analyzed movement of general chess knights using BFS and Random Walk algorithms",
-                            "Built a path visualization module using C++, OpenCV",
+                            "Animated dozens of hand-drawn bicycle components using HTML Canvas and Javascript",
+                            "Created a pixel-based label system by manipulating images with Python and OpenCV"
+                        ]
+                    }
+                },
+                {
+                    "Title": "Generalized Knights",
+                    "Date": "7/2019",
+                    "Link": "https://lemoing.ca/blog/knight",
+                    "Description": {
+                        "Bulleted": true,
+                        "Contents": [
+                            "Analyzed movement of generaized chess knights using BFS and Random Walk algorithms",
                             "Implemented animated visualizations in d3 for the explorative post on my blog"
                         ]
                     }
                 },
                 {
-                    "Title": "GoCV",
-                    "Subtitle": "Templated resume generator",
-                    "Subheading": "Golang",
+                    "Title": "Static Site Resume Generator",
                     "Date": "9/2019",
                     "Link": "https://github.com/nlemoing/resume-generator",
                     "Description": {
                         "Bulleted": true, 
                         "Contents": [
-                            "Built a resume template engine to generate this resume from JSON data",
-                            "Supports LaTex and HTML formats"
+                            "Implemented a Markdown-based static site engine in Go to host my personal website and blog",
+                            "Extended the static site generator to output PDF and HTML versions of my resume from output-agnostic JSON data"
                         ]
                     }
                 }
@@ -105,42 +138,35 @@
             "Title": "Teaching and Research",
             "Items": [
                 {
-                    "Title": "Research Assistant",
-                    "Subheading": "Stereo 3D Images (Supervisor: Lesley Istead)",
+                    "Title": "Computer Graphics Research Assistant",
                     "Date": "5/2019 - 8/2019",
                     "Description": {
                         "Bulleted": true,
                         "Contents": [
-                            "Researched algorithms for consistent stereo 3D line drawings",
-                            "Implemented a 3D image stylization algorithm in OpenCV"
+                            "Researched and implemented algorithms for consistent stereo 3D line drawings using C++ and OpenCV"
                         ]
                     }
                 },
                 {
-                    "Title": "Teaching Assistant",
-                    "Subheading": "Math and Computer Science",
+                    "Title": "Math and CS Teaching Assistant",
                     "Date": "9/2017 - 4/2021",
                     "Description": {
                         "Bulleted": true,
                         "Contents": [
-                            "Organized and presented end-of-term review sessions for hundreds of students",
-                            "Prepared weekly review courses for first year courses",
-                            "Specialties: Functional Programming, Linear Algebra, Statistics"
+                            "Prepared and hosted one-on-one weekly review sessions for first- and second-year university students"
                         ]
                     }
                 }
             ]
-        }
-    ],
-    "SideSections": [
+        },
         {
             "Title": "Education",
             "Items": [
                 {
                     "Title": "University of Waterloo",
-                    "Subheading": "Computer Science (9/2016 - 4/2021)",
+                    "Subtitle": "Bachelor of Computer Science",
                     "Description": {
-                       "Bulleted": false,
+                       "Bulleted": true,
                         "Contents": [
                             "Dean's Honour List, 91 Average",
                             "Favourite Courses: Computer Graphics, Science Fiction, Game Theory"
@@ -148,78 +174,7 @@
                     }
                 }
             ]
-        }, 
-        {
-            "Title": "Skills",
-            "Items": [
-                {
-                    "Title": "Programming Languages",
-                    "Description": {
-                        "Bulleted": false,
-                        "Contents": [
-                            "Python",
-                            "JavaScript/Node",
-                            "Java/Kotlin",
-                            "C/C++"
-                        ]
-                    }
-                },
-                {
-                    "Title": "Frontend Frameworks",
-                    "Description": {
-                        "Bulleted": false,
-                        "Contents": [
-                            "React",
-                            "Angular"
-                        ]
-                    }
-                },
-                {
-                    "Title": "Graphics and Visualization",
-                    "Description": {
-                        "Bulleted": false,
-                        "Contents": [
-                            "OpenCV",
-                            "OpenGL",
-                            "d3.js"
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "Title": "Interests",
-            "Items": [
-                {
-                    "Title": "Ultimate Frisbee",
-                    "Description": {
-                        "Bulleted": false,
-                        "Contents": [
-                            "I've played for my university's school team for three seasons.",
-                            "I also played on NYU's team while living in New York and for an Australian team during their national beach tournament."
-                        ]
-                    }
-                },
-                {
-                    "Title": "Cycling",
-                    "Description": {
-                        "Bulleted": false,
-                        "Contents": [
-                            "I worked at a bike shop in Australia for 3 months",
-                            "While in New York I biked to work every day, as well as to all five boroughs."
-                        ]
-                    }
-                },
-                {
-                    "Title": "Creative Writing",
-                    "Description": {
-                        "Bulleted": false,
-                        "Contents": [
-                            "I write articles about various math, sports and business topics on my blog."
-                        ]
-                    }
-                }
-            ]
         }
-    ]
+    ],
+    "SideSections": []
 }
